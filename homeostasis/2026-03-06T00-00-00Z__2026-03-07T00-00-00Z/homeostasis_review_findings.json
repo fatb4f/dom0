@@ -1,0 +1,118 @@
+{
+  "artifact": "review_findings",
+  "subject": "skill_homeostasis/core_ideas.md",
+  "generated_at": "2026-03-06",
+  "counts": {
+    "total": 4,
+    "by_severity": {
+      "P1": 1,
+      "P2": 3
+    }
+  },
+  "findings": [
+    {
+      "id": "F001",
+      "severity": "P1",
+      "title": "Missing snapshot identity in snapshot contract",
+      "location": {
+        "path": "skill_homeostasis/core_ideas.md",
+        "line_start": 46,
+        "line_end": 46
+      },
+      "evidence": [
+        {
+          "line": 46,
+          "text": "- `meta`: version, generated_at, host, profile."
+        },
+        {
+          "line": 121,
+          "text": "- each opponent output must reference `introspect.skills.snapshot` by `snapshot_id`"
+        },
+        {
+          "line": 152,
+          "text": "- `snapshot_id`"
+        }
+      ],
+      "impact": "Findings cannot be reliably correlated to a specific snapshot across runs.",
+      "required_change": "Add a stable `snapshot_id` field to the snapshot contract and emitted introspection artifact."
+    },
+    {
+      "id": "F002",
+      "severity": "P2",
+      "title": "Inconsistent status/gate enums across contract sections",
+      "location": {
+        "path": "skill_homeostasis/core_ideas.md",
+        "line_start": 52,
+        "line_end": 52
+      },
+      "evidence": [
+        {
+          "line": 52,
+          "text": "- `status`: `PASS|FAIL|UNKNOWN`."
+        },
+        {
+          "line": 71,
+          "text": "- evaluation: `verify/gate` with tri-state decisions (`VALID|INVALID|UNKNOWN`),"
+        }
+      ],
+      "impact": "Machine consumers need ad-hoc enum mapping and can mis-handle gate outcomes.",
+      "required_change": "Adopt one canonical tri-state enum set and apply it consistently."
+    },
+    {
+      "id": "F003",
+      "severity": "P2",
+      "title": "Mutation ownership boundary is contradictory",
+      "location": {
+        "path": "skill_homeostasis/core_ideas.md",
+        "line_start": 101,
+        "line_end": 101
+      },
+      "evidence": [
+        {
+          "line": 90,
+          "text": "- `homeostasis` collects/evaluates only,"
+        },
+        {
+          "line": 91,
+          "text": "- downstream review/execution flows apply changes."
+        },
+        {
+          "line": 101,
+          "text": "`homeostasis` should treat todo management as a dedicated writer capability (`todo-write` or equivalent), with:"
+        }
+      ],
+      "impact": "Implementation ownership is ambiguous and can bypass governance by enabling direct mutation.",
+      "required_change": "Either remove `todo-write` from homeostasis or explicitly revise the boundary model and controls."
+    },
+    {
+      "id": "F004",
+      "severity": "P2",
+      "title": "Deterministic/read-only claim lacks enforceable tool constraints",
+      "location": {
+        "path": "skill_homeostasis/core_ideas.md",
+        "line_start": 136,
+        "line_end": 136
+      },
+      "evidence": [
+        {
+          "line": 136,
+          "text": "Bind `opponent_validate` to deterministic tooling so findings are reproducible:"
+        },
+        {
+          "line": 138,
+          "text": "1. `hypothesis`:"
+        },
+        {
+          "line": 146,
+          "text": "3. `pytest`:"
+        },
+        {
+          "line": 162,
+          "text": "All tool-bound runs stay read-only; remediation remains downstream."
+        }
+      ],
+      "impact": "Runs can be non-reproducible or write local state unless determinism and read-only execution flags are defined.",
+      "required_change": "Specify fixed seeds, disabled/randomized-state controls, cache/tmp handling, and filesystem write restrictions in contract."
+    }
+  ]
+}

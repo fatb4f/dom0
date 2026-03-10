@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "schema": "context.snapshot.v1",
+    "generated_at_utc": "2026-03-06T00:00:00Z",
+    "generated_by": "codex",
+    "cwd": "/home/_404/src",
+    "session_date_local": "2026-03-06",
+    "timezone": "America/Toronto"
+  },
+  "request": {
+    "current": "Generate context.json and report.md as a memory-object building block and human-readable process snapshot.",
+    "preceding_scope": [
+      "Review GitHub agentic-AI features",
+      "Parse and review awesome-agentic-patterns/{patterns,research}",
+      "Cross-reference with projected state_space and discussions",
+      "Build operational heat-map of foundational building blocks"
+    ]
+  },
+  "inputs": {
+    "local_paths_scanned": [
+      "/home/_404/src/discussions",
+      "/home/_404/src/discussions/state_space",
+      "/home/_404/src/discussions/skill_homeostasis",
+      "/home/_404/src/dotfiles/config/codex/skills",
+      "/home/_404/src/awesome-agentic-patterns/patterns",
+      "/home/_404/src/awesome-agentic-patterns/research"
+    ],
+    "counts": {
+      "patterns_files": 149,
+      "research_files": 220,
+      "patterns_with_research_match": 148,
+      "discussion_files": 19,
+      "codex_skill_groups": 4
+    }
+  },
+  "derived_context": {
+    "projected_state_space": {
+      "source": "/home/_404/src/discussions/state_space/formal_state_space_spec_v0.md",
+      "status": "designed_not_implemented",
+      "core_authority": "spawn owns known_state, dependency graph, and gate decisions",
+      "gate_model": "VALID|INVALID|UNKNOWN",
+      "pipeline": [
+        "declared graph from dotfiles/spec",
+        "live graph from runtime",
+        "journald overlay",
+        "optional inference"
+      ]
+    },
+    "homeostasis_model": {
+      "source": "/home/_404/src/discussions/skill_homeostasis/core_ideas.md",
+      "status": "conceptual_with_defined_capabilities",
+      "capabilities": [
+        "introspect-skills",
+        "feedback_loop",
+        "skill_health",
+        "opponent_validate"
+      ],
+      "mutation_boundary": "collect/evaluate only; downstream flows mutate"
+    },
+    "skill_runtime_foundations": {
+      "source": "/home/_404/src/dotfiles/config/codex/skills",
+      "implemented": [
+        "loop",
+        "sweep",
+        "plan",
+        "implement"
+      ],
+      "capabilities": [
+        "workflow.json + interface.json artifacts",
+        "packet templates",
+        "validators",
+        "pre/post sweep diff",
+        "worktree-centered output contracts"
+      ]
+    }
+  },
+  "external_context": {
+    "github_agentic_features": [
+      {
+        "feature": "Copilot coding agent public preview",
+        "date": "2026-03-05",
+        "source": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-now-available-in-public-preview/",
+        "relevance": "Managed agent loop on issues/PRs with GitHub-native controls"
+      },
+      {
+        "feature": "Copilot code review moved to agentic architecture",
+        "date": "2026-03-05",
+        "source": "https://github.blog/changelog/2026-03-05-copilot-code-review-now-in-agentic-architecture/",
+        "relevance": "Review automation and policy hooks without custom reviewer service"
+      },
+      {
+        "feature": "Agentic workflows with GitHub Actions technical preview",
+        "date": "2026-03-06",
+        "source": "https://github.blog/changelog/2026-03-06-introducing-agentic-workflows-with-github-copilot-and-github-actions/",
+        "relevance": "Background CI-driven agent loops align with sweep/plan/implement phases"
+      },
+      {
+        "feature": "Enterprise coding-agent activity filters and metrics",
+        "date": "2026-03-05",
+        "source": "https://github.blog/changelog/2026-03-05-discover-and-manage-agent-activity-with-new-session-filters/",
+        "relevance": "Operational visibility for governance and baseline evidence"
+      }
+    ]
+  },
+  "operational_heatmap_seed": [
+    {
+      "block": "Contract-first artifacts",
+      "have": true,
+      "can_do_now": "Use JSON/MD packets and validators for deterministic handoffs",
+      "cannot_do_yet": "Schema-derived, spawn-owned runtime gate enforcement",
+      "missing": "state-space schemas + runtime validator wiring"
+    },
+    {
+      "block": "Baseline and drift evidence",
+      "have": true,
+      "can_do_now": "preflight/postflight sweeps and normalized diffs",
+      "cannot_do_yet": "authoritative dependency graph with confidence-scored edges",
+      "missing": "state graph builder and periodic recompute timers"
+    },
+    {
+      "block": "Memory substrate",
+      "have": true,
+      "can_do_now": "session-capture artifacts and todo JSON schema contracts",
+      "cannot_do_yet": "continuous hydration from spawn runtime",
+      "missing": "state-space skill runtime implementation"
+    },
+    {
+      "block": "Feedback loops",
+      "have": "partial",
+      "can_do_now": "manual codex-review + opponent concept docs",
+      "cannot_do_yet": "automated periodic introspection and adversarial runs",
+      "missing": "timers, executable capabilities, evidence routing"
+    },
+    {
+      "block": "Security and policy",
+      "have": "partial",
+      "can_do_now": "gated apply and issue-linked evidence requirements",
+      "cannot_do_yet": "zero-trust policy graph enforcement per transition",
+      "missing": "policy engine tied to dependency graph"
+    }
+  ],
+  "constraints": [
+    "Do not execute runtime mutations without explicit approval",
+    "Prefer existing tools/features before custom code",
+    "Keep loop orchestration deterministic and evidence-backed"
+  ],
+  "open_items": [
+    "Finalize operational heat-map document",
+    "Produce no-custom-code baseline checklist",
+    "Decide first implementation slice for spawn state_space build/update/gate"
+  ],
+  "next_actions": [
+    "Write discussions/skill_homeostasis/no_custom_code_baseline_checklist.md",
+    "Write discussions/skill_homeostasis/operational_heatmap_2026-03-06.md",
+    "Map selected pattern/research files to per-block actionability"
+  ],
+  "$schema": "./context.schema.v1.json"
+}

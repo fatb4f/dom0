@@ -1,0 +1,83 @@
+{
+  "schema_version": "session-capture-patterns.v1",
+  "generated_at": "2026-03-10T20:31:20Z",
+  "source_refs": [
+    "discussions/skills/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+    "discussions/skills/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md",
+    "discussions/skills/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md"
+  ],
+  "patterns": [
+    {
+      "pattern_id": "HST-001",
+      "kind": "root_first_discovery",
+      "summary": "Treat `host`, `codex`, and `spawn` as root systems first, then crawl downstream before freezing bootstrap objects.",
+      "evidence_refs": ["S010", "S011", "S012", "S013", "S014", "S015"],
+      "first_seen": "2026-03-10T19:49:05.197Z",
+      "last_seen": "2026-03-10T19:51:36.045Z",
+      "count": 6,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Define a root-system discovery packet for `host`, `codex`, and `spawn` with bounded downstream crawl rules."
+    },
+    {
+      "pattern_id": "HST-002",
+      "kind": "identity_first_scoping",
+      "summary": "Scope candidate FSMs and subsystems by live identity; any identity-changing finding must trigger fresh applied-control analysis.",
+      "evidence_refs": ["S016", "S017", "S018", "S019", "S020", "S021"],
+      "first_seen": "2026-03-10T19:56:22.583Z",
+      "last_seen": "2026-03-10T20:04:12.664Z",
+      "count": 6,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Formalize `identity.current`, `identity.delta`, and `identity.schema` as separate but coupled artifacts."
+    },
+    {
+      "pattern_id": "HST-003",
+      "kind": "promotion_only_for_fidelity",
+      "summary": "Promotion should gate only representation fidelity and applied-control fidelity, not live observations or undisclosed operations.",
+      "evidence_refs": ["S020", "S022", "S023"],
+      "first_seen": "2026-03-10T20:03:54.199Z",
+      "last_seen": "2026-03-10T20:08:14.245Z",
+      "count": 3,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Define explicit fidelity-review artifacts for `identity.schema` and `applied_control` rather than promotion-gating raw findings."
+    },
+    {
+      "pattern_id": "HST-004",
+      "kind": "relationship_substrate_precedes_static_docs",
+      "summary": "Observable relationships should land immediately in canonical JSON relationship state and optional graph projections, with relationship deltas allowed to mutate identity.",
+      "evidence_refs": ["S024", "S025", "S026", "S027"],
+      "first_seen": "2026-03-10T20:12:00.394Z",
+      "last_seen": "2026-03-10T20:15:05.187Z",
+      "count": 4,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Define `relationship.current` and `relationship.delta` contracts, then treat Neo4j as a projection/query layer rather than the source of truth."
+    },
+    {
+      "pattern_id": "HST-005",
+      "kind": "homeostatic_accuracy_maintenance",
+      "summary": "System understanding should be maintained as a homeostatic loop where findings mutate relationships, relationships mutate identity, identity triggers control reassessment, and raw capture accompanies formalization.",
+      "evidence_refs": ["S028", "S029", "S030", "S035", "S037"],
+      "first_seen": "2026-03-10T20:16:41.257Z",
+      "last_seen": "2026-03-10T20:26:24.861Z",
+      "count": 5,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Keep every formal discovery/control document paired with a bounded session slice and inclusion verification to guard against lossy translation."
+    },
+    {
+      "pattern_id": "HST-006",
+      "kind": "scope_anchor_without_git",
+      "summary": "Every scoped system needs an explicit `scope_root` or `control_root` even when no enclosing git repository exists.",
+      "evidence_refs": ["S053", "S054", "S055"],
+      "first_seen": "2026-03-10T20:32:17.293Z",
+      "last_seen": "2026-03-10T20:32:44.907Z",
+      "count": 3,
+      "confidence": "high",
+      "actionability": "immediate",
+      "recommended_next_action": "Add `scope_root` or `control_root` to root identity and treat missing git metadata as a finding rather than absence of root."
+    }
+  ]
+}
