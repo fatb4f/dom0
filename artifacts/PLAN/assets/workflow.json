@@ -1,149 +1,295 @@
 {
-  "version": "1.0",
-  "workflow": "root_homeostasis_acm_analysis",
-  "description": "Plan-local workflow for aligning root-level homeostasis concepts with the asset-control-model substrate and freezing an operational methodology.",
-  "start": "N0_objective",
+  "version": "2.1",
+  "workflow": "system_discovery_and_homeostasis",
+  "description": "State-space-first, admission-based micro-plan program for aligning homeostasis with the asset-control-model substrate under reiterative closure.",
+  "start": "MP00_state_space_definition",
   "nodes": [
     {
-      "id": "N0_objective",
+      "id": "MP00_state_space_definition",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "bind_problem_statement",
+      "question": "What classes of state exist, which transitions are allowed between them, what admission rules govern accepted-state mutation, and what authority status does each layer have?",
       "outputs": [
-        "objective",
-        "success_criteria"
+        "state_space.model",
+        "state_taxonomy.current",
+        "state_transition_rules.current",
+        "state_authority_rules.current",
+        "evidence_ingestion_rules.current",
+        "state_acceptance_rules.current",
+        "reanalysis_triggers.current",
+        "closure_conditions.current"
       ],
       "next": [
-        "N1_source_collection"
+        "MP01_five_plane_definition"
+      ],
+      "reiterate_when": [
+        "new finding requires a new state class",
+        "a transition crosses state layers in an undefined way",
+        "evidence cannot be admitted cleanly",
+        "the acceptance boundary becomes ambiguous",
+        "authority status of a state layer changes",
+        "fidelity review exposes missing state semantics"
       ]
     },
     {
-      "id": "N1_source_collection",
+      "id": "MP01_five_plane_definition",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "collect_dom0_sources",
+      "question": "How does the accepted state taxonomy map into the root, observation, relationship, identity, and control planes?",
       "outputs": [
-        "source_inventory",
-        "evidence_refs"
+        "plane_mapping.current",
+        "plane_operating_model.current",
+        "plane_transition_constraints.current",
+        "projection_boundary_rules.current"
       ],
       "next": [
-        "N2_crosswalk"
-      ]
-    },
-    {
-      "id": "N2_homeostasis_terms",
-      "phase": "PLAN",
-      "action": "extract_homeostasis_terms",
-      "outputs": [
-        "homeostasis_term_inventory"
-      ],
-      "next": [
-        "N3_acm_terms"
-      ]
-    },
-    {
-      "id": "N3_acm_terms",
-      "phase": "PLAN",
-      "action": "extract_acm_terms",
-      "outputs": [
-        "acm_term_inventory"
-      ],
-      "next": [
-        "N4_crosswalk"
-      ]
-    },
-    {
-      "id": "N4_crosswalk",
-      "phase": "PLAN",
-      "action": "derive_terminology_crosswalk",
-      "outputs": [
-        "concept_crosswalk",
-        "gap_register"
+        "MP02_root_declaration"
       ],
       "guards": {
-        "aligned": {
-          "when": "concept_crosswalk has no unresolved collisions",
-          "goto": "N5_root_scope"
-        },
-        "misaligned": {
-          "when": "concept_crosswalk has unresolved collisions",
-          "goto": "N2_homeostasis_terms"
+        "state_space_unresolved": {
+          "when": "plane definition depends on unresolved state taxonomy, transition rules, or authority rules",
+          "goto": "MP00_state_space_definition"
         }
-      }
-    },
-    {
-      "id": "N5_root_scope",
-      "phase": "PLAN",
-      "action": "define_root_scope_semantics",
-      "outputs": [
-        "root_scope_model"
-      ],
-      "next": [
-        "N6_relationship_substrate"
+      },
+      "reiterate_when": [
+        "state taxonomy changes",
+        "state authority rules change",
+        "plane responsibility becomes ambiguous",
+        "projection surfaces threaten to become authority surfaces"
       ]
     },
     {
-      "id": "N6_relationship_substrate",
+      "id": "MP02_root_declaration",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "define_relationship_substrate",
+      "question": "What are the current candidate scope roots, control roots, and crawl boundaries for host, codex, and spawn?",
       "outputs": [
-        "relationship_substrate_model"
+        "root_set.current",
+        "scope_root_map.current",
+        "control_root_map.current",
+        "root_boundary.current",
+        "root_crawl_rules.current"
       ],
       "next": [
-        "N7_identity_substrate"
+        "MP03_root_controller_arbitration"
+      ],
+      "guards": {
+        "plane_model_unresolved": {
+          "when": "root discovery depends on unresolved state-to-plane mapping",
+          "goto": "MP01_five_plane_definition"
+        }
+      },
+      "reiterate_when": [
+        "new root candidate discovered",
+        "scope_root corrected",
+        "control_root corrected",
+        "root boundary invalidated",
+        "crawl boundary invalidated"
       ]
     },
     {
-      "id": "N7_identity_substrate",
+      "id": "MP03_root_controller_arbitration",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "define_identity_substrate",
+      "question": "How are controller conflicts, precedence, invalid overlap, and tie-breaks resolved across the current root candidates?",
       "outputs": [
-        "identity_substrate_model"
+        "controller_catalog.current",
+        "control_scope_map.current",
+        "controller_precedence_rules.current",
+        "controller_conflict_matrix.current",
+        "controller_tie_break_rules.current",
+        "controller_conflict_findings",
+        "controller_conflict_delta"
       ],
       "next": [
-        "N8_applied_control_substrate"
+        "MP04_identity_scoping"
+      ],
+      "guards": {
+        "missing_root_scope": {
+          "when": "controller arbitration depends on unresolved root or scope_root definitions",
+          "goto": "MP02_root_declaration"
+        }
+      },
+      "reiterate_when": [
+        "new controller discovered",
+        "new actuator path discovered",
+        "new subordinate relationship discovered",
+        "new shared control surface discovered",
+        "new guarded transition discovered",
+        "scope_root corrected"
       ]
     },
     {
-      "id": "N8_applied_control_substrate",
+      "id": "MP04_identity_scoping",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "define_applied_control_substrate",
+      "question": "What is the accepted identity estimate of each root candidate under current evidence, and does each root candidate fit FSM treatment directly or as a container of downstream FSMs?",
       "outputs": [
-        "applied_control_model",
-        "promotion_boundary_model"
+        "entity_facts.current",
+        "identity.current",
+        "identity.delta",
+        "identity_assumption_register.current",
+        "fsm_fit_assessment.current"
       ],
       "next": [
-        "N9_methodology_workflow"
+        "MP05_relationship_substrate_bootstrap"
+      ],
+      "guards": {
+        "controller_rules_unresolved": {
+          "when": "identity scoping depends on unresolved controller precedence",
+          "goto": "MP03_root_controller_arbitration"
+        }
+      },
+      "reiterate_when": [
+        "an admitted delta materially changes accepted identity",
+        "new state surface discovered",
+        "new produced artifact class discovered",
+        "new dependency alters control boundary",
+        "new relationship effect changes accepted identity"
       ]
     },
     {
-      "id": "N9_methodology_workflow",
+      "id": "MP05_relationship_substrate_bootstrap",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "freeze_homeostasis_method",
+      "question": "How are findings admitted into canonical relationship state, and how do relationship deltas affect accepted identity?",
       "outputs": [
-        "methodology_spec",
-        "workflow_spec"
+        "finding.log",
+        "finding.normalized",
+        "evidence_ref_index.current",
+        "relationship.current",
+        "relationship.delta",
+        "relationship_capture_rules.current",
+        "relationship_identity_effect_rules.current",
+        "graph_projection_rules.current"
       ],
       "next": [
-        "N10_gate_review"
+        "MP06_applied_control_gap_loop"
+      ],
+      "guards": {
+        "identity_unresolved": {
+          "when": "relationship identity effects cannot be classified against accepted identity",
+          "goto": "MP04_identity_scoping"
+        }
+      },
+      "reiterate_when": [
+        "new observable relationship discovered",
+        "admitted relationship delta changes accepted identity",
+        "new relationship type discovered",
+        "new observation mode is required",
+        "graph projection semantics drift from canonical JSON"
       ]
     },
     {
-      "id": "N10_gate_review",
+      "id": "MP06_applied_control_gap_loop",
+      "kind": "micro_plan",
       "phase": "PLAN",
-      "action": "emit_plan_decision",
+      "question": "Given accepted identity and accepted relationship state, what is controlled, uncontrolled, ambiguous, or missing, and what must be re-analyzed?",
       "outputs": [
-        "decision",
+        "applied_control.current",
+        "applied_control.report",
+        "applied_control_gap_register.current",
+        "applied_control_reanalysis_rules.current",
+        "controller_findings.current"
+      ],
+      "next": [
+        "MP07_fidelity_gates"
+      ],
+      "guards": {
+        "identity_changed": {
+          "when": "accepted identity changed during control analysis",
+          "goto": "MP04_identity_scoping"
+        },
+        "relationship_changed": {
+          "when": "relationship findings introduce new identity-affecting edges",
+          "goto": "MP05_relationship_substrate_bootstrap"
+        },
+        "controller_conflict_unresolved": {
+          "when": "control analysis discovers unresolved controller overlap or precedence drift",
+          "goto": "MP03_root_controller_arbitration"
+        }
+      },
+      "reiterate_when": [
+        "identity.current changes",
+        "relationship.current introduces new controller or actuator reach",
+        "control coverage class changes",
+        "new unknown or undisclosed operation is observed"
+      ]
+    },
+    {
+      "id": "MP07_fidelity_gates",
+      "kind": "micro_plan",
+      "phase": "PLAN",
+      "question": "Do the schema and applied-control models represent the accepted model with high fidelity, and what operational methodology follows from that state?",
+      "outputs": [
+        "schema_fidelity_review.current",
+        "applied_control_fidelity_review.current",
+        "methodology_workflow_projection.current",
+        "implementation_readiness_rules.current"
+      ],
+      "next": [
+        "G00_program_review"
+      ],
+      "guards": {
+        "state_space_incomplete": {
+          "when": "accepted model state cannot be represented within the defined state taxonomy or authority model",
+          "goto": "MP00_state_space_definition"
+        },
+        "plane_mapping_incomplete": {
+          "when": "accepted truth or control behavior crosses planes without a defined host or boundary",
+          "goto": "MP01_five_plane_definition"
+        },
+        "schema_incomplete": {
+          "when": "accepted model state cannot be represented with high fidelity",
+          "goto": "MP04_identity_scoping"
+        },
+        "control_fidelity_failed": {
+          "when": "applied control does not match accepted identity or intended outputs and byproducts",
+          "goto": "MP06_applied_control_gap_loop"
+        }
+      },
+      "reiterate_when": [
+        "identity.current changes materially",
+        "relationship.current materially changes accepted identity",
+        "applied_control.current changes materially",
+        "schema fidelity review fails",
+        "applied-control fidelity review fails"
+      ]
+    },
+    {
+      "id": "G00_program_review",
+      "kind": "gate_review",
+      "phase": "PLAN",
+      "question": "Is the micro-plan program approved as a planning foundation, and is implementation approved yet?",
+      "outputs": [
+        "plan_approval_state",
+        "implementation_readiness_state",
+        "temporary_closure_statement",
         "evidence_required"
       ],
       "next": []
     }
   ],
   "invariants": [
+    "define_state_space_before_ontology",
+    "define_planes_before_discovery",
+    "state_space_is_layered_and_partially_observable",
+    "no_flattened_state_model",
+    "roots_are_discovered_only_after_state_typing",
+    "host_codex_spawn_are_candidate_roots",
+    "identity_first_scoping_after_root_declaration",
+    "evidence_is_appended_immediately_but_accepted_state_mutation_is_reduced",
+    "relationship_current_is_the_canonical_relationship_surface_of_the_model",
+    "identity_current_is_the_accepted_operational_state_estimate",
+    "identity_current_is_a_deterministic_materialized_view",
+    "applied_control_is_derived_from_identity",
+    "fsm_is_a_probe_not_the_base_ontology",
+    "neo4j_is_projection_only",
+    "promotion_gates_apply_only_to_schema_fidelity_and_applied_control_fidelity",
+    "temporary_closure_is_epistemic_quiescence_under_current_evidence",
     "static_file_analysis_only",
     "dom0_is_the_only_trusted_working_directory",
     "no_runtime_mutation",
-    "acm_plane_separation_preserved",
-    "root_terms_must_be_classified_before_root_scope_definition",
-    "relationship_identity_and_applied_control_are_separate_micro_deliverables",
-    "artifact_families_require_explicit_schema_instance_actuation_rendering_boundaries"
+    "acm_plane_separation_preserved"
   ]
 }

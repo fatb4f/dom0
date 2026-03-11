@@ -1,7 +1,7 @@
 {
-  "version": "1.0",
+  "version": "2.1",
   "skill": "plan",
-  "context": "root_homeostasis_acm_analysis",
+  "context": "system_discovery_and_homeostasis",
   "entry_requires": [
     {
       "name": "problem_set",
@@ -34,55 +34,175 @@
       "type": "path"
     },
     {
-      "name": "homeostasis_term_inventory",
-      "type": "planned_deliverable"
+      "name": "micro_plan_program",
+      "type": "planned_program"
     },
     {
-      "name": "acm_term_inventory",
-      "type": "planned_deliverable"
+      "name": "state_space.model",
+      "type": "planned_artifact"
     },
     {
-      "name": "concept_crosswalk",
-      "type": "planned_deliverable"
+      "name": "state_taxonomy.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "root_scope_model",
-      "type": "planned_deliverable"
+      "name": "state_transition_rules.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "relationship_substrate_model",
-      "type": "planned_deliverable"
+      "name": "state_authority_rules.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "identity_substrate_model",
-      "type": "planned_deliverable"
+      "name": "evidence_ingestion_rules.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "applied_control_model",
-      "type": "planned_deliverable"
+      "name": "state_acceptance_rules.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "methodology_spec",
-      "type": "planned_deliverable"
+      "name": "reanalysis_triggers.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "artifact_family_model",
-      "type": "planned_deliverable"
+      "name": "closure_conditions.current",
+      "type": "planned_artifact"
     },
     {
-      "name": "decision",
+      "name": "plane_mapping.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "plane_operating_model.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "plane_transition_constraints.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "projection_boundary_rules.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "root_set.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "scope_root_map.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "control_root_map.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "root_boundary.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "root_crawl_rules.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "controller_catalog.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "control_scope_map.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "controller_precedence_rules.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "controller_conflict_matrix.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "controller_tie_break_rules.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "entity_facts.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "identity.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "identity.delta",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "finding.log",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "finding.normalized",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "evidence_ref_index.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "relationship.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "relationship.delta",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "applied_control.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "applied_control.report",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "schema_fidelity_review.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "applied_control_fidelity_review.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "methodology_workflow_projection.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "plan_approval_state",
       "type": "enum(APPROVED|REJECTED|NEEDS_INFO)"
+    },
+    {
+      "name": "implementation_readiness_state",
+      "type": "enum(NOT_YET_APPROVED|APPROVED|BLOCKED)"
     }
   ],
   "capabilities": [
-    "root_concept_analysis",
-    "control_model_cross_reference",
-    "micro_deliverable_scoping",
-    "workflow_freezing",
-    "plan_first_gating"
+    "state_space_definition",
+    "state_transition_rule_definition",
+    "state_authority_rule_definition",
+    "evidence_ingestion_rule_definition",
+    "accepted_state_mutation_rule_definition",
+    "five_plane_architecture_definition",
+    "candidate_root_modeling_after_state_typing",
+    "controller_arbitration",
+    "identity_materialization_modeling",
+    "relationship_bootstrap",
+    "applied_control_gap_analysis",
+    "fidelity_gate_definition",
+    "workflow_projection"
   ],
   "side_effects": [
-    "writes_files_under_wt_plan"
+    "writes_files_under_wt_artifacts_plan"
   ],
   "mutations": {
     "repo": false,
@@ -90,9 +210,21 @@
     "network": false
   },
   "notes": [
+    "Micro-plan is the planning unit; artifacts are the output unit.",
+    "State space is defined before planes, ontology, root discovery, and controller analysis.",
+    "The architecture is a rooted, event-sourced, dual-loop homeostatic control system, not a one-shot document pipeline.",
+    "The model is layered and partially observable; it must not collapse evidence, relationships, identity, control, and fidelity into one flattened state.",
+    "Canonical current-state artifacts are deterministic materialized views over admitted evidence and accepted observations.",
+    "Evidence ingestion is immediate, but accepted-state mutation happens only through explicit admission and reduction rules.",
+    "Neo4j or any graph database is a projection/query surface only and not the source of truth.",
+    "identity.current is the accepted operational state estimate, not world state itself.",
+    "relationship.current is the canonical relationship surface of the model, not the ontic relationship fabric of the world.",
+    "Promotion gates apply only to schema fidelity and applied-control fidelity, not to observed live facts.",
+    "host, codex, and spawn begin as candidate scope/control roots and may be refined during discovery.",
+    "FSM fit is a local probe, not the base ontology for the whole system.",
+    "Temporary closure is temporary epistemic quiescence under current evidence and may be reopened by identity-changing findings.",
     "Sweep artifacts are intentionally not required for this static conceptual analysis objective.",
     "Runtime implementation remains out of scope for this planning pass.",
-    "Complexity is reduced by splitting the work into independently reviewable micro-deliverables.",
     "All trusted inputs and outputs are localized under /home/_404/src/dom0."
   ]
 }

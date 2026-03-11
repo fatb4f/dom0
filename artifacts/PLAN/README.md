@@ -13,12 +13,14 @@ assignees: []
 
 ## artifact_paths
 - `wt`: `/home/_404/src/dom0`
-- Packet: `$wt/PLAN/README.md`
-- Metadata: `$wt/PLAN/packet.meta.json`
-- Workflow asset: `$wt/PLAN/assets/workflow.json`
-- Interface asset: `$wt/PLAN/assets/interface.json`
-- Sequence asset: `$wt/PLAN/assets/sequence_dag.md`
-- Reference asset: `$wt/PLAN/references/git_flow.md`
+- Validator compatibility packet path: `$wt/PLAN/README.md` (logical alias; localized implementation uses `$wt/artifacts/PLAN/README.md`)
+- Validator compatibility metadata path: `$wt/PLAN/packet.meta.json` (logical alias; localized implementation uses `$wt/artifacts/PLAN/packet.meta.json`)
+- Packet: `$wt/artifacts/PLAN/README.md`
+- Metadata: `$wt/artifacts/PLAN/packet.meta.json`
+- Workflow asset: `$wt/artifacts/PLAN/assets/workflow.json`
+- Interface asset: `$wt/artifacts/PLAN/assets/interface.json`
+- Sequence asset: `$wt/artifacts/PLAN/assets/sequence_dag.md`
+- Reference asset: `$wt/artifacts/PLAN/references/git_flow.md`
 
 ## problem_set
 Required input:
@@ -26,15 +28,14 @@ Required input:
 - Baseline evidence path (`N1_collection`)
 
 Analysis:
-- Symptoms: `homeostasis` defines a root-first discovery and accuracy model at `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md`, but those concepts are not yet materialized as ACM-governed root-level control definitions.
-- Symptoms: `homeostasis` defines a root-first discovery and accuracy model at `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md`, but those concepts are not yet materialized as ACM-governed root-level control definitions.
-- Symptoms: The broader environment is now treated as untrusted due to compounding drift and unconstrained state, so all planning inputs, outputs, and reference material must be localized under `/home/_404/src/dom0`.
-- Expected behavior: We need to perform an in depth analysis of concepts and terminology, scopes and entities defined under `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z`, and cross-reference concepts present under `/home/_404/src/dom0/asset-control-model`, allowing the conception of ACM applied at the root level, which in turn provides us with the basic concepts required to materialize definitions in homeostasis. Once materialized, a strict, concise and detailed methodology and workflow must be defined, which supports operationalizing homeostasis.
-- Failure signatures: Root-level homeostasis concepts are not yet materialized into ACM-aligned definitions or an operational methodology; ACM currently governs per-asset control and `.control` bundle semantics, but not the root-level `relationship.current`, `identity.current`, and `applied_control.current` substrate described by homeostasis.
-- User impact: Without a shared root-level terminology and control model, downstream implementation risks hardening leaf artifacts before roots, control boundaries, and truth-maintenance semantics are defined.
+- Symptoms: `homeostasis` defines a dual-loop truth-maintenance model with `relationship.current`, `identity.current`, and `applied_control.current`, but the localized planning packet still lacked a typed state space to receive findings without semantic drift.
+- Symptoms: The broader environment is treated as untrusted due to compounding drift and unconstrained state, so planning inputs, outputs, and reference material must stay localized under `/home/_404/src/dom0`.
+- Expected behavior: We need a state-space-first, plane-aware discovery program that aligns homeostasis concepts with ACM at the root level, keeps the accepted operational model accurate under reiterative closure, and emits methodology/workflow artifacts without collapsing evidence into accepted state or promotion into runtime.
+- Failure signatures: Discovery starts before state classes and authority rules are frozen; plane boundaries remain implicit; roots and controllers are discovered into an untyped model; identity-changing findings have no bounded reiteration path; schema/control fidelity remain mixed with live-fact updates.
+- User impact: Without a stable state model, later artifacts will harden roots, leaves, and control boundaries into the wrong layers and make the homeostatic loop harder to operationalize safely.
 
 Output:
-- One clear problem definition tied to observed evidence: align root-level homeostasis concepts with ACM so homeostasis can be materialized as a controlled substrate instead of remaining conceptual prose.
+- One clear program definition tied to observed evidence: a micro-plan program for system discovery and homeostasis that defines state space first, planes second, discovery third, and fidelity review last.
 
 ## reproduce_problem_set
 Required input:
@@ -42,13 +43,13 @@ Required input:
 - Baseline evidence and repro commands/requests
 
 Analysis:
-- Repro method: Compare the 2026-03-10 homeostasis root-substrate document with the current ACM entity, constraint, and scoped-asset definitions, then classify which homeostasis concepts are already covered, partially covered, or missing.
-- Command/API/request: Run a localized text search across the `dom0` homeostasis root document and ACM artifacts for the terms `scope_root`, `control_root`, `relationship.current`, `identity.current`, `applied_control.current`, and `promotion`.
-- Expected failure signature: Homeostasis terms for root discovery, live truth maintenance, and re-analysis triggers are present in the homeostasis document, while ACM remains centered on per-asset authority chains, `.control`, validator ownership, and initial scoped assets.
+- Repro method: Compare the 2026-03-10 homeostasis root-substrate document with the current ACM entity, constraint, and plane definitions, then verify that the localized plan packet now starts with state typing rather than immediate root/entity crawl.
+- Command/API/request: Run a localized text search across the `dom0` homeostasis root document and ACM artifacts for the terms `relationship.current`, `identity.current`, `applied_control.current`, `promotion`, `controller`, `scope_root`, `control_root`, `primary_planes`, and `runtime projection`.
+- Expected failure signature: Homeostasis terms for layered state, immediate evidence ingestion, and narrow promotion boundaries are present in the homeostasis document, while ACM remains centered on control authority, primary planes, and current/delta governance constraints.
 - Current result: The mismatch is directly observable in the current on-disk sources. This is a static conceptual analysis objective, so sweep/liveliness artifacts are not required for reproduction.
 
 Output:
-- Deterministic repro step: rerun the cross-reference query above and verify that root-level homeostasis substrate terms are not yet first-class ACM entities or artifact families.
+- Deterministic repro step: rerun the cross-reference query above and verify that homeostasis requires state-space-first definition before root discovery is formalized as ACM-governed root-level artifacts.
 
 ## scope
 Required input:
@@ -56,13 +57,13 @@ Required input:
 - System boundaries from evidence
 
 Analysis:
-- In scope: terminology extraction from the 2026-03-10 homeostasis root document; concept progression from the 2026-03-06 and 2026-03-07 homeostasis notes; ACM entity/plane/authority analysis; definition of a root-level ACM application model; definition of the minimum artifact families and strict methodology/workflow needed to operationalize homeostasis.
+- In scope: state-space definition, plane definition, root declaration, controller arbitration, identity scoping, relationship substrate bootstrap, applied-control gap analysis, schema/control fidelity review, and the methodology/workflow projection that falls out of those micro-plans.
 - Out of scope: implementing spawn collectors, timers, or validators; enabling services; mutating live runtime state; promoting these working-copy documents back into the source repos; adding new tool languages beyond the current ACM stack.
-- Constraints: Static file analysis only; no sweep dependency for this objective; no runtime/operational mutation; keep JSON Schema as structural authority, CUE for admissibility, and `json-tool` as canonical JSON actuator where new repeated artifact families are introduced; preserve ACM plane separation and authority-chain constraints; do not rely on trust in any state outside `/home/_404/src/dom0`.
+- Constraints: Static file analysis only; no sweep dependency for this objective; no runtime/operational mutation; keep JSON Schema as structural authority, CUE for admissibility, and `json-tool` as canonical JSON actuator where repeated artifact families are introduced; preserve ACM plane separation and authority-chain constraints; do not rely on trust in any state outside `/home/_404/src/dom0`.
 - Assumptions: `/home/_404/src/dom0/homeostasis` and `/home/_404/src/dom0/asset-control-model` are the only trusted planning inputs; the 2026-03-10 homeostasis document is the latest localized root-substrate statement; ACM as copied into `dom0` is the localized control-side baseline for this plan.
 
 Output:
-- Bounded scope: produce a root-level ACM conception and an execution-ready methodology/workflow for homeostasis materialization without implementing the runtime slice yet.
+- Bounded scope: produce a state-space-first micro-plan program and implementation-gated workflow projection for homeostasis materialization without implementing the runtime slice yet.
 
 ## assets_required
 Required input:
@@ -83,19 +84,19 @@ Analysis:
   - `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json` - `ready`
   - `/home/_404/src/dom0/asset-control-model/proposal_register.v1.json` - `ready`
 - Scripts/tools:
-  - `/home/_404/src/dom0/PLAN/assets/workflow.json` - `ready`
-  - `/home/_404/src/dom0/PLAN/assets/interface.json` - `ready`
-  - `/home/_404/src/dom0/PLAN/references/git_flow.md` - `ready`
-  - `rg`, `nl`, `git` for local inspection - `ready`
+  - `/home/_404/src/dom0/artifacts/PLAN/assets/workflow.json` - `ready`
+  - `/home/_404/src/dom0/artifacts/PLAN/assets/interface.json` - `ready`
+  - `/home/_404/src/dom0/artifacts/PLAN/references/git_flow.md` - `ready`
+  - `rg`, `nl`, `git`, `jq` for local inspection and validation - `ready`
 - Runtime dependencies:
-  - Sweep preflight - `ready` by explicit non-applicability for this static analysis objective
+  - Sweep preflight - `ready` by explicit non-applicability for this static conceptual analysis objective
   - systemd/user bus/runtime state - `ready` by non-requirement
 - Access requirements:
-  - local read/write access to `/home/_404/src/dom0/PLAN` - `ready`
+  - local read/write access to `/home/_404/src/dom0/artifacts/PLAN` - `ready`
   - issue tracker parent/sub-issue creation - `missing` until an execution turn actually opens the plan issue
 
 Output:
-- Ready inventory for planning exists. The only missing asset is issue-tracker context, which affects IMPLEMENT routing later, not this analysis plan itself.
+- Ready inventory for planning exists. The only missing asset is issue-tracker context, which affects implementation routing later, not this analysis plan itself.
 
 ## assets_impacted
 Required input:
@@ -107,26 +108,25 @@ Analysis:
   - `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json`
   - `/home/_404/src/dom0/asset-control-model/proposal_register.v1.json`
   - one or more new root-level analysis/spec artifacts under `/home/_404/src/dom0/homeostasis/`
-  - this plan packet and its local assets under `/home/_404/src/dom0/PLAN/`
+  - this plan packet and its local assets under `/home/_404/src/dom0/artifacts/PLAN/`
 - Units/services affected:
   - None in this planning pass
 - Data stores/paths affected:
   - future root-level control bundle paths under `$git_root/.control`
-  - future homeostasis live truth surfaces (`finding.current`, `relationship.current`, `identity.current`, `applied_control.current`) once materialized
+  - future foundational state artifacts such as `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `plane_mapping.current`, `reanalysis_triggers.current`, and `closure_conditions.current`
+  - future accepted-state surfaces such as `root_set.current`, `entity_facts.current`, `finding.normalized`, `relationship.current`, `identity.current`, `applied_control.current`, and fidelity review artifacts
+  - future projection/query surfaces such as Neo4j, which remain non-authoritative
 - Operational touchpoints:
+  - state-space typing
+  - five-plane operating model
   - `host`, `codex`, and `spawn` as root candidates
   - root discovery crawl
-  - applied-control reassessment trigger semantics
-  - fidelity promotion boundary
-- New or revised repeated artifact families:
-  - Canonical schema refs: to be introduced for `finding.current.v1.json`, `relationship.current.v1.json`, `relationship.delta.v1.json`, `identity.current.v1.json`, `identity.delta.v1.json`, `identity.schema.v1.json`, `applied_control.current.v1.json`, and `applied_control.report.v1.json`
-  - Template refs: each repeated artifact family should get an `artifact.template.json` seed once the root-level ACM model is frozen
-  - CUE overlay refs (if any): root-level admissibility assertions across relationship, identity, and applied-control surfaces
-  - json-tool actuation boundary: canonical normalization, derivation, and deterministic JSON emission for all repeated JSON artifact families
-  - MiniJinja render refs (if any): human-readable projections only; never authority for canonical JSON artifacts
+  - controller arbitration
+  - identity mutation and applied-control reassessment
+  - fidelity review boundaries
 
 Output:
-- The blast radius is document/spec heavy, not runtime heavy: root ACM definitions, artifact family contracts, and homeostasis methodology/workflow documents are the intended impact surfaces.
+- The blast radius is document/spec heavy, not runtime heavy: state taxonomy, plane rules, root declarations, controller rules, current/delta artifact-family contracts, and workflow projection artifacts are the intended impact surfaces.
 
 ## matrix
 Required input:
@@ -136,123 +136,304 @@ Required input:
 Analysis:
 | Dependency / Gap | Type | Status (ready/missing/blocked) | Impact | Mitigation | Proof (sweep artifact ref) | Evidence type (observed/inferred) |
 |---|---|---|---|---|---|---|
-| Root-first discovery and live truth-maintenance model already exists in homeostasis | concept baseline | ready | Gives the planning target a concrete root/substrate vocabulary instead of starting from leaves | Treat the 2026-03-10 document as the semantic baseline for root identity, relationship, and applied-control terms | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:28`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:138`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294` | observed |
-| ACM control substrate already defines planes, authority-chain fields, `.control` inventory, validator ownership, and initial scoped assets | control baseline | ready | Provides the control-side structure that root-level homeostasis must land into instead of inventing a parallel system | Treat ACM as the control authority baseline and extend it upward to the root layer | `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:18`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:98`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:116`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:145` | observed |
-| Trust boundary is localized to the `dom0` working directory | trust boundary | ready | Prevents polluted upstream or drifted external state from affecting terminology, scope, or control decisions in this plan | Keep all evidence, references, outputs, and next-pass inputs under `/home/_404/src/dom0` only | `/home/_404/src/dom0/PLAN/packet.meta.json` | observed |
-| Root-level ACM application is not yet defined | contract gap | missing | Homeostasis root concepts cannot be governed or validated as first-class ACM surfaces yet | Define how ACM applies to `host`, `codex`, and `spawn`, including `scope_root`, control reach, and root-level control objects | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:376`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:20`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:29` | observed |
-| Homeostasis artifact family is named but not materialized as ACM-governed contracts | artifact gap | missing | The core truth surfaces remain conceptual and cannot yet be validated, diffed, or promoted for fidelity | Define the root-level repeated artifact families and their authority/actuation boundaries before implementation | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:37` | observed |
-| Terminology alignment is partial: homeostasis names roots, controllers, actuators, subordinates, relationships, and identity effects; ACM does not yet bind them as root-level entities | terminology gap | missing | Implementation would drift on names, responsibilities, and promotion semantics | Produce a terminology crosswalk classifying each term as mapped, extended, or new | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:61`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:37` | observed |
-| Methodology/workflow is conceptually described in homeostasis but not yet frozen as a strict operational workflow with gates and outputs | workflow gap | missing | The system can be reasoned about, but not executed or validated consistently | Convert the discovery-to-accuracy procedure into an explicit phased methodology and workflow with artifacts, gates, and rollback | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:333`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md:9`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md:7` | observed |
-| Earlier homeostasis documents already expose contract defects and runtime gaps that the root-level plan must absorb | historical constraint | ready | Prevents repeating the earlier ambiguity around identity, enums, mutation boundaries, and runtime ownership | Use the 2026-03-06 and 2026-03-07 notes as regression checks while defining the root-level model | `/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md:40`, `/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/homeostasis_review_findings.json:12`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md:44` | observed |
+| Root-first, partially observable homeostasis model already exists in homeostasis | concept baseline | ready | Gives the program a concrete vocabulary for discovery anchors, accepted-state substrates, and narrow promotion boundaries | Treat the 2026-03-10 document as the semantic baseline for roots, relationships, identity, applied control, and fidelity, then correct its truth-heavy bias in the plan model | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:10`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266` | observed |
+| ACM control substrate already defines planes, authority-chain fields, runtime/source distinctions, and root-level extension constraints | control baseline | ready | Provides the control-side structure that root-level homeostasis must land into instead of inventing a parallel system | Treat ACM as the control authority baseline and extend it upward through state-space and root-level planning artifacts | `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:75`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:82`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:86`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:101` | observed |
+| Trust boundary is localized to the `dom0` working directory | trust boundary | ready | Prevents polluted upstream or drifted external state from affecting terminology, scope, or control decisions in this plan | Keep all evidence, references, outputs, and next-pass inputs under `/home/_404/src/dom0` only | `/home/_404/src/dom0/artifacts/PLAN/packet.meta.json` | observed |
+| Typed state-space, transition, and authority rules are not yet first-class planning artifacts | substrate gap | missing | Discovery has no stable target model for separating evidence, relationships, identity, control, and fidelity | Run MP-00 before any root/entity discovery | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:209` | inferred |
+| Five-plane operating definition is not yet frozen as a separate planning artifact family | architecture gap | missing | Root discovery and controller analysis can drift if state classes are not hosted in explicit planes with projection boundaries | Run MP-01 immediately after MP-00 and freeze plane mapping before discovery begins | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:101` | inferred |
+| Root declarations and controller arbitration are not yet formalized | governance gap | missing | Later identity, relationship, and applied-control artifacts will drift if root/controller authority stays implicit | Run MP-02 and MP-03 before any root-scoped artifact-family drafting | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:59`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:246`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:86` | observed |
+| Current/delta artifact lifecycle rules are not yet defined for root-level state families | lifecycle gap | missing | Recompute, tombstone, idempotence, ordering, and partial-failure behavior remain implicit | Emit lifecycle rules during MP-05 through MP-07 before schema drafting or implementation approval | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:88` | observed |
 
 Output:
-- The core planning dependencies are present. The missing items are exactly the analysis and definition deliverables this plan is meant to produce, not blockers that prevent the planning pass itself.
+- The core planning dependencies are present. The missing items are the state-space-first micro-plans and their artifact outputs, not blockers that prevent the planning pass itself.
 
 ## plan
-Required input:
-- Completed matrix and constraints
 
-Analysis:
-Deliverables:
-| Deliverable ID | Description | Owner | Validation gate | Rollback |
-|---|---|---|---|---|
-| D1 | Extract root-substrate terminology from the 2026-03-10 homeostasis document | codex+user | Root terms, roles, states, triggers, and artifact names are listed with file refs | Revert D1 artifact only |
-| D2 | Extract ACM terminology, entities, invariants, and boundaries from the current ACM packet | codex+user | ACM terms and invariants are listed with file refs and no paraphrase drift | Revert D2 artifact only |
-| D3 | Produce a terminology crosswalk and explicit gap register | codex+user | Every term is classified as `mapped`, `extended`, or `new`, and every unresolved concept is explicit | Revert D3 artifact only |
-| D4 | Define root candidates and `scope_root`/`control_root` semantics for `host`, `codex`, and `spawn` | codex+user | Root scope anchors and control reach are explicit and consistent with homeostasis and ACM | Revert D4 artifact only |
-| D5 | Define the `relationship.current` substrate as a root-level ACM-governed artifact family | codex+user | Required fields, authority, and update semantics are explicit | Revert D5 artifact only |
-| D6 | Define the `identity.current` and `identity.delta` substrate as a root-level ACM-governed artifact family | codex+user | Identity materialization, mutation semantics, and fidelity boundaries are explicit | Revert D6 artifact only |
-| D7 | Define the `applied_control.current` and fidelity-promotion boundary as a root-level ACM-governed artifact family | codex+user | Control semantics, promotion boundary, and re-analysis triggers are explicit | Revert D7 artifact only |
-| D8 | Freeze the strict homeostasis methodology and workflow from crawl to fidelity promotion | codex+user | Workflow includes ordered micro-steps, artifacts, triggers, measures, outputs, byproducts, validation gates, and rollback | Revert D8 artifact only |
+### architecture_model
 
-1. Phase 1
-- Inputs: `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md`, `/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json`, `/home/_404/src/dom0/asset-control-model/proposal_register.v1.json`
-- Actions: Produce D1, D2, and D3 as separate micro-deliverables: homeostasis term inventory, ACM term inventory, then the crosswalk/gap register, all authored and reviewed strictly inside `/home/_404/src/dom0`.
-- Rationale (why this fix/sequence): Complexity is highest at the naming layer. Splitting extraction from mapping keeps evidence collection, normalization, and gap identification independently reviewable.
-- Validation gate: D1 and D2 are complete before D3 starts; D3 contains no unmapped term without an explicit gap entry.
-- Rollback: Revert only the micro-deliverable under review instead of discarding the whole terminology pass.
+- Architectural form: rooted, event-sourced, dual-loop homeostatic control system
+- Planning unit: `micro_plan`
+- Output unit: `artifact`
+- Promotion unit: `schema_fidelity` and `applied_control_fidelity`
+- Closure mode: `temporary_epistemic_quiescence_under_current_evidence`
+- Main design rule: define the state space before ontology; define planes before discovery; admit evidence immediately; update accepted model state through explicit reduction rules; review fidelity without blocking evidence ingestion
 
-2. Phase 2
-- Inputs: Phase 1 crosswalk plus ACM invariants (`primary_planes`, `asset_control_entry_minimum_fields`, `.control` bundle structure, validator contract)
-- Actions: Produce D4, D5, D6, and D7 as separate micro-deliverables: root candidate/scope semantics, relationship substrate, identity substrate, and applied-control/promotion-boundary substrate.
-- Actions: Produce D4, D5, D6, and D7 as separate micro-deliverables: root candidate/scope semantics, relationship substrate, identity substrate, and applied-control/promotion-boundary substrate, with every draft and proof localized under `/home/_404/src/dom0`.
-- Rationale (why this fix/sequence): Root control, relationship truth, identity truth, and applied control are distinct surfaces. Separating them reduces the risk of one overloaded draft hiding semantic errors.
-- Validation gate: Each micro-deliverable preserves ACM invariants on its own and explicitly names inputs/outputs to the next micro-deliverable.
-- Rollback: Revert only the failing micro-deliverable and keep accepted predecessors intact.
+### state_space
 
-3. Phase 3
-- Inputs: Phase 2 root-level ACM conception plus the homeostasis discovery-to-accuracy loop
-- Actions: Produce D8 as the strict methodology/workflow layer, explicitly referencing the accepted outputs of D1-D7 and defining the smallest executable step order for later implementation.
-- Actions: Produce D8 as the strict methodology/workflow layer, explicitly referencing the accepted outputs of D1-D7 and defining the smallest executable step order for later implementation, again without importing trust from outside `dom0`.
-- Rationale (why this fix/sequence): Workflow should freeze only after the underlying micro-surfaces are named and bounded. That keeps process from outrunning substrate.
-- Validation gate: D8 references accepted micro-deliverables only, introduces no new root-level concepts silently, and defines rollback/re-entry conditions per workflow step.
-- Rollback: Revert D8 only and retain the accepted root-level substrate definitions.
+The system is modeled as a layered, partially observable operational state space. It must not collapse ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review into one flattened state.
 
-Artifact family authority statement:
-- schema authority: ACM-derived JSON Schema definitions for each repeated artifact family, introduced by the root-level ACM extension
-- instance authority: live root-scoped truth surfaces owned by the applicable root/controller path, not by rendered prose
-- actuation authority: `json-tool` for canonical JSON actuation, under ACM validator/wrapper ownership
-- rendering boundary: MiniJinja or markdown projections may summarize artifacts, but never become canonical JSON authority
+#### State taxonomy
 
-Output:
-- Executable three-phase plan composed of eight micro-deliverables, each with a reduced scope and independent review gate.
+1. Ontic state
+   - What is actually true in the world whether observed or not.
+   - Examples: running processes, actual controller paths, hidden operations, real dependencies.
+2. Evidentiary state
+   - Findings, evidence refs, provenance, confidence, timestamps, and observation modes.
+3. Accepted relationship state
+   - The canonical relationship layer of the model after admission and reduction.
+4. Accepted identity state
+   - The current justified operational state estimate computed from lower-level substrates.
+5. Applied-control state
+   - Current control interpretation derived from accepted identity, controller rules, observed effects, unresolved unknowns, and control conflicts.
+6. Fidelity review state
+   - Schema/control quality review surfaces used for promotion-gated fidelity decisions only.
+
+#### Transition model
+
+```text
+ontic_state
+  -> evidentiary_state
+  -> admission_or_reduction
+  -> accepted_relationship_state
+  -> accepted_identity_state
+  -> applied_control_state
+  -> fidelity_review_state
+```
+
+Feedback path:
+
+```text
+applied_control_findings
+  -> admission_or_reduction
+  -> accepted_relationship_state
+  -> accepted_identity_state
+```
+
+#### Gate model
+
+1. Ingestion gate
+   - Determines whether a finding can enter the evidentiary layer.
+2. Acceptance gate
+   - Determines whether evidentiary state is strong and coherent enough to mutate accepted relationship state or accepted identity state.
+3. Promotion gate
+   - Determines whether schema fidelity or applied-control fidelity should be accepted, rejected, or revised.
+
+#### Authority model
+
+| Layer | Authority status |
+|---|---|
+| Ontic state | Real but not directly authoritative inside the model |
+| Evidentiary state | Canonical evidence ledger |
+| Accepted relationship state | Canonical relationship surface of the model |
+| Accepted identity state | Canonical accepted operational state estimate |
+| Applied-control state | Canonical current control interpretation |
+| Fidelity review state | Canonical governance/review surface |
+| Neo4j | Projection only; never the source of truth |
+
+#### State properties
+
+| State type | Immediate append/update | Promotion-gated | Derived | Can trigger re-analysis |
+|---|---:|---:|---:|---:|
+| Evidentiary | Yes | No | No | Yes |
+| Accepted relationship | Rapid via reduction | No | Yes | Yes |
+| Accepted identity | Rapid via reduction | No | Yes | Yes |
+| Applied-control | Rapid via reduction | No | Yes | Yes |
+| Fidelity review | No | Yes | Yes | No |
+
+### planes
+
+- Root plane:
+  - owns candidate root anchors, `scope_root`, `control_root`, root boundaries, and crawl rules
+- Observation plane:
+  - owns append-only findings, normalization, provenance, confidence, evidence refs, and evidence admission rules
+- Relationship plane:
+  - owns `relationship.current`, `relationship.delta`, contradiction/supersession handling, and graph projection jobs
+- Identity plane:
+  - owns `entity_facts.current`, `identity.current`, `identity.delta`, `identity.schema`, and `fsm_fit.current`
+- Control plane:
+  - owns `applied_control.current`, `applied_control.report`, controller arbitration, gap sets, observed effects, conflict matrices, and fidelity reviews
+
+### service_decomposition
+
+- Always-on services:
+  - finding intake service
+  - evidence admission reducer
+  - relationship reducer
+  - identity materializer
+  - control analyzer
+  - graph projector
+- Supervisory services:
+  - delta classifier
+  - controller arbitrator
+  - epistemic quiescence detector
+  - promotion assessor
+
+### program_model
+
+- Program: `system_discovery_and_homeostasis`
+- Planning unit: `micro_plan`
+- Output unit: `artifact`
+- Promotion units: `schema_fidelity` and `applied_control_fidelity`
+- Closure mode: `temporary_epistemic_quiescence_under_current_evidence`
+- Reiteration rule: any admitted delta that materially changes accepted identity reopens the relevant upstream micro-plan and re-triggers applied-control analysis
+- Materialization rule: `identity.current` is the accepted operational state estimate; it is a deterministic materialized view over admitted findings, accepted relationship state, and accepted observations
+- Projection rule: graph databases and traversal indexes are query surfaces only and never replace canonical JSON artifacts
+- Discovery rule: discovery begins only after MP-00 and MP-01 are temporarily closed under current evidence
+- Root rule: `host`, `codex`, and `spawn` begin as candidate scope/control roots and may be refined, split, merged, or retired during discovery
+- FSM rule: FSM fit is a local probe, not the base ontology for the whole system
+
+### micro_plan_catalog
+| Micro-plan | Primary question | Core artifacts | Temporary closure condition |
+|---|---|---|---|
+| MP-00 | What kinds of state exist, how may state move, what admission rules govern accepted-state mutation, and what authority status does each state class have? | `state_space.model`, `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current` | The state taxonomy, admission rules, transition rules, authority rules, re-analysis triggers, and closure conditions are explicit and no known state class is unhosted |
+| MP-01 | How does the accepted state taxonomy map into the five operating planes? | `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current` | Every accepted state class has a plane host and projection boundaries are explicit |
+| MP-02 | What are the current candidate scope/control roots and crawl boundaries? | `root_set.current`, `scope_root_map.current`, `control_root_map.current`, `root_boundary.current`, `root_crawl_rules.current` | Every current root candidate has an accepted declaration and no unresolved scope-root ambiguity remains |
+| MP-03 | How are controller conflicts and tie-breaks resolved across candidate roots? | `controller_catalog.current`, `control_scope_map.current`, precedence and conflict artifacts | Every known shared control surface has a precedence rule, tie-break, or explicit unresolved gap |
+| MP-04 | What is the accepted identity estimate of each root candidate under current evidence? | `entity_facts.current`, `identity.current`, `identity.delta`, `fsm_fit_assessment.current` | Identity is accepted for all current root candidates under current evidence and unresolved identity gaps are explicit |
+| MP-05 | How are findings admitted into accepted relationship state, and how do those relationship deltas affect accepted identity? | `finding.log`, `finding.normalized`, `relationship.current`, `relationship.delta`, relationship capture artifacts | Observable relationship capture is defined and identity effects are explicit under current evidence |
+| MP-06 | What is controlled, uncontrolled, ambiguous, or missing against accepted identity? | `applied_control.current`, `applied_control.report`, control gap and re-analysis artifacts | Applied-control understanding is current under accepted identity and all known gaps are explicit |
+| MP-07 | Does schema/control fidelity match the accepted model, and what workflow projection follows? | `schema_fidelity_review.current`, `applied_control_fidelity_review.current`, `methodology_workflow_projection.current` | Both fidelity reviews are accepted under current evidence or their failures are explicit and routed |
+
+### micro_plans
+
+#### MP-00 — State-space definition
+- Question being resolved: What classes of state exist, how are they allowed to transition, what admission rules govern accepted-state mutation, and what authority status does each state layer have?
+- Roots in scope: pre-root substrate for all later roots and downstream scoped systems
+- Current accepted identity assumptions: the system is layered and partially observable; ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review must remain distinct layers
+- Discovery method / crawl path: synthesize the state model from the homeostasis live-substrate loop and ACM current/delta governance constraints before any root/entity crawl begins
+- Evidence that can change accepted state: any admitted finding that requires a new state class, state transition, ingestion rule, acceptance rule, authority rule, or closure rule
+- Artifacts emitted: `state_space.model` with intended file surface `state_space.model.md`; `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current`
+- Reiteration triggers: new state class required; undefined state transition discovered; evidence cannot be admitted cleanly; acceptance logic becomes ambiguous; fidelity review exposes missing state semantics
+- Promotion gate: none for evidentiary or accepted-state mutation logic; fidelity review is later
+- Temporary closure condition: the typed state space is explicit enough that new findings have a stable landing zone and an admission path without flattening the model
+
+#### MP-01 — Five-plane definition
+- Question being resolved: How does the accepted state taxonomy map into the root, observation, relationship, identity, and control planes?
+- Roots in scope: all present and future root candidates that will later be discovered into the typed state model
+- Current accepted identity assumptions: MP-00 is temporarily closed under current evidence
+- Discovery method / crawl path: define the operating decomposition of the state space, including projection-only surfaces and plane transition constraints
+- Evidence that can change accepted state: any admitted finding showing that a state class has no valid plane host or that a projection surface is acting as authority
+- Artifacts emitted: `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current`
+- Reiteration triggers: state taxonomy changes; authority rules change; plane responsibility becomes ambiguous; projection surfaces threaten to become authority surfaces
+- Promotion gate: none for plane-definition findings; fidelity review is later
+- Temporary closure condition: every accepted state class has a plane host and every projection/query surface has an explicit non-authority boundary
+
+#### MP-02 — Root declaration and scope-root definition
+- Question being resolved: What are the current candidate `scope_root`, `control_root`, root boundaries, and crawl rules for `host`, `codex`, and `spawn`, including cases with no enclosing git repository?
+- Roots in scope: current candidates `host`, `codex`, `spawn`
+- Current accepted identity assumptions: MP-00 and MP-01 are temporarily closed under current evidence
+- Discovery method / crawl path: inspect homeostasis root statements, ACM control boundaries, and localized evidence of root ownership or scope anchors
+- Evidence that can change accepted state: new root-candidate findings, corrected scope roots, corrected control roots, newly observed undisclosed operations at root level
+- Artifacts emitted: `root_set.current`, `scope_root_map.current`, `control_root_map.current`, `root_boundary.current`, `root_crawl_rules.current`
+- Reiteration triggers: new root candidate discovered; scope root corrected; control root corrected; root boundary invalidated; crawl boundary invalidated
+- Promotion gate: none for root findings; only later fidelity review
+- Temporary closure condition: every current root candidate is declared, bounded, and mapped to scope/control roots under current evidence
+
+#### MP-03 — Root controller arbitration
+- Question being resolved: How are controller conflicts, precedence, invalid overlap, and tie-breaks resolved across controllers rooted in the current root candidates?
+- Roots in scope: current candidates `host`, `codex`, `spawn`
+- Current accepted identity assumptions: MP-02 root-candidate declarations are temporarily closed under current evidence
+- Discovery method / crawl path: crawl root-owned control surfaces, controller/actuator paths, shared assets, and guarded transitions
+- Evidence that can change accepted state: new controller, new actuator path, new subordinate, new shared control surface, new guarded transition, corrected root declaration
+- Artifacts emitted: `controller_catalog.current`, `control_scope_map.current`, `controller_precedence_rules.current`, `controller_conflict_matrix.current`, `controller_tie_break_rules.current`, `controller_conflict_findings`, `controller_conflict_delta`
+- Reiteration triggers: any new controller, actuator, subordinate, shared control surface, guarded transition, or scope-root correction
+- Promotion gate: none for controller findings; fidelity review happens later
+- Temporary closure condition: every known controller is anchored to a current root candidate and every shared control surface has precedence, tie-break, or explicit unresolved gap
+
+#### MP-04 — Identity scoping per root
+- Question being resolved: What is the accepted identity estimate of each root candidate, and does each root candidate fit FSM treatment directly or as a container of downstream FSMs?
+- Roots in scope: all current root candidates accepted by MP-02
+- Current accepted identity assumptions: MP-02 and MP-03 are temporarily closed under current evidence
+- Discovery method / crawl path: identity-first crawl over boundary, purpose, authority owner, subordinates, controllers, actuators, state surfaces, artifacts, ingress/egress, and dependencies
+- Evidence that can change accepted state: new state surface, new produced artifact class, new external dependency, undisclosed operation, new subordinate/controller relation
+- Artifacts emitted: `entity_facts.current`, `identity.current`, `identity.delta`, `identity_assumption_register.current`, `fsm_fit_assessment.current`
+- Reiteration triggers: any admitted delta or relationship effect that materially changes the accepted identity estimate
+- Promotion gate: none for accepted identity mutation; schema fidelity is reviewed in MP-07
+- Temporary closure condition: the accepted identity estimate is current for each known root candidate and unresolved identity gaps are explicit
+
+#### MP-05 — Relationship substrate bootstrap
+- Question being resolved: How are observable findings admitted into accepted relationship state, and how do those accepted relationship deltas affect accepted identity?
+- Roots in scope: all accepted root candidates plus their discovered first-degree entities and control surfaces
+- Current accepted identity assumptions: MP-04 identity is current under accepted evidence
+- Discovery method / crawl path: normalize observations into evidentiary state, apply admission and reduction rules, then emit canonical relationship state with identity-effect classification and projection-only graph boundaries
+- Evidence that can change accepted state: any observed node/edge or control finding with `affects_identity`, `affects_control`, or a new `identity_effect`
+- Artifacts emitted: `finding.log`, `finding.normalized`, `evidence_ref_index.current`, `relationship.current`, `relationship.delta`, `relationship_capture_rules.current`, `relationship_identity_effect_rules.current`, `graph_projection_rules.current`
+- Reiteration triggers: new observable relationship; new relationship type; new observation mode; admitted relationship effect that materially changes accepted identity; graph projection drift
+- Promotion gate: none for observed or accepted relationships; fidelity review is later
+- Temporary closure condition: relationship admission, reduction, and identity-effect semantics are explicit under current evidence
+
+#### MP-06 — Applied-control gap analysis loop
+- Question being resolved: Given accepted identity and accepted relationship state, what is controlled, uncontrolled, ambiguous, or missing, and what must be re-analyzed?
+- Roots in scope: all accepted root candidates plus their known controller/actuator reach
+- Current accepted identity assumptions: MP-04 and MP-05 are current under accepted evidence
+- Discovery method / crawl path: compute applied-control understanding from accepted identity, controller rules, observed effects, unresolved unknowns, control conflicts, and relationship state
+- Evidence that can change accepted state: control analysis that discovers a new real controller, actuator, subordinate, shared control surface, or material observed effect
+- Artifacts emitted: `applied_control.current`, `applied_control.report`, `applied_control_gap_register.current`, `applied_control_reanalysis_rules.current`, `controller_findings.current`
+- Reiteration triggers: `identity.current` changes materially; `relationship.current` introduces new controller/actuator reach; control coverage class changes; undisclosed operations appear
+- Promotion gate: none for the existence of control gaps; applied-control fidelity review is later
+- Temporary closure condition: applied-control understanding is current under accepted identity and all known gaps are explicit
+
+#### MP-07 — Fidelity gates
+- Question being resolved: Does the schema represent the accepted model with high fidelity, does applied control govern that accepted model correctly, and what methodology/workflow follows from that state?
+- Roots in scope: all roots accepted by upstream micro-plans
+- Current accepted identity assumptions: MP-00 through MP-06 are temporarily closed under current evidence
+- Discovery method / crawl path: compare accepted model state to schema fit and compare accepted control behavior to intended controller/actuator paths, measures, outputs, and byproducts
+- Evidence that can change accepted state: findings that show accepted model state is missing from the state taxonomy, plane model, schema, or applied-control assumptions
+- Artifacts emitted: `schema_fidelity_review.current`, `applied_control_fidelity_review.current`, `methodology_workflow_projection.current`, `implementation_readiness_rules.current`
+- Reiteration triggers: state-space incompleteness; plane-boundary failure; identity mutation; relationship mutation with identity effect; material applied-control change; schema fidelity failure; applied-control fidelity failure
+- Promotion gate: this is the promotion-gate surface; only schema fidelity and applied-control fidelity are gated here
+- Temporary closure condition: both fidelity reviews are accepted under temporary epistemic quiescence or their failures are explicit and routed back upstream
 
 ## approval_gate
-- Patch-only steps permitted before approval: create and revise planning docs, crosswalk docs, root-level ACM drafts, JSON Schema drafts, CUE draft assertions, and workflow/interface assets under `/home/_404/src/dom0`.
-- Runtime/operational steps blocked until explicit approval: implementing spawn services or collectors, enabling timers, mutating live control/state artifacts, deploying graph infrastructure, trusting external repo state, or promoting working-copy outputs back into the source repos.
+- Patch-only steps permitted before plan approval: create and revise planning docs, state-space drafts, plane-definition drafts, root declarations, controller arbitration drafts, JSON Schema drafts, CUE draft assertions, and workflow/interface assets under `/home/_404/src/dom0`.
+- Runtime/operational steps blocked until explicit implementation approval: implementing spawn services or collectors, enabling timers, mutating live control/state artifacts, deploying graph infrastructure, trusting external repo state, or promoting working-copy outputs back into the source repos.
 
 ## decision
 - Status: APPROVED
-- Decision rationale: The required source evidence is already present in the `dom0` working copy, the objective is static conceptual analysis rather than runtime inspection, and the plan cleanly sequences terminology alignment before control-model extension and workflow freezing.
-- Decision rationale: The required source evidence is already present in the `dom0` working copy, the objective is static conceptual analysis rather than runtime inspection, and the plan now reduces risk by splitting the work into micro-deliverables before any broader root-level synthesis.
-- Blocking items (if `REJECTED`): N/A for `APPROVED`; remaining gaps are the planned deliverables rather than blockers to the planning pass.
-- Required follow-up evidence: D1 crosswalk with proof refs, D2 root-level ACM conception, D3 strict methodology/workflow, and D4 artifact-family boundary definition.
-- Re-entry condition for re-review: Re-review once D1-D4 exist in `dom0` and the evidence gate for implementation is restated against those concrete artifacts.
+- Plan status: APPROVED
+- Implementation status: NOT_YET_APPROVED
+- Decision rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with state-space and plane definition before discovery begins.
+- Plan rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with state-space definition, explicit admission logic, and plane definition before discovery begins.
+- Blocking items (if `REJECTED`): not applicable; this packet is approved only as a planning foundation and blocked for implementation by the items below.
+- Implementation blockers: MP-00 through MP-07 artifacts do not yet exist as accepted current-state artifacts; root declarations and controller arbitration are not yet temporarily closed under current evidence; fidelity reviews do not yet exist; the parent issue does not yet exist; the implementation evidence gate remains pending.
+- Required follow-up evidence: accepted outputs from MP-00 through MP-07, each with explicit temporary epistemic-quiescence statements under current evidence.
+- Re-entry condition for re-review: re-review once MP-00 through MP-07 have current artifacts, temporary epistemic-quiescence statements, and the implementation evidence gate is restated against those artifacts.
+- Re-entry condition for implementation review: re-review once MP-00 through MP-07 have current artifacts, temporary epistemic-quiescence statements, and the implementation evidence gate is restated against those artifacts.
 
 ## post_decision_actions
-- If `APPROVED`: generate one sub-issue per micro-deliverable after creating a single parent issue for the root-level ACM/homeostasis foundation effort.
-- Parent issue link: Parent issue not yet created; create it from this plan packet before IMPLEMENT begins.
-- Sub-issue title pattern: `[dom0][foundation] D<n> <deliverable summary>`
-- If `REJECTED`: not applicable in this decision; restate `problem_set` only if new evidence invalidates the root-level ACM direction.
+- If plan is `APPROVED`: generate one sub-issue per micro-plan after creating a single parent issue for the root-level ACM/homeostasis foundation effort.
+- Parent issue link: Parent issue not yet created; create it from this plan packet before implementation begins.
+- Sub-issue title pattern: `[dom0][foundation] MP-<nn> <micro-plan summary>`
 
 ## implement
 - Mode: dry-run
-- Parent issue: Pending creation from this plan packet; no implementation starts until the parent issue exists and the deliverable split is accepted.
-- Sub-issue mapping (deliverable -> issue): Proposed below; create after the parent issue exists.
-| Deliverable ID | Sub-issue | Status |
-|---|---|---|
-| D1 | `[dom0][foundation] D1 homeostasis term inventory` | pending |
-| D2 | `[dom0][foundation] D2 ACM term inventory` | pending |
-| D3 | `[dom0][foundation] D3 terminology crosswalk and gaps` | pending |
-| D4 | `[dom0][foundation] D4 root scope semantics` | pending |
-| D5 | `[dom0][foundation] D5 relationship substrate` | pending |
-| D6 | `[dom0][foundation] D6 identity substrate` | pending |
-| D7 | `[dom0][foundation] D7 applied control and promotion boundary` | pending |
-| D8 | `[dom0][foundation] D8 homeostasis workflow` | pending |
+- Approval state: not yet approved for implementation
+- Parent issue: pending creation from this plan packet; no implementation starts until the parent issue exists and MP-00 through MP-07 have accepted current-state outputs
+- Sub-issue mapping (deliverable -> issue): micro-plan mapping is used as the execution unit for this packet
+- Sub-issue mapping (micro-plan -> issue): proposed below; create after the parent issue exists
 
-- Evidence required: Required proof for each deliverable is listed below and must be attached before any `apply` transition.
-| Deliverable ID | Evidence required | Proof ref | Status (pending|met|blocked) |
+| Micro-plan | Sub-issue | Status |
+|---|---|---|
+| MP-00 | `[dom0][foundation] MP-00 state-space definition` | pending |
+| MP-01 | `[dom0][foundation] MP-01 five-plane definition` | pending |
+| MP-02 | `[dom0][foundation] MP-02 root declaration and scope roots` | pending |
+| MP-03 | `[dom0][foundation] MP-03 root controller arbitration` | pending |
+| MP-04 | `[dom0][foundation] MP-04 identity scoping per root` | pending |
+| MP-05 | `[dom0][foundation] MP-05 relationship substrate bootstrap` | pending |
+| MP-06 | `[dom0][foundation] MP-06 applied-control gap loop` | pending |
+| MP-07 | `[dom0][foundation] MP-07 fidelity gates and workflow projection` | pending |
+
+- Evidence required: required proof for each micro-plan is listed below and must be attached before any `apply` transition
+
+| Micro-plan | Evidence required | Proof ref | Status (pending|met|blocked) |
 |---|---|---|---|
-| D1 | Homeostasis term inventory with direct file refs | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md` | pending |
-| D2 | ACM term inventory with direct file refs | `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json`, `/home/_404/src/dom0/asset-control-model/proposal_register.v1.json` | pending |
-| D3 | Crosswalk showing `mapped|extended|new` terms and explicit gaps | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json` | pending |
-| D4 | Root candidate and scope semantics draft for `host`, `codex`, and `spawn` | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:28`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:59` | pending |
-| D5 | Relationship substrate draft with fields, authority, and update semantics | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:148`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:82` | pending |
-| D6 | Identity substrate draft with materialization and delta semantics | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:188`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:321` | pending |
-| D7 | Applied-control and promotion-boundary draft with re-analysis triggers | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:207`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:75` | pending |
-| D8 | Methodology/workflow spec referencing accepted D1-D7 outputs only | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:333`, `/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md:65` | pending |
+| MP-00 | State taxonomy, transition rules, authority rules, re-analysis triggers, and closure conditions | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266` | pending |
+| MP-01 | Plane mapping, plane transition constraints, and projection boundary rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:101` | pending |
+| MP-02 | Root declarations plus `scope_root`/`control_root` mappings and crawl rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:28`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:59`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:376` | pending |
+| MP-03 | Controller catalog, precedence, conflict matrix, and tie-break rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:68`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:246`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:87` | pending |
+| MP-04 | Entity facts, identity scoping, and FSM-fit assessment per root | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:61`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:321` | pending |
+| MP-05 | Finding normalization, relationship substrate rules, and identity-effect semantics | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:148`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:222`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:312` | pending |
+| MP-06 | Applied-control gap register, controller findings, and re-analysis rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:209`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:234`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:327` | pending |
+| MP-07 | Schema fidelity review, applied-control fidelity review, and workflow projection | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:86`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:88` | pending |
 
 - Evidence gate status: PENDING
-- Git flow reference: `/home/_404/src/dom0/PLAN/references/git_flow.md`
-- Execution command(s): Prepare an integration worktree only after the parent issue exists and the evidence gate is restated; suggested command shown below.
-
-```bash
-cd /home/_404/src/dom0
-git worktree add ../wt-int-root-homeostasis-acm -b int/root-homeostasis-acm "$(git rev-parse HEAD)"
-```
+- Git flow reference: `/home/_404/src/dom0/artifacts/PLAN/references/git_flow.md`
+- Execution command(s): `python3 /home/_404/src/dotfiles/config/codex/skills/plan/scripts/validate_plan_packet.py /home/_404/src/dom0/artifacts/PLAN/README.md --mode ready` and `jq empty /home/_404/src/dom0/artifacts/PLAN/assets/workflow.json /home/_404/src/dom0/artifacts/PLAN/assets/interface.json /home/_404/src/dom0/artifacts/PLAN/packet.meta.json`
 
 ## success_criteria
-- [ ] The work is split into micro-deliverables small enough to review independently without concept drift.
-- [ ] Homeostasis and ACM terminology are aligned through explicit inventories and a gap register before root-level synthesis begins.
-- [ ] Root scope, relationship, identity, and applied-control substrates are each defined separately and checked against ACM invariants.
-- [ ] The final methodology/workflow references accepted micro-deliverables only and introduces no silent new concepts.
+- [ ] The program is expressed as a rolling set of micro-plans, not a fixed deliverable pipeline.
+- [ ] State space is defined before planes, ontology, roots, controllers, or downstream artifact-family drafting.
+- [ ] Discovery begins only after MP-00 and MP-01 are temporarily closed under current evidence.
+- [ ] Identity-changing findings have explicit reiteration paths back into the relevant upstream micro-plan.
+- [ ] Evidence ingestion, accepted-state mutation, and promotion-gated fidelity review are explicitly separated.
+- [ ] Temporary epistemic quiescence is stated under current evidence for every micro-plan.

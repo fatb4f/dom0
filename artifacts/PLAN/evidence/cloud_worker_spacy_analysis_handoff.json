@@ -9,7 +9,7 @@
     "corpus_root": "/home/_404/src/dom0",
     "excluded_paths": [
       "/home/_404/src/dom0/.git/**",
-      "/home/_404/src/dom0/PLAN/**"
+      "/home/_404/src/dom0/artifacts/PLAN/**"
     ],
     "raw_glossary": "/home/_404/src/dom0/glossary.json",
     "homeostasis_root": "/home/_404/src/dom0/homeostasis",
@@ -21,10 +21,10 @@
     "spacy_version": "3.8.11",
     "installed_pipeline_packages": [],
     "evidence_refs": [
-      "/home/_404/src/dom0/PLAN/evidence/spacy_installation_summary.txt",
-      "/home/_404/src/dom0/PLAN/evidence/spacy_runtime_info.txt",
-      "/home/_404/src/dom0/PLAN/evidence/spacy_validate.txt",
-      "/home/_404/src/dom0/PLAN/evidence/spacy_docs_review.md"
+      "/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_installation_summary.txt",
+      "/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_runtime_info.txt",
+      "/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_validate.txt",
+      "/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_docs_review.md"
     ]
   },
   "official_doc_refs": [

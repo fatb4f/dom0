@@ -20,7 +20,7 @@ Run a localized spaCy-based linguistic analysis over the `dom0` corpus and emit 
 - Corpus root: `/home/_404/src/dom0`
 - Excludes:
   - `/home/_404/src/dom0/.git/**`
-  - `/home/_404/src/dom0/PLAN/**`
+  - `/home/_404/src/dom0/artifacts/PLAN/**`
 - Source roots:
   - `/home/_404/src/dom0/homeostasis`
   - `/home/_404/src/dom0/asset-control-model`
@@ -34,10 +34,10 @@ Run a localized spaCy-based linguistic analysis over the `dom0` corpus and emit 
 
 Evidence:
 
-- `/home/_404/src/dom0/PLAN/evidence/spacy_installation_summary.txt`
-- `/home/_404/src/dom0/PLAN/evidence/spacy_runtime_info.txt`
-- `/home/_404/src/dom0/PLAN/evidence/spacy_validate.txt`
-- `/home/_404/src/dom0/PLAN/evidence/spacy_docs_review.md`
+- `/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_installation_summary.txt`
+- `/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_runtime_info.txt`
+- `/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_validate.txt`
+- `/home/_404/src/dom0/artifacts/PLAN/evidence/spacy_docs_review.md`
 
 ## Official Documentation Findings
 

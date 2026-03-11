@@ -5,8 +5,68 @@
     "Root-level homeostasis concepts are not yet materialized into ACM-aligned definitions or an operational methodology"
   ],
   "wt": "/home/_404/src/dom0",
-  "packet_path": "/home/_404/src/dom0/PLAN/README.md",
+  "packet_path": "/home/_404/src/dom0/artifacts/PLAN/README.md",
   "mode": "full",
+  "program_name": "system_discovery_and_homeostasis",
+  "planning_unit": "micro_plan",
+  "output_unit": "artifact",
+  "architectural_form": "rooted_event_sourced_dual_loop_homeostatic_control_system",
+  "state_space_model": "layered_partially_observable_operational_model",
+  "state_layers": [
+    "ontic_state",
+    "evidentiary_state",
+    "accepted_relationship_state",
+    "accepted_identity_state",
+    "applied_control_state",
+    "fidelity_review_state"
+  ],
+  "architectural_planes": [
+    "root_plane",
+    "observation_plane",
+    "relationship_plane",
+    "identity_plane",
+    "control_plane"
+  ],
+  "projection_only_surfaces": [
+    "neo4j_graph"
+  ],
+  "foundational_state_artifacts": [
+    "state_space.model",
+    "state_taxonomy.current",
+    "state_transition_rules.current",
+    "state_authority_rules.current",
+    "evidence_ingestion_rules.current",
+    "state_acceptance_rules.current",
+    "reanalysis_triggers.current",
+    "closure_conditions.current",
+    "plane_mapping.current",
+    "plane_operating_model.current",
+    "plane_transition_constraints.current",
+    "projection_boundary_rules.current"
+  ],
+  "canonical_materialized_views": [
+    "root_set.current",
+    "scope_root_map.current",
+    "control_root_map.current",
+    "root_boundary.current",
+    "controller_catalog.current",
+    "control_scope_map.current",
+    "entity_facts.current",
+    "finding.normalized",
+    "relationship.current",
+    "relationship.delta",
+    "identity.current",
+    "identity.delta",
+    "applied_control.current",
+    "applied_control.report",
+    "schema_fidelity_review.current",
+    "applied_control_fidelity_review.current"
+  ],
+  "promotion_unit": [
+    "schema_fidelity",
+    "applied_control_fidelity"
+  ],
+  "temporary_closure_mode": "epistemic_quiescence_under_current_evidence",
   "evidence_mode": "direct_file_analysis",
   "pre_sweep_ref": "not_required_for_static_conceptual_analysis",
   "source_roots": [
@@ -14,13 +74,50 @@
     "/home/_404/src/dom0/asset-control-model"
   ],
   "plan_assets": [
-    "/home/_404/src/dom0/PLAN/assets/sequence_dag.md",
-    "/home/_404/src/dom0/PLAN/assets/workflow.json",
-    "/home/_404/src/dom0/PLAN/assets/interface.json"
+    "/home/_404/src/dom0/artifacts/PLAN/assets/sequence_dag.md",
+    "/home/_404/src/dom0/artifacts/PLAN/assets/workflow.json",
+    "/home/_404/src/dom0/artifacts/PLAN/assets/interface.json"
   ],
-  "decision_target": "APPROVED plan-only packet; implementation remains dry-run and gated",
-  "delivery_shape": "micro_deliverables",
-  "deliverable_count": 8,
+  "decision_target": "Plan approved only; implementation remains not yet approved until state-space, governance, and fidelity gates are satisfied",
+  "plan_status": "APPROVED",
+  "implementation_status": "NOT_YET_APPROVED",
+  "implementation_blockers": [
+    "state-space and admission artifacts do not yet exist as accepted current planning artifacts",
+    "five-plane operating definitions do not yet exist as accepted current planning artifacts",
+    "root declarations and controller arbitration are not yet temporarily closed under current evidence",
+    "identity, relationship, and applied-control artifacts do not yet exist as accepted current-state planning artifacts",
+    "schema fidelity and applied-control fidelity reviews do not yet exist",
+    "parent issue is not yet created",
+    "implementation evidence gate remains pending"
+  ],
+  "delivery_shape": "micro_plans",
+  "micro_plan_count": 8,
+  "micro_plan_order": [
+    "MP00_state_space_definition",
+    "MP01_five_plane_definition",
+    "MP02_root_declaration",
+    "MP03_root_controller_arbitration",
+    "MP04_identity_scoping",
+    "MP05_relationship_substrate_bootstrap",
+    "MP06_applied_control_gap_loop",
+    "MP07_fidelity_gates"
+  ],
+  "discovery_starts_after": [
+    "MP00_state_space_definition",
+    "MP01_five_plane_definition"
+  ],
+  "design_rules": [
+    "define_state_space_before_ontology",
+    "define_planes_before_discovery",
+    "evidence_ingestion_is_immediate_but_accepted_state_mutation_is_reduced",
+    "treat_relationship_current_as_the_canonical_relationship_surface_of_the_model",
+    "treat_identity_current_as_the_accepted_operational_state_estimate",
+    "treat_identity_current_as_a_deterministic_materialized_view",
+    "treat_applied_control_current_as_derived_from_identity",
+    "treat_host_codex_spawn_as_candidate_roots",
+    "treat_fsm_as_a_local_probe_not_the_base_ontology",
+    "review_fidelity_without_blocking_evidence_ingestion"
+  ],
   "trust_boundary": "dom0_only",
   "external_state": "untrusted_due_to_compounding_drift"
 }

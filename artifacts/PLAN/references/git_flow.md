@@ -4,8 +4,8 @@
 
 - Trunk branch is `main`.
 - Work is composed in an integration worktree/branch from an immutable base SHA.
-- One logical commit per micro-deliverable.
-- Run gates per micro-deliverable before stacking the next one.
+- One logical commit per micro-plan closure slice or artifact-family change set.
+- Run gates per micro-plan before stacking the next one.
 - Promote via squash into `main`.
 - Preserve integration lineage with a branch/tag for audit.
 
@@ -13,7 +13,7 @@
 
 - This plan trusts only `/home/_404/src/dom0`.
 - Do not pull planning truth from sibling repos or external working trees during execution of this packet.
-- Localize derived references, drafts, and proofs under `PLAN/` or adjacent localized copies inside `dom0`.
+- Localize derived references, drafts, and proofs under `artifacts/PLAN/` or adjacent localized copies inside `dom0`.
 
 ## Command skeleton
 
@@ -22,10 +22,10 @@ cd /home/_404/src/dom0
 git worktree add ../wt-int-root-homeostasis-acm -b int/root-homeostasis-acm "$(git rev-parse HEAD)"
 ```
 
-## Deliverable commit conventions
+## Micro-Plan Commit Conventions
 
 - Commit trailer fields:
-  - `Deliverable: D-<id>`
+  - `Micro-Plan: MP-<nn>`
   - `Gate: pass|needs-human`
   - `Base-Ref: <sha>`
 
@@ -33,4 +33,4 @@ git worktree add ../wt-int-root-homeostasis-acm -b int/root-homeostasis-acm "$(g
 
 - Resolve conflicts on the integration branch.
 - Re-run gates after conflict resolution.
-- If scope grows, split the deliverable again instead of broadening one commit.
+- If scope grows, split the micro-plan slice again instead of broadening one commit.

@@ -82,7 +82,10 @@
     "JSON Schema remains canonical for control object validity, while CUE assertions validate cross-object admissibility and consistency",
     "spawnctl owns wrapped validation in v1; validation must occur before assurance actions",
     "service assurance triggers must default to report/reconcile semantics and must not perform broad mutation unless pre-approved and deterministic",
-    "initial scoped assets must be listed explicitly, and session_context must be fully populated as the first control exemplar before later assets graduate into fully populated control entries"
+    "initial scoped assets must be listed explicitly, and session_context must be fully populated as the first control exemplar before later assets graduate into fully populated control entries",
+    "any root-level ACM extension must explicitly separate live-fact mutation from promotion-gated fidelity review before defining current and delta artifact families",
+    "any root-level ACM extension must freeze root-authority precedence and controller conflict resolution before drafting root-scoped schemas",
+    "any root-level ACM extension that defines current or delta artifact families must also define recomputation, tombstone, idempotence, ordering, and partial-failure behavior"
   ],
   "acceptance_criteria": [
     "the proposal defines the only primary planes and separates secondary concerns from plane assignment",
