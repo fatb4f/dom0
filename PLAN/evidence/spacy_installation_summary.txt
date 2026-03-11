@@ -1,0 +1,3 @@
+venv=/home/_404/src/dom0/.venv
+python=3.12.12
+spacy=3.8.11

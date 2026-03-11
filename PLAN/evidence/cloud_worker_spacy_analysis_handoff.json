@@ -1,0 +1,86 @@
+{
+  "kind": "cloud_worker.spacy_analysis_handoff.v1",
+  "status": "pending_external_execution",
+  "requested_from": "codex_session_without_cloud_worker_executor",
+  "objective": "Run a localized spaCy-based linguistic analysis over the dom0 corpus and emit derived analysis artifacts without mutating the raw glossary substrate.",
+  "trust_boundary": "dom0_only",
+  "workspace_root": "/home/_404/src/dom0",
+  "inputs": {
+    "corpus_root": "/home/_404/src/dom0",
+    "excluded_paths": [
+      "/home/_404/src/dom0/.git/**",
+      "/home/_404/src/dom0/PLAN/**"
+    ],
+    "raw_glossary": "/home/_404/src/dom0/glossary.json",
+    "homeostasis_root": "/home/_404/src/dom0/homeostasis",
+    "acm_root": "/home/_404/src/dom0/asset-control-model"
+  },
+  "local_environment": {
+    "venv": "/home/_404/src/dom0/.venv",
+    "python_version": "3.12.12",
+    "spacy_version": "3.8.11",
+    "installed_pipeline_packages": [],
+    "evidence_refs": [
+      "/home/_404/src/dom0/PLAN/evidence/spacy_installation_summary.txt",
+      "/home/_404/src/dom0/PLAN/evidence/spacy_runtime_info.txt",
+      "/home/_404/src/dom0/PLAN/evidence/spacy_validate.txt",
+      "/home/_404/src/dom0/PLAN/evidence/spacy_docs_review.md"
+    ]
+  },
+  "official_doc_refs": [
+    "https://spacy.io/usage",
+    "https://spacy.io/usage/models",
+    "https://github.com/explosion/spaCy"
+  ],
+  "task_bounds": {
+    "must_not_modify": [
+      "/home/_404/src/dom0/glossary.json"
+    ],
+    "must_stay_within": [
+      "/home/_404/src/dom0"
+    ],
+    "must_emit_separate_outputs": true,
+    "must_preserve_raw_forms": true
+  },
+  "analysis_targets": [
+    {
+      "id": "A1",
+      "name": "token_layer",
+      "description": "Tokenize the corpus and emit token-level JSON artifacts."
+    },
+    {
+      "id": "A2",
+      "name": "lemma_layer",
+      "description": "Emit lemma-based views if supported by the chosen pipeline or lookups configuration."
+    },
+    {
+      "id": "A3",
+      "name": "kwic_layer",
+      "description": "Emit keyword-in-context windows for high-signal terms."
+    },
+    {
+      "id": "A4",
+      "name": "collocation_layer",
+      "description": "Emit collocation and co-occurrence artifacts over the localized corpus."
+    }
+  ],
+  "open_decisions": [
+    "whether to install a trained English pipeline such as en_core_web_sm",
+    "whether to install spacy-lookups-data for lemmatization support in a blank-pipeline path",
+    "which output root to use for derived artifacts"
+  ],
+  "recommended_output_root": "/home/_404/src/dom0/SPACY_ANALYSIS",
+  "expected_outputs": [
+    "/home/_404/src/dom0/SPACY_ANALYSIS/tokens.json",
+    "/home/_404/src/dom0/SPACY_ANALYSIS/lemmas.json",
+    "/home/_404/src/dom0/SPACY_ANALYSIS/kwic.json",
+    "/home/_404/src/dom0/SPACY_ANALYSIS/collocations.json",
+    "/home/_404/src/dom0/SPACY_ANALYSIS/run_summary.md"
+  ],
+  "success_criteria": [
+    "spaCy analysis runs entirely from the localized dom0 environment",
+    "derived artifacts are emitted separately from glossary.json",
+    "pipeline choice and linguistic limitations are recorded explicitly",
+    "all outputs remain inside /home/_404/src/dom0"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "version": "1.0",
+  "workflow": "root_homeostasis_acm_analysis",
+  "description": "Plan-local workflow for aligning root-level homeostasis concepts with the asset-control-model substrate and freezing an operational methodology.",
+  "start": "N0_objective",
+  "nodes": [
+    {
+      "id": "N0_objective",
+      "phase": "PLAN",
+      "action": "bind_problem_statement",
+      "outputs": [
+        "objective",
+        "success_criteria"
+      ],
+      "next": [
+        "N1_source_collection"
+      ]
+    },
+    {
+      "id": "N1_source_collection",
+      "phase": "PLAN",
+      "action": "collect_dom0_sources",
+      "outputs": [
+        "source_inventory",
+        "evidence_refs"
+      ],
+      "next": [
+        "N2_crosswalk"
+      ]
+    },
+    {
+      "id": "N2_homeostasis_terms",
+      "phase": "PLAN",
+      "action": "extract_homeostasis_terms",
+      "outputs": [
+        "homeostasis_term_inventory"
+      ],
+      "next": [
+        "N3_acm_terms"
+      ]
+    },
+    {
+      "id": "N3_acm_terms",
+      "phase": "PLAN",
+      "action": "extract_acm_terms",
+      "outputs": [
+        "acm_term_inventory"
+      ],
+      "next": [
+        "N4_crosswalk"
+      ]
+    },
+    {
+      "id": "N4_crosswalk",
+      "phase": "PLAN",
+      "action": "derive_terminology_crosswalk",
+      "outputs": [
+        "concept_crosswalk",
+        "gap_register"
+      ],
+      "guards": {
+        "aligned": {
+          "when": "concept_crosswalk has no unresolved collisions",
+          "goto": "N5_root_scope"
+        },
+        "misaligned": {
+          "when": "concept_crosswalk has unresolved collisions",
+          "goto": "N2_homeostasis_terms"
+        }
+      }
+    },
+    {
+      "id": "N5_root_scope",
+      "phase": "PLAN",
+      "action": "define_root_scope_semantics",
+      "outputs": [
+        "root_scope_model"
+      ],
+      "next": [
+        "N6_relationship_substrate"
+      ]
+    },
+    {
+      "id": "N6_relationship_substrate",
+      "phase": "PLAN",
+      "action": "define_relationship_substrate",
+      "outputs": [
+        "relationship_substrate_model"
+      ],
+      "next": [
+        "N7_identity_substrate"
+      ]
+    },
+    {
+      "id": "N7_identity_substrate",
+      "phase": "PLAN",
+      "action": "define_identity_substrate",
+      "outputs": [
+        "identity_substrate_model"
+      ],
+      "next": [
+        "N8_applied_control_substrate"
+      ]
+    },
+    {
+      "id": "N8_applied_control_substrate",
+      "phase": "PLAN",
+      "action": "define_applied_control_substrate",
+      "outputs": [
+        "applied_control_model",
+        "promotion_boundary_model"
+      ],
+      "next": [
+        "N9_methodology_workflow"
+      ]
+    },
+    {
+      "id": "N9_methodology_workflow",
+      "phase": "PLAN",
+      "action": "freeze_homeostasis_method",
+      "outputs": [
+        "methodology_spec",
+        "workflow_spec"
+      ],
+      "next": [
+        "N10_gate_review"
+      ]
+    },
+    {
+      "id": "N10_gate_review",
+      "phase": "PLAN",
+      "action": "emit_plan_decision",
+      "outputs": [
+        "decision",
+        "evidence_required"
+      ],
+      "next": []
+    }
+  ],
+  "invariants": [
+    "static_file_analysis_only",
+    "dom0_is_the_only_trusted_working_directory",
+    "no_runtime_mutation",
+    "acm_plane_separation_preserved",
+    "root_terms_must_be_classified_before_root_scope_definition",
+    "relationship_identity_and_applied_control_are_separate_micro_deliverables",
+    "artifact_families_require_explicit_schema_instance_actuation_rendering_boundaries"
+  ]
+}

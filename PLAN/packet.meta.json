@@ -1,0 +1,26 @@
+{
+  "kind": "plan.packet.meta.v1",
+  "objective": "Analyze dom0 homeostasis root-level concepts against ACM and define the methodology/workflow required to operationalize homeostasis",
+  "failure_signatures": [
+    "Root-level homeostasis concepts are not yet materialized into ACM-aligned definitions or an operational methodology"
+  ],
+  "wt": "/home/_404/src/dom0",
+  "packet_path": "/home/_404/src/dom0/PLAN/README.md",
+  "mode": "full",
+  "evidence_mode": "direct_file_analysis",
+  "pre_sweep_ref": "not_required_for_static_conceptual_analysis",
+  "source_roots": [
+    "/home/_404/src/dom0/homeostasis",
+    "/home/_404/src/dom0/asset-control-model"
+  ],
+  "plan_assets": [
+    "/home/_404/src/dom0/PLAN/assets/sequence_dag.md",
+    "/home/_404/src/dom0/PLAN/assets/workflow.json",
+    "/home/_404/src/dom0/PLAN/assets/interface.json"
+  ],
+  "decision_target": "APPROVED plan-only packet; implementation remains dry-run and gated",
+  "delivery_shape": "micro_deliverables",
+  "deliverable_count": 8,
+  "trust_boundary": "dom0_only",
+  "external_state": "untrusted_due_to_compounding_drift"
+}

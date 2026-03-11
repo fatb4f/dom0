@@ -1,0 +1,335 @@
+{
+  "kind": "term.closure_summary.v1",
+  "source_refs": [
+    "term.relationship_graph.json",
+    "term.closure_cycles.json"
+  ],
+  "node_count": 41,
+  "overview": {
+    "direct_self_loop_count": 0,
+    "two_hop_cycle_count": 52,
+    "two_hop_cycle_group_count": 7,
+    "three_hop_cycle_count": 12,
+    "three_hop_cycle_group_count": 2,
+    "strongly_connected_component_count": 3
+  },
+  "dominant_component": {
+    "index": 2,
+    "node_indices": [
+      0,
+      4,
+      6,
+      21,
+      22
+    ],
+    "edge_indices": [
+      3,
+      5,
+      13,
+      29,
+      31,
+      36,
+      37,
+      42,
+      43,
+      44,
+      47,
+      56,
+      64,
+      68,
+      71,
+      75,
+      101,
+      106,
+      108,
+      113
+    ],
+    "term_count": 5,
+    "edge_count": 20,
+    "node_terms": [
+      "policy",
+      "service",
+      "assurance",
+      "state_space",
+      "fsm"
+    ]
+  },
+  "direct_self_loops": [],
+  "two_hop_cycle_groups": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4
+      ],
+      "supporting_cycle_indices": [
+        0,
+        2,
+        7,
+        8
+      ],
+      "node_terms": [
+        "policy",
+        "service"
+      ],
+      "supporting_cycle_count": 4
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6
+      ],
+      "supporting_cycle_indices": [
+        1,
+        26
+      ],
+      "node_terms": [
+        "policy",
+        "assurance"
+      ],
+      "supporting_cycle_count": 2
+    },
+    {
+      "index": 2,
+      "node_cycle": [
+        14,
+        16
+      ],
+      "supporting_cycle_indices": [
+        3,
+        4
+      ],
+      "node_terms": [
+        "undisclosed",
+        "unknown"
+      ],
+      "supporting_cycle_count": 2
+    },
+    {
+      "index": 3,
+      "node_cycle": [
+        4,
+        6
+      ],
+      "supporting_cycle_indices": [
+        5,
+        6,
+        25,
+        27
+      ],
+      "node_terms": [
+        "service",
+        "assurance"
+      ],
+      "supporting_cycle_count": 4
+    },
+    {
+      "index": 4,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "supporting_cycle_indices": [
+        9,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        20,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "node_terms": [
+        "service",
+        "state_space"
+      ],
+      "supporting_cycle_count": 16
+    },
+    {
+      "index": 5,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "supporting_cycle_indices": [
+        13,
+        14,
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "node_terms": [
+        "service",
+        "fsm"
+      ],
+      "supporting_cycle_count": 16
+    },
+    {
+      "index": 6,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "supporting_cycle_indices": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "node_terms": [
+        "policy_surface",
+        "bootstrap_manifest"
+      ],
+      "supporting_cycle_count": 8
+    }
+  ],
+  "three_hop_cycle_groups": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4,
+        6
+      ],
+      "supporting_cycle_indices": [
+        0,
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "node_terms": [
+        "policy",
+        "service",
+        "assurance"
+      ],
+      "supporting_cycle_count": 6
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6,
+        4
+      ],
+      "supporting_cycle_indices": [
+        1,
+        2,
+        6,
+        7,
+        8,
+        11
+      ],
+      "node_terms": [
+        "policy",
+        "assurance",
+        "service"
+      ],
+      "supporting_cycle_count": 6
+    }
+  ],
+  "strongly_connected_components": [
+    {
+      "index": 0,
+      "node_indices": [
+        14,
+        16
+      ],
+      "edge_indices": [
+        21,
+        28
+      ],
+      "term_count": 2,
+      "edge_count": 2,
+      "node_terms": [
+        "undisclosed",
+        "unknown"
+      ]
+    },
+    {
+      "index": 1,
+      "node_indices": [
+        36,
+        37
+      ],
+      "edge_indices": [
+        122,
+        123,
+        124,
+        125
+      ],
+      "term_count": 2,
+      "edge_count": 4,
+      "node_terms": [
+        "policy_surface",
+        "bootstrap_manifest"
+      ]
+    },
+    {
+      "index": 2,
+      "node_indices": [
+        0,
+        4,
+        6,
+        21,
+        22
+      ],
+      "edge_indices": [
+        3,
+        5,
+        13,
+        29,
+        31,
+        36,
+        37,
+        42,
+        43,
+        44,
+        47,
+        56,
+        64,
+        68,
+        71,
+        75,
+        101,
+        106,
+        108,
+        113
+      ],
+      "term_count": 5,
+      "edge_count": 20,
+      "node_terms": [
+        "policy",
+        "service",
+        "assurance",
+        "state_space",
+        "fsm"
+      ]
+    }
+  ]
+}

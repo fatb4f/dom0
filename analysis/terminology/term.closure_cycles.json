@@ -1,0 +1,1291 @@
+{
+  "kind": "term.closure_cycles.v1",
+  "source_ref": "term.relationship_graph.json",
+  "node_count": 41,
+  "direct_self_loop_count": 0,
+  "two_hop_cycle_count": 52,
+  "two_hop_cycle_group_count": 7,
+  "three_hop_cycle_count": 12,
+  "three_hop_cycle_group_count": 2,
+  "strongly_connected_component_count": 3,
+  "direct_self_loops": [],
+  "two_hop_cycles": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4
+      ],
+      "path_edge_indices": [
+        3,
+        31
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 6
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6
+      ],
+      "path_edge_indices": [
+        5,
+        47
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 4
+    },
+    {
+      "index": 2,
+      "node_cycle": [
+        0,
+        4
+      ],
+      "path_edge_indices": [
+        13,
+        31
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 6
+    },
+    {
+      "index": 3,
+      "node_cycle": [
+        14,
+        16
+      ],
+      "path_edge_indices": [
+        21,
+        28
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 4,
+      "node_cycle": [
+        16,
+        14
+      ],
+      "path_edge_indices": [
+        28,
+        21
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 5,
+      "node_cycle": [
+        4,
+        6
+      ],
+      "path_edge_indices": [
+        29,
+        44
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 8
+    },
+    {
+      "index": 6,
+      "node_cycle": [
+        4,
+        6
+      ],
+      "path_edge_indices": [
+        29,
+        56
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 8
+    },
+    {
+      "index": 7,
+      "node_cycle": [
+        4,
+        0
+      ],
+      "path_edge_indices": [
+        31,
+        3
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 6
+    },
+    {
+      "index": 8,
+      "node_cycle": [
+        4,
+        0
+      ],
+      "path_edge_indices": [
+        31,
+        13
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 6
+    },
+    {
+      "index": 9,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        36,
+        64
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 10,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        36,
+        68
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 11,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        36,
+        71
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 12,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        36,
+        75
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 13,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        37,
+        101
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 14,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        37,
+        106
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 15,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        37,
+        108
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 16,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        37,
+        113
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 17,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        42,
+        64
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 18,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        42,
+        68
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 19,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        42,
+        71
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 20,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "path_edge_indices": [
+        42,
+        75
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 21,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        43,
+        101
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 22,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        43,
+        106
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 23,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        43,
+        108
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 24,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "path_edge_indices": [
+        43,
+        113
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 25,
+      "node_cycle": [
+        6,
+        4
+      ],
+      "path_edge_indices": [
+        44,
+        29
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 8
+    },
+    {
+      "index": 26,
+      "node_cycle": [
+        6,
+        0
+      ],
+      "path_edge_indices": [
+        47,
+        5
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 4
+    },
+    {
+      "index": 27,
+      "node_cycle": [
+        6,
+        4
+      ],
+      "path_edge_indices": [
+        56,
+        29
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 8
+    },
+    {
+      "index": 28,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        64,
+        36
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 29,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        64,
+        42
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 30,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        68,
+        36
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 31,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        68,
+        42
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 32,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        71,
+        36
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 33,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        71,
+        42
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 34,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        75,
+        36
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 35,
+      "node_cycle": [
+        21,
+        4
+      ],
+      "path_edge_indices": [
+        75,
+        42
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 36,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        101,
+        37
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 37,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        101,
+        43
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 38,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        106,
+        37
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 39,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        106,
+        43
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 40,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        108,
+        37
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 41,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        108,
+        43
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 42,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        113,
+        37
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 43,
+      "node_cycle": [
+        22,
+        4
+      ],
+      "path_edge_indices": [
+        113,
+        43
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 44,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "path_edge_indices": [
+        122,
+        124
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 45,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "path_edge_indices": [
+        122,
+        125
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 46,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "path_edge_indices": [
+        123,
+        124
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 47,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "path_edge_indices": [
+        123,
+        125
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 48,
+      "node_cycle": [
+        37,
+        36
+      ],
+      "path_edge_indices": [
+        124,
+        122
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 49,
+      "node_cycle": [
+        37,
+        36
+      ],
+      "path_edge_indices": [
+        124,
+        123
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 50,
+      "node_cycle": [
+        37,
+        36
+      ],
+      "path_edge_indices": [
+        125,
+        122
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 2
+    },
+    {
+      "index": 51,
+      "node_cycle": [
+        37,
+        36
+      ],
+      "path_edge_indices": [
+        125,
+        123
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "first_degree_entity"
+      ],
+      "path_weight": 2
+    }
+  ],
+  "two_hop_cycle_groups": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4
+      ],
+      "supporting_cycle_indices": [
+        0,
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6
+      ],
+      "supporting_cycle_indices": [
+        1,
+        26
+      ]
+    },
+    {
+      "index": 2,
+      "node_cycle": [
+        14,
+        16
+      ],
+      "supporting_cycle_indices": [
+        3,
+        4
+      ]
+    },
+    {
+      "index": 3,
+      "node_cycle": [
+        4,
+        6
+      ],
+      "supporting_cycle_indices": [
+        5,
+        6,
+        25,
+        27
+      ]
+    },
+    {
+      "index": 4,
+      "node_cycle": [
+        4,
+        21
+      ],
+      "supporting_cycle_indices": [
+        9,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        20,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "index": 5,
+      "node_cycle": [
+        4,
+        22
+      ],
+      "supporting_cycle_indices": [
+        13,
+        14,
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "index": 6,
+      "node_cycle": [
+        36,
+        37
+      ],
+      "supporting_cycle_indices": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ],
+  "three_hop_cycles": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4,
+        6
+      ],
+      "path_edge_indices": [
+        3,
+        29,
+        47
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6,
+        4
+      ],
+      "path_edge_indices": [
+        5,
+        44,
+        31
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 2,
+      "node_cycle": [
+        0,
+        6,
+        4
+      ],
+      "path_edge_indices": [
+        5,
+        56,
+        31
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 3,
+      "node_cycle": [
+        0,
+        4,
+        6
+      ],
+      "path_edge_indices": [
+        13,
+        29,
+        47
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 4,
+      "node_cycle": [
+        4,
+        6,
+        0
+      ],
+      "path_edge_indices": [
+        29,
+        47,
+        3
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 5,
+      "node_cycle": [
+        4,
+        6,
+        0
+      ],
+      "path_edge_indices": [
+        29,
+        47,
+        13
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 6,
+      "node_cycle": [
+        4,
+        0,
+        6
+      ],
+      "path_edge_indices": [
+        31,
+        5,
+        44
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 7,
+      "node_cycle": [
+        4,
+        0,
+        6
+      ],
+      "path_edge_indices": [
+        31,
+        5,
+        56
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "first_degree_entity"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 8,
+      "node_cycle": [
+        6,
+        4,
+        0
+      ],
+      "path_edge_indices": [
+        44,
+        31,
+        5
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 9,
+      "node_cycle": [
+        6,
+        0,
+        4
+      ],
+      "path_edge_indices": [
+        47,
+        3,
+        29
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 10,
+      "node_cycle": [
+        6,
+        0,
+        4
+      ],
+      "path_edge_indices": [
+        47,
+        13,
+        29
+      ],
+      "path_relationship_types": [
+        "lexical_field",
+        "first_degree_entity",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    },
+    {
+      "index": 11,
+      "node_cycle": [
+        6,
+        4,
+        0
+      ],
+      "path_edge_indices": [
+        56,
+        31,
+        5
+      ],
+      "path_relationship_types": [
+        "first_degree_entity",
+        "lexical_field",
+        "lexical_field"
+      ],
+      "path_weight": 9
+    }
+  ],
+  "three_hop_cycle_groups": [
+    {
+      "index": 0,
+      "node_cycle": [
+        0,
+        4,
+        6
+      ],
+      "supporting_cycle_indices": [
+        0,
+        3,
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    {
+      "index": 1,
+      "node_cycle": [
+        0,
+        6,
+        4
+      ],
+      "supporting_cycle_indices": [
+        1,
+        2,
+        6,
+        7,
+        8,
+        11
+      ]
+    }
+  ],
+  "strongly_connected_components": [
+    {
+      "index": 0,
+      "node_indices": [
+        14,
+        16
+      ],
+      "edge_indices": [
+        21,
+        28
+      ],
+      "term_count": 2,
+      "edge_count": 2
+    },
+    {
+      "index": 1,
+      "node_indices": [
+        36,
+        37
+      ],
+      "edge_indices": [
+        122,
+        123,
+        124,
+        125
+      ],
+      "term_count": 2,
+      "edge_count": 4
+    },
+    {
+      "index": 2,
+      "node_indices": [
+        0,
+        4,
+        6,
+        21,
+        22
+      ],
+      "edge_indices": [
+        3,
+        5,
+        13,
+        29,
+        31,
+        36,
+        37,
+        42,
+        43,
+        44,
+        47,
+        56,
+        64,
+        68,
+        71,
+        75,
+        101,
+        106,
+        108,
+        113
+      ],
+      "term_count": 5,
+      "edge_count": 20
+    }
+  ]
+}

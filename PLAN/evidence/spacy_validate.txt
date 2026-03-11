@@ -1,0 +1,8 @@
+⠙ Loading compatibility table...⠹ Loading compatibility table...[2K[38;5;2m✔ Loaded compatibility table[0m
+[1m
+================ Installed pipeline packages (spaCy v3.8.11) ================[0m
+[38;5;4mℹ spaCy installation:
+/home/_404/src/dom0/.venv/lib/python3.12/site-packages/spacy[0m
+
+No pipeline packages found in your current environment.
+

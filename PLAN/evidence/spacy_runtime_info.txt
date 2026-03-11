@@ -1,0 +1,9 @@
+[1m
+============================== Info about spaCy ==============================[0m
+
+spaCy version    3.8.11                        
+Location         /home/_404/src/dom0/.venv/lib/python3.12/site-packages/spacy
+Platform         Linux-6.6.99-09070-g0245f6566c20-x86_64-with-glibc2.43
+Python version   3.12.12                       
+Pipelines                                      
+

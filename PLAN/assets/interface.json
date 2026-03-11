@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "skill": "plan",
+  "context": "root_homeostasis_acm_analysis",
+  "entry_requires": [
+    {
+      "name": "problem_set",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "wt",
+      "type": "path",
+      "required": true
+    },
+    {
+      "name": "homeostasis_root",
+      "type": "path",
+      "required": true
+    },
+    {
+      "name": "acm_root",
+      "type": "path",
+      "required": true
+    }
+  ],
+  "exit_produces": [
+    {
+      "name": "plan_packet",
+      "type": "path"
+    },
+    {
+      "name": "plan_packet_meta",
+      "type": "path"
+    },
+    {
+      "name": "homeostasis_term_inventory",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "acm_term_inventory",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "concept_crosswalk",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "root_scope_model",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "relationship_substrate_model",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "identity_substrate_model",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "applied_control_model",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "methodology_spec",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "artifact_family_model",
+      "type": "planned_deliverable"
+    },
+    {
+      "name": "decision",
+      "type": "enum(APPROVED|REJECTED|NEEDS_INFO)"
+    }
+  ],
+  "capabilities": [
+    "root_concept_analysis",
+    "control_model_cross_reference",
+    "micro_deliverable_scoping",
+    "workflow_freezing",
+    "plan_first_gating"
+  ],
+  "side_effects": [
+    "writes_files_under_wt_plan"
+  ],
+  "mutations": {
+    "repo": false,
+    "system": false,
+    "network": false
+  },
+  "notes": [
+    "Sweep artifacts are intentionally not required for this static conceptual analysis objective.",
+    "Runtime implementation remains out of scope for this planning pass.",
+    "Complexity is reduced by splitting the work into independently reviewable micro-deliverables.",
+    "All trusted inputs and outputs are localized under /home/_404/src/dom0."
+  ]
+}

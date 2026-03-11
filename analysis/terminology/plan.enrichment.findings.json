@@ -1,0 +1,633 @@
+{
+  "kind": "plan.enrichment.findings.v1",
+  "source_diff_ref": "terminology.diff.json",
+  "source_seed_ref": "terminology.seeds.json",
+  "candidate_count": 21,
+  "top_candidates": [
+    {
+      "term": "policy",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation",
+        "authority_roles",
+        "planes_and_boundaries",
+        "root_scope"
+      ],
+      "priority_score": 71,
+      "suggested_plan_sections": [
+        "scope"
+      ],
+      "reason": {
+        "source_path_count": 9,
+        "supporting_entry_count": 36,
+        "occurrence_total": 57,
+        "authority_score": 9
+      },
+      "source_paths": [
+        "asset-control-model/proposal_register.v1.json",
+        "asset-control-model/spec_draft.v1.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Your plane normalization point is correct. That packet still uses `control|governance|data|tooling`, which is out of step with ACM\u2019s `policy|contract|runtime` primary-plane rule in [proposal_register.v1.json](/home/_404/src/proposal_register/specify-proposal/proposal_register.v1.json#L27) and [spec_draft.v1.json](/home/_404/src/proposal_register/asset-control-model/spec_draft.v1.json).",
+        "define policy, contract, and runtime as the only primary planes and move secondary labels into concerns so generated prompt projections remain runtime artifacts, not authority surfaces",
+        "Policy Contract Runtime Plane Separation",
+        "policy | contract | runtime",
+        "policy|contract|runtime"
+      ]
+    },
+    {
+      "term": "undisclosed",
+      "family": "control_theory",
+      "categories": [
+        "state_and_dynamics"
+      ],
+      "priority_score": 59,
+      "suggested_plan_sections": [
+        "deliverables_D6"
+      ],
+      "reason": {
+        "source_path_count": 5,
+        "supporting_entry_count": 10,
+        "occurrence_total": 17,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session-capture-patterns.json",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Promotion should gate only representation fidelity and applied-control fidelity, not live observations or undisclosed operations.",
+        "If a finding emerges and documents an undisclosed operation, this needs to become a new unknown, which mutates our conception of IDENTITY. It's not subjected to promotion because it's a live fact.",
+        "So an undisclosed operation should enter `IDENTITY.current` as something like:",
+        "Undisclosed operations become new unknowns that mutate live identity immediately and are not promotion-gated.",
+        "undisclosed"
+      ]
+    },
+    {
+      "term": "unknown",
+      "family": "control_theory",
+      "categories": [
+        "state_and_dynamics"
+      ],
+      "priority_score": 59,
+      "suggested_plan_sections": [
+        "deliverables_D6"
+      ],
+      "reason": {
+        "source_path_count": 8,
+        "supporting_entry_count": 17,
+        "occurrence_total": 29,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/homeostasis_review_findings.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "evaluation: `verify/gate` with tri-state decisions (`VALID|INVALID|UNKNOWN`),",
+        "- evaluation: `verify/gate` with tri-state decisions (`VALID|INVALID|UNKNOWN`),",
+        "If a finding emerges and documents an undisclosed operation, this needs to become a new unknown, which mutates our conception of IDENTITY. It's not subjected to promotion because it's a live fact.",
+        "Tri-state gate semantics: `VALID | INVALID | UNKNOWN`.",
+        "`suspected_break` maps to `UNKNOWN` gate pressure until validated."
+      ]
+    },
+    {
+      "term": "service",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation",
+        "authority_roles",
+        "planes_and_boundaries",
+        "root_scope"
+      ],
+      "priority_score": 59,
+      "suggested_plan_sections": [
+        "deliverables_D4"
+      ],
+      "reason": {
+        "source_path_count": 7,
+        "supporting_entry_count": 10,
+        "occurrence_total": 14,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "asset-control-model/proposal_register.v1.json",
+        "asset-control-model/spec_draft.v1.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Trunk: state space + authority model + service/asset/artifact ontology",
+        "The operational substrate requires roots, state-space/FSM/service/asset definitions, and a tree rather than leaf-only thinking.",
+        "a state space definition: what is the state_space, what are the FSMs, what is a service, what are assets",
+        "bind the first control-assessed assets: session_context, prompt seeds and composed prompt, service-assurance triggers, git policy surface, and skill registry lifecycle, with session_context as the first fully populated exemplar",
+        "initial scoped assets: session_context, prompt seeds and composed prompt, service-assurance triggers, git policy surface, and skill registry lifecycle"
+      ]
+    },
+    {
+      "term": "assurance",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation",
+        "authority_roles",
+        "planes_and_boundaries",
+        "root_scope"
+      ],
+      "priority_score": 56,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 4,
+        "supporting_entry_count": 15,
+        "occurrence_total": 17,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "asset-control-model/proposal_register.v1.json",
+        "asset-control-model/spec_draft.v1.json",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "define a singular authority chain per controlled asset using the frozen asset_control_entry minimum field set, including authority, promotion, runtime source/projection, assurance, and rollback metadata",
+        "one controlled asset with singular authority, promotion, runtime, and assurance metadata",
+        "runtime-plane object defining projections, triggers, assurance checks, and rollback behavior",
+        "what has no gate, rollback, or assurance",
+        "assurance trigger, severity, and action classification"
+      ]
+    },
+    {
+      "term": "writer",
+      "family": "spec_driven",
+      "categories": [
+        "authority_roles"
+      ],
+      "priority_score": 54,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 5,
+        "supporting_entry_count": 3,
+        "occurrence_total": 9,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "asset-control-model/spec_draft.v1.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/homeostasis_review_findings.json",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`homeostasis` should treat todo management as a dedicated writer capability (`todo-write` or equivalent), with:",
+        "writer",
+        "`writer`"
+      ]
+    },
+    {
+      "term": "state_space",
+      "family": "control_theory",
+      "categories": [
+        "state_and_dynamics"
+      ],
+      "priority_score": 52,
+      "suggested_plan_sections": [
+        "problem_set",
+        "deliverables_D4"
+      ],
+      "reason": {
+        "source_path_count": 4,
+        "supporting_entry_count": 14,
+        "occurrence_total": 19,
+        "authority_score": 5
+      },
+      "source_paths": [
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Prioritize `state_space` runtime implementation in spawn (build/update/gate/verify).",
+        "a state space definition: what is the state_space, what are the FSMs, what is a service, what are assets",
+        "Decide first implementation slice for spawn state_space build/update/gate",
+        "state_space",
+        "`state_space`"
+      ]
+    },
+    {
+      "term": "state_space",
+      "family": "spec_driven",
+      "categories": [
+        "planes_and_boundaries",
+        "root_scope"
+      ],
+      "priority_score": 52,
+      "suggested_plan_sections": [
+        "problem_set",
+        "deliverables_D4"
+      ],
+      "reason": {
+        "source_path_count": 4,
+        "supporting_entry_count": 14,
+        "occurrence_total": 19,
+        "authority_score": 5
+      },
+      "source_paths": [
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Prioritize `state_space` runtime implementation in spawn (build/update/gate/verify).",
+        "a state space definition: what is the state_space, what are the FSMs, what is a service, what are assets",
+        "Decide first implementation slice for spawn state_space build/update/gate",
+        "state_space",
+        "`state_space`"
+      ]
+    },
+    {
+      "term": "subordinate",
+      "family": "control_theory",
+      "categories": [
+        "control_roles"
+      ],
+      "priority_score": 50,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 4,
+        "occurrence_total": 9,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`identity.current -> applied_control -> control findings -> relationship.current` when control analysis discovers a new real controller/actuator/subordinate relationship",
+        "new subordinate",
+        "`subordinate`",
+        "subordinate"
+      ]
+    },
+    {
+      "term": "subordinate",
+      "family": "spec_driven",
+      "categories": [
+        "authority_roles",
+        "control_surfaces"
+      ],
+      "priority_score": 50,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 4,
+        "occurrence_total": 9,
+        "authority_score": 6
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`identity.current -> applied_control -> control findings -> relationship.current` when control analysis discovers a new real controller/actuator/subordinate relationship",
+        "new subordinate",
+        "`subordinate`",
+        "subordinate"
+      ]
+    },
+    {
+      "term": "feedback",
+      "family": "control_theory",
+      "categories": [
+        "feedback_and_regulation",
+        "state_and_dynamics"
+      ],
+      "priority_score": 47,
+      "suggested_plan_sections": [
+        "deliverables_D8"
+      ],
+      "reason": {
+        "source_path_count": 5,
+        "supporting_entry_count": 11,
+        "occurrence_total": 12,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/context.snapshot.json",
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md",
+        "homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl"
+      ],
+      "supporting_examples": [
+        "You can externalize part of background execution, CI feedback loops, and activity governance to GitHub-native features while keeping local loop/state-space as the authoritative control-plane target.",
+        "Feedback-loop tuner",
+        "How is IDENTITY persisted? A json-schema derived from crawling findings and control-analysis findings. This is now a closed feedback loop.",
+        "`homeostasis` is aligned with `Skill Library Evolution` and the `Feedback Loops` category:",
+        "Feedback loops"
+      ]
+    },
+    {
+      "term": "fsm",
+      "family": "control_theory",
+      "categories": [
+        "feedback_and_regulation",
+        "state_and_dynamics"
+      ],
+      "priority_score": 44,
+      "suggested_plan_sections": [
+        "deliverables_D4"
+      ],
+      "reason": {
+        "source_path_count": 4,
+        "supporting_entry_count": 8,
+        "occurrence_total": 11,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "The operational substrate requires roots, state-space/FSM/service/asset definitions, and a tree rather than leaf-only thinking.",
+        "`Scope roots by identity`; `Test FSM fit`; `Trigger Rule`",
+        "FSM",
+        "Test `FSM` fit:",
+        "identity scoping and FSM-fit testing"
+      ]
+    },
+    {
+      "term": "fsm",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation",
+        "planes_and_boundaries",
+        "root_scope"
+      ],
+      "priority_score": 44,
+      "suggested_plan_sections": [
+        "deliverables_D4"
+      ],
+      "reason": {
+        "source_path_count": 4,
+        "supporting_entry_count": 8,
+        "occurrence_total": 11,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/inclusion_verification_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "The operational substrate requires roots, state-space/FSM/service/asset definitions, and a tree rather than leaf-only thinking.",
+        "`Scope roots by identity`; `Test FSM fit`; `Trigger Rule`",
+        "FSM",
+        "Test `FSM` fit:",
+        "identity scoping and FSM-fit testing"
+      ]
+    },
+    {
+      "term": "identity_delta",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation",
+        "control_surfaces"
+      ],
+      "priority_score": 41,
+      "suggested_plan_sections": [
+        "deliverables_D6"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 9,
+        "occurrence_total": 23,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`identity_delta` is the re-analysis trigger",
+        "finding -> identity.current mutation -> identity_delta -> control re-analysis",
+        "finding -> mutate IDENTITY.current -> emit identity_delta -> rerun applied_control -> expose control gap",
+        "relationship.current -> identity.current -> identity_delta",
+        "identity_delta"
+      ]
+    },
+    {
+      "term": "policy_surface",
+      "family": "spec_driven",
+      "categories": [
+        "control_surfaces"
+      ],
+      "priority_score": 39,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 4,
+        "occurrence_total": 17,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "asset-control-model/spec_draft.v1.json",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Define the missing bootstrap object family first: `proposal_subject`, `canonical_binding_set`, `asset_inventory`, `plane_scope_map`, `trust_domain_map`, `interop_dependency_set`, `policy_surface_map`, `bootstrap_manifest`.",
+        "policy_surface_map",
+        "`policy_surface_map`",
+        "git_policy_surface"
+      ]
+    },
+    {
+      "term": "bootstrap_manifest",
+      "family": "spec_driven",
+      "categories": [
+        "control_surfaces"
+      ],
+      "priority_score": 34,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 2,
+        "supporting_entry_count": 3,
+        "occurrence_total": 24,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "Define the missing bootstrap object family first: `proposal_subject`, `canonical_binding_set`, `asset_inventory`, `plane_scope_map`, `trust_domain_map`, `interop_dependency_set`, `policy_surface_map`, `bootstrap_manifest`.",
+        "bootstrap_manifest",
+        "`bootstrap_manifest`"
+      ]
+    },
+    {
+      "term": "observer",
+      "family": "control_theory",
+      "categories": [
+        "control_roles"
+      ],
+      "priority_score": 32,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 3,
+        "occurrence_total": 5,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`observer`",
+        "observer",
+        "new observer"
+      ]
+    },
+    {
+      "term": "observer",
+      "family": "spec_driven",
+      "categories": [
+        "authority_roles"
+      ],
+      "priority_score": 32,
+      "suggested_plan_sections": [
+        "problem_set"
+      ],
+      "reason": {
+        "source_path_count": 3,
+        "supporting_entry_count": 3,
+        "occurrence_total": 5,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "`observer`",
+        "observer",
+        "new observer"
+      ]
+    },
+    {
+      "term": "measure",
+      "family": "control_theory",
+      "categories": [
+        "signals_and_observability"
+      ],
+      "priority_score": 22,
+      "suggested_plan_sections": [
+        "deliverables_D7"
+      ],
+      "reason": {
+        "source_path_count": 2,
+        "supporting_entry_count": 1,
+        "occurrence_total": 2,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "applied control: does it do what it's meant to do, the way it's meant to do it, with the intended measure outputs and byproducts?"
+      ]
+    },
+    {
+      "term": "measure",
+      "family": "spec_driven",
+      "categories": [
+        "assurance_validation"
+      ],
+      "priority_score": 22,
+      "suggested_plan_sections": [
+        "deliverables_D7"
+      ],
+      "reason": {
+        "source_path_count": 2,
+        "supporting_entry_count": 1,
+        "occurrence_total": 2,
+        "authority_score": 3
+      },
+      "source_paths": [
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.jsonl",
+        "homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/session_log_slice_2026-03-10_system_discovery_homeostasis.md"
+      ],
+      "supporting_examples": [
+        "applied control: does it do what it's meant to do, the way it's meant to do it, with the intended measure outputs and byproducts?"
+      ]
+    },
+    {
+      "term": "signal",
+      "family": "control_theory",
+      "categories": [
+        "signals_and_observability"
+      ],
+      "priority_score": 14,
+      "suggested_plan_sections": [
+        "deliverables_D5"
+      ],
+      "reason": {
+        "source_path_count": 1,
+        "supporting_entry_count": 1,
+        "occurrence_total": 1,
+        "authority_score": 2
+      },
+      "source_paths": [
+        "homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md"
+      ],
+      "supporting_examples": [
+        "High-signal match to your roadmap:"
+      ]
+    }
+  ]
+}

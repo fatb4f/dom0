@@ -1,0 +1,50 @@
+{
+  "kind": "dom0.daily_ledger.v1",
+  "ledger_date": "2026-03-10",
+  "scope_root": "/home/_404/src/dom0",
+  "scope_statement": "All work captured here was localized to dom0 because state outside dom0 was treated as untrusted.",
+  "summary": "Localized the homeostasis/ACM analysis workflow in dom0, built terminology and graph-derived analysis artifacts, and established a readable closure surface for root-level concept clusters.",
+  "tasks": [
+    "Created a localized PLAN packet for root-level homeostasis versus ACM analysis under /home/_404/src/dom0/PLAN.",
+    "Produced a raw glossary and spaCy-derived token, lemma, KWIC, and collocation artifacts under /home/_404/src/dom0.",
+    "Normalized and deduplicated the glossary without semantic alteration, then enriched the working copy with spec-driven and control-theory terminology.",
+    "Extracted PLAN terminology, diffed it against the enriched glossary, derived seeds, and built plan-enrichment findings.",
+    "Derived seed lexical fields, an indexed term relationship graph, second-degree and third-degree reachability artifacts, and closure-cycle summaries under /home/_404/src/dom0/analysis/terminology.",
+    "Added a local repo ignore boundary for transient cloud/cache/error surfaces."
+  ],
+  "primary_artifact_refs": [
+    "PLAN/README.md",
+    "PLAN/packet.meta.json",
+    "glossary.json",
+    "glossary.spacy.tokens.json",
+    "glossary.spacy.lemmas.json",
+    "glossary.spacy.kwic.json",
+    "glossary.spacy.collocations.json",
+    "spacy.run_summary.md",
+    "analysis/terminology/glossary.normalized.dedup.json",
+    "analysis/terminology/glossary.normalized.dedup.enriched.working.json",
+    "analysis/terminology/plan.key_terminology.json",
+    "analysis/terminology/terminology.diff.json",
+    "analysis/terminology/terminology.seeds.json",
+    "analysis/terminology/plan.enrichment.findings.json",
+    "analysis/terminology/seed.lexical_field.relationship_map.json",
+    "analysis/terminology/term.relationship_graph.json",
+    "analysis/terminology/term.second_degree_relationships.json",
+    "analysis/terminology/term.third_degree_relationships.json",
+    "analysis/terminology/term.closure_cycles.json",
+    "analysis/terminology/term.closure_summary.json",
+    "analysis/terminology/term.closure_summary.md"
+  ],
+  "observed_commit_refs_before_amend": [
+    {
+      "commit": "86e47b1335478091d6a9eb56669889de7d98aa5a",
+      "subject": "init"
+    },
+    {
+      "commit": "e57b2076f1d306691f0a5494da09bedc3f138741",
+      "subject": "Add terminology and closure analysis artifacts"
+    }
+  ],
+  "amend_target_commit_ref": "e57b2076f1d306691f0a5494da09bedc3f138741",
+  "ledger_path": "ledger/2026-03-10.json"
+}

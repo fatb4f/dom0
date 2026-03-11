@@ -1,0 +1,6573 @@
+{
+  "kind": "plan.key_terminology.v1",
+  "source_plan_root": "/home/_404/src/dom0/PLAN",
+  "excluded_paths": [
+    "PLAN/evidence/**"
+  ],
+  "file_count": 6,
+  "extracted_record_count": 3219,
+  "term_count": 378,
+  "terms": [
+    {
+      "term": "entity/plane/authority",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "authority",
+        "plane"
+      ],
+      "matched_spec_categories": [
+        "authority_roles",
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [
+        "authority"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Output",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "output"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [
+        "output"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "actuator",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "actuator"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "actuator"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "applied_control.current",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "applied_control",
+        "applied_control.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "authority",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "authority"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "authority"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "promotion-boundary",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "boundary",
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "trigger",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "trigger"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [
+        "trigger"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "codex"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md:65",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "codex"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md:7",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "codex"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Runtime implementation remains out of scope for this planning pass.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [
+        "runtime",
+        "scope"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D7 applied control and promotion boundary",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "boundary",
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "applied-control/promotion-boundary",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "boundary",
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "applied_control.current.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "applied_control",
+        "applied_control.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "authority-chain",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "authority"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "authority"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "authority/actuation",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "authority"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "authority"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "controller",
+      "source_count": 1,
+      "sources": [
+        "PLAN/*"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [
+        "controller"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "controller"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "fidelity-promotion",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "fidelity",
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation",
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/codex-review.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "codex"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "output",
+      "source_count": 1,
+      "sources": [
+        "PLAN/*"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [
+        "output"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [
+        "output"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "root/controller",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "controller"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [
+        "controller"
+      ],
+      "matched_control_categories": [
+        "control_roles"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "scope",
+      "source_count": 4,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "scope"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "boundary",
+      "source_count": 3,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "boundary"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "evidence",
+      "source_count": 3,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "evidence"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "homeostasis",
+      "source_count": 3,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "promotion",
+      "source_count": 3,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "state",
+      "source_count": 3,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "state"
+      ],
+      "matched_control_categories": [
+        "state_and_dynamics"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": ".control",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [
+        ".control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N8_applied_control_substrate",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "applied_control_model",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifact",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "artifact"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "asset",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "codex",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "codex"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "contract",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "contract"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "control_root",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "control_root"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "delta",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "delta"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "fidelity",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "fidelity"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "gate",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "gate"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "homeostasis.",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "host",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "host"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "identity.current",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "identity.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "int/root-homeostasis-acm",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "loop",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "loop"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "observable",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "observable"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plane",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "plane"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "re-analysis",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "re-analysis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "relationship.current",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "relationship.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "rollback",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "rollback"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "runtime",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "scope_root",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "scope_root"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "spawn",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "spawn"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "validation",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "validation"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "validator",
+      "source_count": 2,
+      "sources": [
+        "PLAN/*",
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "validator"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "wt-int-root-homeostasis-acm",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$git_root/.control",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        ".control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/proposal_register.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:116",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:145",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:18",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:20",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:29",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:37",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:75",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:82",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:98",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/homeostasis_review_findings.json:12",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md:40",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md:44",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md:9",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:138",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:148",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:188",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:207",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:28",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:321",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:333",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:376",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:59",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:61",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "ACM/homeostasis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Artifact",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "artifact"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Evidence",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "evidence"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Gate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "gate"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Gate: pass|needs-human",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "gate"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Homeostasis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "Owner",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "owner"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Promotion",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "promotion"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Rollback",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "rollback"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Root-level homeostasis concepts are not yet materialized into ACM-aligned definitions or an operational methodology",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Runtime",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Runtime/operational",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Trust boundary",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [
+        "boundary"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Validation",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "validation"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D1 homeostasis term inventory",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D4 root scope semantics",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [
+        "scope"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D8 homeostasis workflow",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "applied_control",
+      "source_count": 1,
+      "sources": [
+        "PLAN/*"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "applied_control.report.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "artifact-family",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "artifact"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifact.template.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "artifact"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "bus/runtime",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "candidate/scope",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "scope"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "control/state",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "state"
+      ],
+      "matched_control_categories": [
+        "state_and_dynamics"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "define_applied_control_substrate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "dom0/asset-control-model",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "dom0/homeostasis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "evidence-backed",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "evidence"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "gate.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "gate"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "git_root/.control",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        ".control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/asset-control-model",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/asset-control-model/proposal_register.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/asset-control-model/spec_draft.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/homeostasis_review_findings.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-06T00-00-00Z__2026-03-07T00-00-00Z/process_snapshot_report.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-07T00-00-00Z__2026-03-08T00-00-00Z/core_ideas.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "homeostasis"
+      ],
+      "matched_control_categories": [
+        "feedback_and_regulation"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "identity.current.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "identity.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "identity.delta",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "delta"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "identity.delta.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "delta"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "owner",
+      "source_count": 1,
+      "sources": [
+        "PLAN/*"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [
+        "owner"
+      ],
+      "matched_spec_categories": [
+        "authority_roles"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "per-asset",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "relationship.current.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "relationship.current"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "relationship.delta.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "delta"
+      ],
+      "matched_control_categories": [
+        "signals_and_observability"
+      ],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "relationship_identity_and_applied_control_are_separate_micro_deliverables",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [
+        "applied_control"
+      ],
+      "matched_spec_categories": [
+        "control_surfaces"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "rollback/re-entry",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "rollback"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "runtime-liveliness",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "runtime/operational",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "runtime"
+      ],
+      "matched_spec_categories": [
+        "planes_and_boundaries"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "scoped-asset",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "asset"
+      ],
+      "matched_spec_categories": [
+        "root_scope"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "transition",
+      "source_count": 1,
+      "sources": [
+        "PLAN/*"
+      ],
+      "extraction_kinds": [
+        "lexicon_scan"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "transition"
+      ],
+      "matched_control_categories": [
+        "state_and_dynamics"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "transition.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [
+        "transition"
+      ],
+      "matched_control_categories": [
+        "state_and_dynamics"
+      ],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "validator/wrapper",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [
+        "validator"
+      ],
+      "matched_spec_categories": [
+        "assurance_validation"
+      ],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0",
+      "source_count": 4,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/packet.meta.json",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N0_objective",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "decision",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "next",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "objective",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "plan",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "repo",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "required",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "workflow",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "wt",
+      "source_count": 3,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/assets/interface.json",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/assets/workflow.json",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "1.0",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N10_gate_review",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N1_source_collection",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N2_homeostasis_terms",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N3_acm_terms",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N4_crosswalk",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N5_root_scope",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N6_relationship_substrate",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N7_identity_substrate",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N9_methodology_workflow",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/sequence_dag.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "acm_term_inventory",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "aligned",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifacts",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "concept_crosswalk",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "context",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "control",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "dom0",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "execution",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "gates",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "git",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "homeostasis_term_inventory",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "identity",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "identity_substrate_model",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "invariants",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "inventory",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "methodology_spec",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "name",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "notes",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "outputs",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "path",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "problem_set",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "heading",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "relationship_substrate_model",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "root_homeostasis_acm_analysis",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "root_scope_model",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "source",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "success_criteria",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "sweep",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "system",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "type",
+      "source_count": 2,
+      "sources": [
+        "PLAN/README.md",
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "version",
+      "source_count": 2,
+      "sources": [
+        "PLAN/assets/interface.json",
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/README.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/assets/interface.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/assets/sequence_dag.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/assets/workflow.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/packet.meta.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "$wt/PLAN/references/git_flow.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/README.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/assets/sequence_dag.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/packet.meta.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "/home/_404/src/dom0/PLAN/references/git_flow.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "APPROVED",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "APPROVED plan-only packet; implementation remains dry-run and gated",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "All trusted inputs and outputs are localized under /home/_404/src/dom0.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Base-Ref: <sha>",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Baseline model",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Command skeleton",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Complexity is reduced by splitting the work into independently reviewable micro-deliverables.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Conflict handling",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Deliverable commit conventions",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Deliverable: D-<id>",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Edges",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Inputs",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "Local Git Flow Reference",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N0 -> N1 -> N2 -> N3 -> N4 -> N5 -> N6 -> N7 -> N8 -> N9 -> N10",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N1_collection",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N2_crosswalk",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N4 -> N2|N3",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N6 -> N5",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N7 -> N6",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N8 -> N7",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "N9 -> N5|N6|N7|N8",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Nodes",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "None",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "Notes",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "PENDING",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "PLAN",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "PLAN/",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "PLAN/README.md",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Plan Packet",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "REJECTED",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Root-Level Analysis Sequence DAG",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "heading"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "Sweep artifacts are intentionally not required for this static conceptual analysis objective.",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D2 ACM term inventory",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D3 terminology crosswalk and gaps",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D5 relationship substrate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D6 identity substrate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "[dom0][foundation] D<n> <deliverable summary>",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "acm_plane_separation_preserved",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "acm_root",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "action",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "actuators",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "apply",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "approval_gate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifact_families_require_explicit_schema_instance_actuation_rendering_boundaries",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifact_family_model",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "artifact_paths",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "asset_control_entry_minimum_fields",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "assets",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "assets/workflow.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "assets_impacted",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "assets_required",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "authored",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "bind_problem_statement",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "capabilities",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "collect_dom0_sources",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "concept_crosswalk has no unresolved collisions",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "concept_crosswalk has unresolved collisions",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "constraints",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "contracts",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "control_model_cross_reference",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "controllers",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "current",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "decision_target",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "define_identity_substrate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "define_relationship_substrate",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "define_root_scope_semantics",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "defined",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "deliverable_count",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "delivery_shape",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "dependencies",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "derive_terminology_crosswalk",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "description",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "direct_file_analysis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "directory",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "dom0_is_the_only_trusted_working_directory",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "dom0_only",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "drift",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "emit_plan_decision",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "entities",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "entry_requires",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "enum(APPROVED|REJECTED|NEEDS_INFO)",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "evidence_mode",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "evidence_refs",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "evidence_required",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "exit_produces",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "extended",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "external_state",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "extract_acm_terms",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "extract_homeostasis_terms",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "failure_signatures",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "file",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "finding.current",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "finding.current.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "freeze_homeostasis_method",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "full",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "gap_register",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "generated",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "goto",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "guards",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "homeostasis_root",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "id",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "identity.schema.v1.json",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "impact",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "implement",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "inputs",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "json-tool",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "kind",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "main",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "mapped",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "mapped|extended|new",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "matrix",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "micro_deliverable_scoping",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "micro_deliverables",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "misaligned",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "missing",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "mode",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "mutations",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "network",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "new",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "nl",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "no_runtime_mutation",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "nodes",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "not_required_for_static_conceptual_analysis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "observed",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "out",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/sequence_dag.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "packet_path",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "partial",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "phase",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plan.packet.meta.v1",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plan_assets",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plan_first_gating",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plan_packet",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "plan_packet_meta",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "planned_deliverable",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "post_decision_actions",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "pre_sweep_ref",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "primary_planes",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "promotion_boundary_model",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "pull",
+      "source_count": 1,
+      "sources": [
+        "PLAN/references/git_flow.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "ready",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "render",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "reproduce_problem_set",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "heading",
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "result",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "rg",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "code_span"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "root_concept_analysis",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "root_terms_must_be_classified_before_root_scope_definition",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "schema",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "services",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "side_effects",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "skill",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "source_inventory",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "source_roots",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "start",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "static_file_analysis_only",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "status",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "string",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "subordinates",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "summary",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "text",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "title",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "tool",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "trust_boundary",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "untrusted_due_to_compounding_drift",
+      "source_count": 1,
+      "sources": [
+        "PLAN/packet.meta.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "user",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "validators",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "when",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "why",
+      "source_count": 1,
+      "sources": [
+        "PLAN/README.md"
+      ],
+      "extraction_kinds": [
+        "term_like"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": true
+    },
+    {
+      "term": "workflow_freezing",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "workflow_spec",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/workflow.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    },
+    {
+      "term": "writes_files_under_wt_plan",
+      "source_count": 1,
+      "sources": [
+        "PLAN/assets/interface.json"
+      ],
+      "extraction_kinds": [
+        "json_string"
+      ],
+      "matched_spec_terms": [],
+      "matched_spec_categories": [],
+      "matched_control_terms": [],
+      "matched_control_categories": [],
+      "present_in_glossary_dataset": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+.codex-cloud/
+.venv/
+error.log
+__pycache__/

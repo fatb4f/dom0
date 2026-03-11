@@ -1,0 +1,254 @@
+{
+  "kind": "plan.seed_absorbed.working_copy.v1",
+  "base_plan_ref": "/home/_404/src/dom0/PLAN/README.md",
+  "source_refs": [
+    "/home/_404/src/dom0/analysis/terminology/terminology.seeds.json",
+    "/home/_404/src/dom0/analysis/terminology/plan.enrichment.findings.json",
+    "/home/_404/src/dom0/analysis/terminology/terminology.diff.json"
+  ],
+  "q1_assessment": {
+    "question": "Does semantic definition of the seed in contrast to the task hint towards collateral surface not taken into account previously?",
+    "answer": true,
+    "summary": "Seed semantics expose collateral surfaces that the current PLAN hints at only indirectly: policy-plane governance, epistemic unknown-state handling, service ontology, authority-role refinement, bootstrap/policy surface objects, and assurance measurement outputs."
+  },
+  "collateral_surfaces": [
+    {
+      "surface": "policy_plane_surface",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "policy",
+        "policy_surface"
+      ],
+      "impact": "The PLAN references ACM plane alignment but does not yet treat policy as a root-level governed surface with its own object and boundary semantics."
+    },
+    {
+      "surface": "epistemic_state_surface",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "unknown",
+        "undisclosed",
+        "identity_delta"
+      ],
+      "impact": "Identity work is planned, but the live semantics for unknown and undisclosed operations are not explicitly named as required state classes."
+    },
+    {
+      "surface": "root_service_ontology",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "service",
+        "state_space",
+        "fsm"
+      ],
+      "impact": "The PLAN names roots and scope semantics, but service definition and FSM-fit are not yet explicit required outputs under D4."
+    },
+    {
+      "surface": "authority_role_expansion",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "writer",
+        "subordinate",
+        "observer"
+      ],
+      "impact": "Authority exists in the PLAN, but subordinate execution roles and observation roles are not explicitly enumerated in the root ontology."
+    },
+    {
+      "surface": "assurance_measurement_surface",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "assurance",
+        "measure",
+        "signal"
+      ],
+      "impact": "Applied-control drafting exists, but intended measures, signals, and byproducts are not yet frozen as explicit output requirements."
+    },
+    {
+      "surface": "bootstrap_binding_surface",
+      "missing_from_plan_as_first_class": true,
+      "evidence_terms": [
+        "bootstrap_manifest"
+      ],
+      "impact": "The PLAN assumes root-level ACM extension work, but the bootstrap binding object family is not explicitly queued as a collateral artifact family."
+    }
+  ],
+  "absorbed_seed_terms": [
+    {
+      "term": "policy",
+      "family": "spec_driven",
+      "target_sections": [
+        "scope",
+        "Phase 2"
+      ],
+      "absorption": "Add policy as an explicit root-level governed surface aligned to ACM primary planes and boundary semantics."
+    },
+    {
+      "term": "service",
+      "family": "spec_driven",
+      "target_sections": [
+        "D4",
+        "Phase 2"
+      ],
+      "absorption": "Extend D4 so root candidates must define service identity, service boundaries, and service-produced artifacts."
+    },
+    {
+      "term": "state_space",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D4"
+      ],
+      "absorption": "Make state_space definition a required root-level output rather than only a contextual reference."
+    },
+    {
+      "term": "fsm",
+      "family": "control_theory",
+      "target_sections": [
+        "D4"
+      ],
+      "absorption": "Require explicit FSM-fit testing for host, codex, and spawn, with bounded states, transitions, and guards."
+    },
+    {
+      "term": "unknown",
+      "family": "control_theory",
+      "target_sections": [
+        "D6"
+      ],
+      "absorption": "Add unknown as a first-class identity state requiring immediate mutation of live identity and re-analysis."
+    },
+    {
+      "term": "undisclosed",
+      "family": "control_theory",
+      "target_sections": [
+        "D6"
+      ],
+      "absorption": "Add undisclosed operation handling as a mandatory live identity mutation path distinct from promotion."
+    },
+    {
+      "term": "identity_delta",
+      "family": "spec_driven",
+      "target_sections": [
+        "D6",
+        "D8"
+      ],
+      "absorption": "Promote identity_delta from implied consequence to explicit re-analysis trigger artifact."
+    },
+    {
+      "term": "writer",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D4"
+      ],
+      "absorption": "Enumerate writer as a root authority role with production constraints and artifact ownership."
+    },
+    {
+      "term": "subordinate",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D4"
+      ],
+      "absorption": "Enumerate subordinate as a root/subsystem role affecting identity-change and control reach."
+    },
+    {
+      "term": "observer",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D5"
+      ],
+      "absorption": "Add observer as a formal role that creates relationship updates without claiming writer authority."
+    },
+    {
+      "term": "assurance",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D7"
+      ],
+      "absorption": "Require applied-control outputs to define assurance objectives, checks, and failure semantics."
+    },
+    {
+      "term": "measure",
+      "family": "control_theory",
+      "target_sections": [
+        "D7",
+        "D8"
+      ],
+      "absorption": "Require applied control to name intended measures, outputs, and byproducts."
+    },
+    {
+      "term": "signal",
+      "family": "control_theory",
+      "target_sections": [
+        "D5",
+        "D7"
+      ],
+      "absorption": "Require relationship and control surfaces to define signal emission and observation semantics."
+    },
+    {
+      "term": "feedback",
+      "family": "control_theory",
+      "target_sections": [
+        "D8"
+      ],
+      "absorption": "Make feedback-loop closure explicit in the methodology rather than only implied by homeostasis language."
+    },
+    {
+      "term": "policy_surface",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "D7"
+      ],
+      "absorption": "Add policy_surface as a collateral object family needed to bind root-level policy semantics to ACM."
+    },
+    {
+      "term": "bootstrap_manifest",
+      "family": "spec_driven",
+      "target_sections": [
+        "problem_set",
+        "Phase 2"
+      ],
+      "absorption": "Add bootstrap_manifest as an explicit collateral object for root-level canonical binding and rollout sequencing."
+    }
+  ],
+  "working_copy_updates": {
+    "problem_set_additions": [
+      "The root-level conception must define state_space, service identity, authority-role taxonomy, and unknown/undisclosed identity semantics, not only terminology alignment and workflow shape.",
+      "The root-level conception must identify collateral object surfaces needed by ACM extension: policy_surface and bootstrap_manifest."
+    ],
+    "scope_additions": [
+      "In scope: policy-plane definition at the root level, service ontology, epistemic-state semantics, assurance/measure/signal semantics, and authority-role refinement for writer/subordinate/observer.",
+      "Out of scope remains runtime implementation, but not runtime-facing semantic definition."
+    ],
+    "deliverable_adjustments": {
+      "D4": [
+        "Add state_space definition.",
+        "Add service definition.",
+        "Add FSM-fit test method.",
+        "Add writer/subordinate role semantics."
+      ],
+      "D5": [
+        "Add observer role semantics.",
+        "Add relationship signal semantics."
+      ],
+      "D6": [
+        "Add unknown and undisclosed state classes.",
+        "Add identity_delta as explicit trigger artifact."
+      ],
+      "D7": [
+        "Add assurance objective/check definitions.",
+        "Add measures, outputs, byproducts, and signal semantics.",
+        "Add policy_surface boundary handling."
+      ],
+      "D8": [
+        "Add explicit feedback-loop closure.",
+        "Add identity_delta-triggered re-analysis step."
+      ]
+    },
+    "new_collateral_work_items": [
+      "Define policy_surface as a root-level governed object.",
+      "Define bootstrap_manifest as a root-level bootstrap binding object."
+    ]
+  }
+}
