@@ -1,0 +1,57 @@
+* commit 58c6bcae154945b10e233612bad2afaf1a91270a (HEAD -> main, origin/main, origin/HEAD)
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 11:59:25 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 11:59:25 -0400
+| 
+|     Reshape homeostasis plan around accepted-state model
+| 
+* commit 3afbd99de3c1fc7e48d2afd2974a8604e3e4f8fe
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 11:58:29 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 11:58:29 -0400
+| 
+|     dropped llm external plan review
+| 
+* commit 844817cc547fb5a1d93df23ba9bf4ccc6a01e8d4
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:27:30 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:27:30 -0400
+| 
+|     Fill tool summaries
+| 
+* commit 7fb879873b0a18f14a53640a39f32b2cb707f387
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:26:25 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:26:25 -0400
+| 
+|     tidying up
+| 
+* commit 478279f40671fae527a75d3e15b1cde7a73ada99
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:13:41 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:13:41 -0400
+| 
+|     added git-log dump for quick-ref
+| 
+* commit 3fa252ca7404c2447fb50584a50d6ba0401acc83
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-10 20:26:09 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-10 20:46:10 -0400
+| 
+|     Add terminology and closure analysis artifacts
+|     
+|     Ledger: ledger/2026-03-10.json
+| 
+* commit 86e47b1335478091d6a9eb56669889de7d98aa5a
+  Author:     fatb4f <f4t.bruce@gmail.com>
+  AuthorDate: 2026-03-10 17:07:06 -0400
+  Commit:     fatb4f <f4t.bruce@gmail.com>
+  CommitDate: 2026-03-10 17:07:06 -0400
+  
+      init
