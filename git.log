@@ -1,4 +1,12 @@
-* commit 58c6bcae154945b10e233612bad2afaf1a91270a (HEAD -> main, origin/main, origin/HEAD)
+* commit 68c6d882517d2c1d6d91fa304e1bf634f7fbae2d (HEAD -> main, origin/main, origin/HEAD)
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-12 16:16:19 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-12 16:16:19 -0400
+| 
+|     docs: add git repo service summary and log dump
+| 
+* commit 58c6bcae154945b10e233612bad2afaf1a91270a
 | Author:     fatb4f <f4t.bruce@gmail.com>
 | AuthorDate: 2026-03-11 11:59:25 -0400
 | Commit:     fatb4f <f4t.bruce@gmail.com>
