@@ -1,4 +1,76 @@
-* commit 3fa252ca7404c2447fb50584a50d6ba0401acc83 (HEAD -> main, origin/main, origin/HEAD)
+* commit ea8b19df574109f773cf521e28f887a98283437d (HEAD -> main)
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-13 09:53:49 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-13 09:53:49 -0400
+| 
+|     Refine plan packet and add Codex runtime analyses
+| 
+* commit f9d5a07e2da4b0b6a1aff52d7907781307498757 (origin/main, origin/HEAD)
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-12 20:29:17 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-12 20:29:17 -0400
+| 
+|     Refresh git log dump
+| 
+* commit cf6d8bae3c2bc49220ba646b08aef6dbbf1e14dd
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-12 20:28:29 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-12 20:28:29 -0400
+| 
+|     Document App Server and SDK resolution surface
+| 
+* commit 68c6d882517d2c1d6d91fa304e1bf634f7fbae2d
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-12 16:16:19 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-12 16:16:19 -0400
+| 
+|     docs: add git repo service summary and log dump
+| 
+* commit 58c6bcae154945b10e233612bad2afaf1a91270a
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 11:59:25 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 11:59:25 -0400
+| 
+|     Reshape homeostasis plan around accepted-state model
+| 
+* commit 3afbd99de3c1fc7e48d2afd2974a8604e3e4f8fe
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 11:58:29 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 11:58:29 -0400
+| 
+|     dropped llm external plan review
+| 
+* commit 844817cc547fb5a1d93df23ba9bf4ccc6a01e8d4
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:27:30 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:27:30 -0400
+| 
+|     Fill tool summaries
+| 
+* commit 7fb879873b0a18f14a53640a39f32b2cb707f387
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:26:25 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:26:25 -0400
+| 
+|     tidying up
+| 
+* commit 478279f40671fae527a75d3e15b1cde7a73ada99
+| Author:     fatb4f <f4t.bruce@gmail.com>
+| AuthorDate: 2026-03-11 09:13:41 -0400
+| Commit:     fatb4f <f4t.bruce@gmail.com>
+| CommitDate: 2026-03-11 09:13:41 -0400
+| 
+|     added git-log dump for quick-ref
+| 
+* commit 3fa252ca7404c2447fb50584a50d6ba0401acc83
 | Author:     fatb4f <f4t.bruce@gmail.com>
 | AuthorDate: 2026-03-10 20:26:09 -0400
 | Commit:     fatb4f <f4t.bruce@gmail.com>
