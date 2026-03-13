@@ -1,0 +1,140 @@
+{
+  "kind": "state_taxonomy.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "model_axes": [
+    {
+      "axis_id": "operational_subsystem_model",
+      "description": "Explicit operational entity, variable, interface, transition, and disturbance model.",
+      "artifacts": [
+        "system_entities.current",
+        "operational_state_variables.current",
+        "interface_and_channel_model.current",
+        "operational_transition_model.current",
+        "disturbance_fault_taxonomy.current"
+      ]
+    },
+    {
+      "axis_id": "epistemic_control_governance_model",
+      "description": "Layered accepted-model state used to govern discovery alongside supervisory overlays.",
+      "artifacts": [
+        "hypothesis_entity_mapping.current",
+        "state_taxonomy.current",
+        "state_transition_rules.current",
+        "state_authority_rules.current",
+        "evidence_ingestion_rules.current",
+        "state_acceptance_rules.current",
+        "reanalysis_triggers.current",
+        "closure_conditions.current",
+        "operational_epistemic_model_bridge.current"
+      ]
+    }
+  ],
+  "strata": [
+    {
+      "state_id": "ontic_state",
+      "label": "Ontic State",
+      "description": "What is actually happening in the world whether observed or not.",
+      "state_class": "epistemic_stratum",
+      "authority_status": "real_but_not_directly_authoritative_inside_the_model",
+      "update_mode": "external_only",
+      "derived": false,
+      "can_trigger_reanalysis": false,
+      "examples": [
+        "actual_running_processes",
+        "actual_controller_paths",
+        "hidden_operations",
+        "real_dependencies"
+      ]
+    },
+    {
+      "state_id": "evidentiary_state",
+      "label": "Evidentiary State",
+      "description": "Observed, inferred, or reported findings with provenance and timestamps.",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_evidence_ledger",
+      "update_mode": "append_immediately",
+      "derived": false,
+      "can_trigger_reanalysis": true,
+      "examples": [
+        "finding_log_entries",
+        "normalized_observations",
+        "source_refs",
+        "evidence_refs"
+      ]
+    },
+    {
+      "state_id": "accepted_relationship_state",
+      "label": "Accepted Relationship State",
+      "description": "Canonical relationship surface of the model after admission and reduction.",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_within_the_model",
+      "update_mode": "rapid_via_admission_and_reduction",
+      "derived": true,
+      "can_trigger_reanalysis": true,
+      "examples": [
+        "controller_edges",
+        "dependency_edges",
+        "authority_edges",
+        "identity_effect_edges"
+      ]
+    },
+    {
+      "state_id": "accepted_identity_state",
+      "label": "Accepted Identity State",
+      "description": "Current justified operational state estimate derived from admitted lower-layer state.",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_operational_state_estimate",
+      "update_mode": "rapid_via_materialization",
+      "derived": true,
+      "can_trigger_reanalysis": true,
+      "examples": [
+        "accepted_root_identity",
+        "accepted_subordinate_identity",
+        "fsm_fit_assessment"
+      ]
+    }
+  ],
+  "supervisory_states": [
+    {
+      "state_id": "applied_control_state",
+      "label": "Applied-Control State",
+      "description": "Current control interpretation derived from accepted identity and control-side inputs.",
+      "authority_status": "canonical_current_control_interpretation",
+      "update_mode": "rapid_via_analysis",
+      "derived": true,
+      "can_trigger_reanalysis": true,
+      "supervisory_role": "control_plane",
+      "examples": [
+        "control_gap_register",
+        "controller_findings",
+        "control_conflict_assessment"
+      ]
+    },
+    {
+      "state_id": "fidelity_review_state",
+      "label": "Fidelity Review State",
+      "description": "Schema/control review state used for promotion-gated hardening in the governance plane.",
+      "authority_status": "canonical_governance_review_surface",
+      "update_mode": "promotion_gated",
+      "derived": true,
+      "can_trigger_reanalysis": false,
+      "supervisory_role": "governance_plane",
+      "examples": [
+        "schema_fidelity_review",
+        "applied_control_fidelity_review"
+      ]
+    }
+  ],
+  "invariants": [
+    "no_flattened_state_model",
+    "operational_subsystem_model_must_be_explicit",
+    "applied_control_is_not_an_epistemic_stratum",
+    "fidelity_review_is_not_an_epistemic_stratum",
+    "identity_is_not_world_truth",
+    "relationship_state_is_not_reality_itself",
+    "accepted_state_mutation_requires_admission_or_reduction",
+    "projection_surfaces_are_non_authoritative",
+    "fidelity_review_is_a_parallel_governance_overlay"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "kind": "interface_and_channel_model.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "mediation_patterns": [
+    {
+      "pattern_id": "cloud_execution_routing",
+      "pattern": "mediated_via_codex_local_agent",
+      "statement": "Cloud worker interaction is mediated through codex_local_agent. orchestration_daemon dispatches or reconciles through local agent and queue surfaces rather than calling codex_cloud_worker directly.",
+      "allowed_sequences": [
+        [
+          "orchestration_daemon",
+          "codex_local_agent",
+          "codex_cloud_worker"
+        ],
+        [
+          "codex_local_agent",
+          "codex_cloud_worker"
+        ]
+      ],
+      "disallowed_direct_sequences": [
+        [
+          "orchestration_daemon",
+          "codex_cloud_worker"
+        ]
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "channel_id": "CH01_runtime_to_codex_local_filesystem",
+      "source_entity_id": "runtime_environment",
+      "target_entity_id": "codex_local_agent",
+      "transport_class": "filesystem_boundary",
+      "directionality": "bidirectional",
+      "authority_status": "operational_surface",
+      "observation_surfaces": [
+        "worktree_paths",
+        "state_paths",
+        "artifact_paths"
+      ],
+      "actuation_surfaces": [
+        "file_read",
+        "file_write",
+        "tool_invocation"
+      ],
+      "failure_modes": [
+        "worktree_drift",
+        "permission_block",
+        "path_mismatch"
+      ]
+    },
+    {
+      "channel_id": "CH02_runtime_to_codex_local_process",
+      "source_entity_id": "runtime_environment",
+      "target_entity_id": "codex_local_agent",
+      "transport_class": "local_process_execution",
+      "directionality": "bidirectional",
+      "authority_status": "operational_surface",
+      "observation_surfaces": [
+        "process_status",
+        "tool_output",
+        "session_logs"
+      ],
+      "actuation_surfaces": [
+        "shell_command_execution",
+        "validation_runs",
+        "task_polling"
+      ],
+      "failure_modes": [
+        "tool_not_found",
+        "runtime_mismatch",
+        "session_failure"
+      ]
+    },
+    {
+      "channel_id": "CH03_codex_local_to_cloud_worker_api",
+      "source_entity_id": "codex_local_agent",
+      "target_entity_id": "codex_cloud_worker",
+      "transport_class": "network_api_boundary",
+      "directionality": "request_response",
+      "authority_status": "operational_surface",
+      "observation_surfaces": [
+        "task_status",
+        "task_diff",
+        "task_reports"
+      ],
+      "actuation_surfaces": [
+        "task_submit",
+        "status_poll",
+        "diff_apply"
+      ],
+      "failure_modes": [
+        "auth_scope_failure",
+        "network_partition",
+        "artifact_channel_failure"
+      ]
+    },
+    {
+      "channel_id": "CH04_daemon_to_runtime_event_stream",
+      "source_entity_id": "orchestration_daemon",
+      "target_entity_id": "runtime_environment",
+      "transport_class": "event_log_and_watch_boundary",
+      "directionality": "bidirectional",
+      "authority_status": "operational_surface",
+      "observation_surfaces": [
+        "event_logs",
+        "watch_targets",
+        "unit_state"
+      ],
+      "actuation_surfaces": [
+        "dispatch_trigger",
+        "retry_control",
+        "quarantine_action"
+      ],
+      "failure_modes": [
+        "queue_backlog",
+        "inflight_restart",
+        "event_cursor_drift"
+      ]
+    },
+    {
+      "channel_id": "CH05_daemon_to_codex_local_queue",
+      "source_entity_id": "orchestration_daemon",
+      "target_entity_id": "codex_local_agent",
+      "transport_class": "packet_and_queue_boundary",
+      "directionality": "bidirectional",
+      "authority_status": "operational_surface",
+      "observation_surfaces": [
+        "packet_store",
+        "dispatch_logs",
+        "result_reports"
+      ],
+      "actuation_surfaces": [
+        "packet_dispatch",
+        "result_reconciliation",
+        "gate_signal_emission"
+      ],
+      "failure_modes": [
+        "duplicate_dispatch",
+        "reconciliation_drift",
+        "partial_artifact_publication"
+      ]
+    }
+  ],
+  "interface_classes": [
+    "filesystem_boundary",
+    "local_process_execution",
+    "network_api_boundary",
+    "packet_and_queue_boundary",
+    "event_log_and_watch_boundary",
+    "artifact_return_boundary"
+  ]
+}

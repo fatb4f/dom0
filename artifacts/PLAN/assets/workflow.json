@@ -8,8 +8,15 @@
       "id": "MP00_state_space_definition",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "What classes of state exist, which transitions are allowed between them, what admission rules govern accepted-state mutation, and what authority status does each layer have?",
+      "question": "What operational subsystem entities, variables, interfaces, transitions, and disturbances exist, and what epistemic/control/governance state model governs how evidence about that system becomes accepted state and applied control?",
       "outputs": [
+        "system_entities.current",
+        "hypothesis_entity_mapping.current",
+        "operational_state_variables.current",
+        "interface_and_channel_model.current",
+        "operational_transition_model.current",
+        "disturbance_fault_taxonomy.current",
+        "operational_epistemic_model_bridge.current",
         "state_space.model",
         "state_taxonomy.current",
         "state_transition_rules.current",
@@ -24,6 +31,9 @@
       ],
       "reiterate_when": [
         "new finding requires a new state class",
+        "new operational entity or interface class is required",
+        "operational lifecycle transitions become ambiguous",
+        "disturbance taxonomy proves incomplete",
         "a transition crosses state layers in an undefined way",
         "evidence cannot be admitted cleanly",
         "the acceptance boundary becomes ambiguous",
@@ -35,12 +45,13 @@
       "id": "MP01_five_plane_definition",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "How does the accepted state taxonomy map into the root, observation, relationship, identity, and control planes?",
+      "question": "How does the composed operational plus accepted-state model map into the root, observation, relationship, identity, and control planes, and what qualifies as an admissible discovery anchor?",
       "outputs": [
         "plane_mapping.current",
         "plane_operating_model.current",
         "plane_transition_constraints.current",
-        "projection_boundary_rules.current"
+        "projection_boundary_rules.current",
+        "anchor_admissibility_rules.current"
       ],
       "next": [
         "MP02_root_declaration"
@@ -55,14 +66,15 @@
         "state taxonomy changes",
         "state authority rules change",
         "plane responsibility becomes ambiguous",
-        "projection surfaces threaten to become authority surfaces"
+        "projection surfaces threaten to become authority surfaces",
+        "anchor admission criteria become ambiguous"
       ]
     },
     {
       "id": "MP02_root_declaration",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "What are the current candidate scope roots, control roots, and crawl boundaries for host, codex, and spawn?",
+      "question": "Which subjects satisfy anchor admissibility and can currently be treated as candidate scope roots, control roots, and crawl boundaries, starting with runtime_environment and codex?",
       "outputs": [
         "root_set.current",
         "scope_root_map.current",
@@ -76,6 +88,10 @@
       "guards": {
         "plane_model_unresolved": {
           "when": "root discovery depends on unresolved state-to-plane mapping",
+          "goto": "MP01_five_plane_definition"
+        },
+        "anchor_admissibility_unresolved": {
+          "when": "root discovery depends on unresolved anchor admission criteria",
           "goto": "MP01_five_plane_definition"
         }
       },
@@ -91,7 +107,7 @@
       "id": "MP03_root_controller_arbitration",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "How are controller conflicts, precedence, invalid overlap, and tie-breaks resolved across the current root candidates?",
+      "question": "How are controller conflicts, precedence, invalid overlap, and tie-breaks resolved across the admitted root candidates, expected to start with runtime_environment and codex?",
       "outputs": [
         "controller_catalog.current",
         "control_scope_map.current",
@@ -123,11 +139,10 @@
       "id": "MP04_identity_scoping",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "What is the accepted identity estimate of each root candidate under current evidence, and does each root candidate fit FSM treatment directly or as a container of downstream FSMs?",
+      "question": "What provisional identity hypotheses, assumptions, and FSM-fit probes are needed for each root candidate before relationship-driven identity materialization occurs?",
       "outputs": [
         "entity_facts.current",
-        "identity.current",
-        "identity.delta",
+        "identity_hypothesis.current",
         "identity_assumption_register.current",
         "fsm_fit_assessment.current"
       ],
@@ -141,24 +156,26 @@
         }
       },
       "reiterate_when": [
-        "an admitted delta materially changes accepted identity",
+        "an admitted delta invalidates provisional identity hypotheses",
         "new state surface discovered",
         "new produced artifact class discovered",
         "new dependency alters control boundary",
-        "new relationship effect changes accepted identity"
+        "new relationship effect invalidates provisional identity assumptions"
       ]
     },
     {
       "id": "MP05_relationship_substrate_bootstrap",
       "kind": "micro_plan",
       "phase": "PLAN",
-      "question": "How are findings admitted into canonical relationship state, and how do relationship deltas affect accepted identity?",
+      "question": "How are findings admitted into canonical relationship state, and how do relationship deltas materialize accepted identity?",
       "outputs": [
         "finding.log",
         "finding.normalized",
         "evidence_ref_index.current",
         "relationship.current",
         "relationship.delta",
+        "identity.current",
+        "identity.delta",
         "relationship_capture_rules.current",
         "relationship_identity_effect_rules.current",
         "graph_projection_rules.current"
@@ -167,8 +184,8 @@
         "MP06_applied_control_gap_loop"
       ],
       "guards": {
-        "identity_unresolved": {
-          "when": "relationship identity effects cannot be classified against accepted identity",
+        "identity_hypothesis_unresolved": {
+          "when": "relationship identity effects cannot be classified against provisional identity hypotheses",
           "goto": "MP04_identity_scoping"
         }
       },
@@ -272,20 +289,24 @@
   ],
   "invariants": [
     "define_state_space_before_ontology",
+    "make_operational_subsystem_entities_explicit_before_claiming_a_full_state_space_model",
     "define_planes_before_discovery",
     "state_space_is_layered_and_partially_observable",
     "no_flattened_state_model",
     "roots_are_discovered_only_after_state_typing",
-    "host_codex_spawn_are_candidate_roots",
-    "identity_first_scoping_after_root_declaration",
+    "runtime_environment_and_codex_are_initial_anchor_hypotheses",
+    "spawn_is_not_a_peer_root_by_default",
+    "provisional_identity_scaffolding_after_root_declaration",
     "evidence_is_appended_immediately_but_accepted_state_mutation_is_reduced",
     "relationship_current_is_the_canonical_relationship_surface_of_the_model",
     "identity_current_is_the_accepted_operational_state_estimate",
     "identity_current_is_a_deterministic_materialized_view",
     "applied_control_is_derived_from_identity",
+    "mp04_is_provisional_identity_scaffolding_and_mp05_is_identity_materialization",
     "fsm_is_a_probe_not_the_base_ontology",
     "neo4j_is_projection_only",
     "promotion_gates_apply_only_to_schema_fidelity_and_applied_control_fidelity",
+    "fidelity_review_is_a_parallel_governance_overlay",
     "temporary_closure_is_epistemic_quiescence_under_current_evidence",
     "static_file_analysis_only",
     "dom0_is_the_only_trusted_working_directory",

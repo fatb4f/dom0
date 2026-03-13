@@ -1,0 +1,256 @@
+{
+  "kind": "discovery_phase_planning_process.v1",
+  "name": "discovery_phase_planning_process",
+  "purpose": "Reusable planning process for discovery-heavy work where evidence can materially change the accepted operational model.",
+  "planning_unit": "micro_plan",
+  "output_unit": "artifact",
+  "promotion_units": [
+    "schema_fidelity",
+    "applied_control_fidelity"
+  ],
+  "closure_mode": "temporary_epistemic_quiescence_under_current_evidence",
+  "when_to_use": [
+    "roots or scope anchors are still hypotheses",
+    "ontology is unstable",
+    "evidence can materially change the accepted model",
+    "control analysis must be rerun when accepted identity changes",
+    "one-pass deliverables would hide required reiteration"
+  ],
+  "state_model": {
+    "operational_entities": [
+      "runtime_environment",
+      "codex_local_agent",
+      "codex_cloud_worker",
+      "orchestration_daemon"
+    ],
+    "strata": [
+      "ontic_state",
+      "evidentiary_state",
+      "accepted_relationship_state",
+      "accepted_identity_state"
+    ],
+    "supervisory_states": [
+      "applied_control_state",
+      "fidelity_review_state"
+    ],
+    "transition_chain": [
+      "ontic_state",
+      "evidentiary_state",
+      "admission_or_reduction",
+      "accepted_relationship_state",
+      "accepted_identity_state"
+    ],
+    "supervisory_overlays": [
+      [
+        "accepted_identity_state",
+        "applied_control_state"
+      ],
+      [
+        "accepted_identity_state",
+        "fidelity_review_state"
+      ],
+      [
+        "applied_control_state",
+        "fidelity_review_state"
+      ]
+    ],
+    "feedback_path": [
+      "applied_control_findings",
+      "admission_or_reduction",
+      "accepted_relationship_state",
+      "accepted_identity_state"
+    ]
+  },
+  "gate_model": [
+    {
+      "gate": "ingestion",
+      "question": "Can this finding enter the evidentiary layer?"
+    },
+    {
+      "gate": "acceptance",
+      "question": "Is this evidence strong and coherent enough to mutate accepted relationship or accepted identity state?"
+    },
+    {
+      "gate": "promotion",
+      "question": "Does schema fidelity or applied-control fidelity need to be accepted, rejected, or revised?"
+    }
+  ],
+  "anchor_model": {
+    "anchor_status": "candidate",
+    "examples": [
+      "runtime_environment",
+      "codex",
+      "spawn"
+    ],
+    "initial_hypotheses": [
+      "runtime_environment",
+      "codex"
+    ],
+    "emergent_candidates": [
+      "spawn"
+    ],
+    "allowed_refinements": [
+      "confirm",
+      "split",
+      "merge",
+      "reclassify",
+      "retire"
+    ]
+  },
+  "fsm_guidance": {
+    "role": "local_probe",
+    "not_role": "base_ontology",
+    "fit_requires": [
+      "bounded_named_states",
+      "bounded_transitions",
+      "guards",
+      "controllable_transition_paths",
+      "observable_outputs"
+    ]
+  },
+  "recommended_sequence": [
+    {
+      "micro_plan": "MP-00",
+      "name": "state_space_definition",
+      "outputs": [
+        "system_entities.current",
+        "hypothesis_entity_mapping.current",
+        "operational_state_variables.current",
+        "interface_and_channel_model.current",
+        "operational_transition_model.current",
+        "disturbance_fault_taxonomy.current",
+        "operational_epistemic_model_bridge.current",
+        "state_taxonomy.current",
+        "state_transition_rules.current",
+        "state_authority_rules.current",
+        "evidence_ingestion_rules.current",
+        "state_acceptance_rules.current",
+        "reanalysis_triggers.current",
+        "closure_conditions.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-01",
+      "name": "plane_definition_and_anchor_admissibility",
+      "outputs": [
+        "plane_mapping.current",
+        "plane_operating_model.current",
+        "plane_transition_constraints.current",
+        "projection_boundary_rules.current",
+        "anchor_admissibility_rules.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-02",
+      "name": "candidate_root_declaration",
+      "outputs": [
+        "root_set.current",
+        "scope_root_map.current",
+        "control_root_map.current",
+        "root_boundary.current",
+        "root_crawl_rules.current"
+      ],
+      "initial_targets": [
+        "runtime_environment",
+        "codex"
+      ]
+    },
+    {
+      "micro_plan": "MP-03",
+      "name": "controller_arbitration",
+      "outputs": [
+        "controller_catalog.current",
+        "control_scope_map.current",
+        "controller_precedence_rules.current",
+        "controller_conflict_matrix.current",
+        "controller_tie_break_rules.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-04",
+      "name": "identity_scoping",
+      "outputs": [
+        "entity_facts.current",
+        "identity_hypothesis.current",
+        "identity_assumption_register.current",
+        "fsm_fit_assessment.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-05",
+      "name": "relationship_substrate_bootstrap",
+      "outputs": [
+        "finding.log",
+        "finding.normalized",
+        "relationship.current",
+        "relationship.delta",
+        "identity.current",
+        "identity.delta",
+        "relationship_identity_effect_rules.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-06",
+      "name": "applied_control_gap_loop",
+      "outputs": [
+        "applied_control.current",
+        "applied_control.report",
+        "applied_control_gap_register.current",
+        "applied_control_reanalysis_rules.current"
+      ]
+    },
+    {
+      "micro_plan": "MP-07",
+      "name": "fidelity_gates",
+      "outputs": [
+        "schema_fidelity_review.current",
+        "applied_control_fidelity_review.current",
+        "methodology_workflow_projection.current",
+        "implementation_readiness_rules.current"
+      ]
+    }
+  ],
+  "micro_plan_fields": [
+    "question_being_resolved",
+    "roots_or_anchors_in_scope",
+    "current_accepted_state_assumptions",
+    "discovery_method_or_crawl_path",
+    "what_evidence_can_change_accepted_state",
+    "artifacts_emitted",
+    "reiteration_triggers",
+    "what_is_promotion_gated",
+    "what_allows_temporary_epistemic_quiescence"
+  ],
+  "invariants": [
+    "define_state_space_before_ontology",
+    "make_operational_subsystem_model_explicit_before_claiming_full_state_space_coverage",
+    "define_planes_before_discovery",
+    "keep_the_model_layered_and_partially_observable",
+    "evidence_ingestion_is_immediate",
+    "accepted_state_mutation_requires_admission_or_reduction",
+    "relationship_current_is_canonical_inside_the_model_not_reality",
+    "identity_current_is_the_accepted_operational_state_estimate",
+    "mp04_is_provisional_identity_scaffolding_and_mp05_is_identity_materialization",
+    "applied_control_reruns_only_on_material_accepted_identity_delta",
+    "fidelity_review_is_parallel_governance_overlay",
+    "graph_storage_is_projection_only",
+    "promotion_is_limited_to_fidelity_hardening",
+    "trust_boundary_must_be_explicit"
+  ],
+  "anti_patterns": [
+    "treat_identity_as_world_truth",
+    "let_raw_findings_directly_rewrite_accepted_state",
+    "treat_relationship_state_as_reality_itself",
+    "declare_discovery_anchors_to_be_final_roots_too_early",
+    "assume_the_whole_subject_is_an_fsm_before_fit_is_proven",
+    "describe_temporary_closure_as_equilibrium_or_stability"
+  ],
+  "source_refs": [
+    "/home/_404/src/dom0/artifacts/PLAN/README.md",
+    "/home/_404/src/dom0/artifacts/PLAN/assets/workflow.json",
+    "/home/_404/src/dom0/artifacts/PLAN/assets/interface.json",
+    "/home/_404/src/dom0/artifacts/PLAN/assets/sequence_dag.md",
+    "/home/_404/src/dom0/artifacts/PLAN/packet.meta.json",
+    "/home/_404/src/dom0/artifacts/external_review/chatgpt-proposal-and-plan-review-2026-03-11T15-45-35-635Z.md"
+  ]
+}

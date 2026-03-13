@@ -1,0 +1,162 @@
+{
+  "kind": "operational_state_variables.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "entities": [
+    {
+      "entity_id": "runtime_environment",
+      "state_variables": [
+        {
+          "name": "session_state",
+          "type": "enum(active|degraded|partitioned|restored)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "filesystem_worktree_state",
+          "type": "enum(clean|dirty|drifting|unknown)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "network_reachability",
+          "type": "enum(reachable|restricted|partitioned|unknown)",
+          "observability": "probe_or_report"
+        },
+        {
+          "name": "credential_mount_state",
+          "type": "enum(present|expired|missing|unknown)",
+          "observability": "probe_or_report"
+        },
+        {
+          "name": "toolchain_availability",
+          "type": "enum(ready|partial|missing|drifting)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "scheduler_capacity",
+          "type": "enum(available|constrained|saturated|unknown)",
+          "observability": "probe_or_report"
+        }
+      ]
+    },
+    {
+      "entity_id": "codex_local_agent",
+      "state_variables": [
+        {
+          "name": "lifecycle_state",
+          "type": "enum(ready|planning|executing|blocked|failed|recovered)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "active_contract_or_packet_id",
+          "type": "string_or_null",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "bound_repo_worktree",
+          "type": "path_or_null",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "tool_surface_state",
+          "type": "enum(ready|partial|missing|degraded)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "session_context_integrity",
+          "type": "enum(intact|partial|drifting|unknown)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "permission_mode",
+          "type": "enum(local_only|cloud_enabled|restricted|unknown)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "pending_output_state",
+          "type": "enum(empty|buffered|awaiting_review|blocked)",
+          "observability": "direct_observation"
+        }
+      ]
+    },
+    {
+      "entity_id": "codex_cloud_worker",
+      "state_variables": [
+        {
+          "name": "provisioning_state",
+          "type": "enum(unrequested|queued|running|reported|finalized|failed|expired)",
+          "observability": "reported"
+        },
+        {
+          "name": "job_ref",
+          "type": "string_or_null",
+          "observability": "reported"
+        },
+        {
+          "name": "artifact_channel_status",
+          "type": "enum(unbound|ready|partial|failed|closed)",
+          "observability": "reported"
+        },
+        {
+          "name": "callback_or_report_state",
+          "type": "enum(unavailable|pending|reported|failed)",
+          "observability": "reported"
+        },
+        {
+          "name": "remote_cache_state",
+          "type": "enum(unknown|cold|warm|stale)",
+          "observability": "reported"
+        },
+        {
+          "name": "auth_scope_state",
+          "type": "enum(valid|restricted|expired|unknown)",
+          "observability": "reported"
+        },
+        {
+          "name": "network_policy",
+          "type": "enum(open|restricted|offline|unknown)",
+          "observability": "reported"
+        }
+      ]
+    },
+    {
+      "entity_id": "orchestration_daemon",
+      "state_variables": [
+        {
+          "name": "supervisor_mode",
+          "type": "enum(idle|watching|dispatching|awaiting_result|reconciling|gated|failed)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "watched_queue_set",
+          "type": "set_or_null",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "active_dispatch_ref",
+          "type": "string_or_null",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "retry_count",
+          "type": "integer",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "reconciliation_state",
+          "type": "enum(clean|pending|drifting|failed)",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "event_log_cursor",
+          "type": "string_or_null",
+          "observability": "direct_observation"
+        },
+        {
+          "name": "gate_status",
+          "type": "enum(open|guarded|blocked|quarantined)",
+          "observability": "direct_observation"
+        }
+      ]
+    }
+  ]
+}

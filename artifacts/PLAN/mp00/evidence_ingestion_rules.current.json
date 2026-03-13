@@ -1,0 +1,56 @@
+{
+  "kind": "evidence_ingestion_rules.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "required_fields": [
+    "finding_id",
+    "observed_at",
+    "source_ref",
+    "observation_mode",
+    "content"
+  ],
+  "optional_fields": [
+    "evidence_ref",
+    "confidence",
+    "collector",
+    "target_hypothesis",
+    "notes"
+  ],
+  "admissible_observation_modes": [
+    "direct_observation",
+    "derived_from_local_artifact",
+    "inference_from_accepted_state",
+    "review_finding"
+  ],
+  "ingestion_outcomes": [
+    {
+      "outcome": "admitted_to_evidentiary_state",
+      "when": [
+        "required_fields_present",
+        "source_ref_resolves",
+        "observation_mode_allowed"
+      ]
+    },
+    {
+      "outcome": "quarantined_for_review",
+      "when": [
+        "source_ref_missing_but_content_material",
+        "observation_mode_unclear",
+        "confidence_explicitly_low"
+      ]
+    },
+    {
+      "outcome": "rejected_malformed",
+      "when": [
+        "required_fields_missing",
+        "content_unusable",
+        "duplicate_identifier_with_conflicting_payload_and_no_supersession_marker"
+      ]
+    }
+  ],
+  "invariants": [
+    "evidence_ingestion_is_immediate",
+    "evidence_ingestion_does_not_mutate_accepted_state_by_itself",
+    "quarantined_evidence_remains_visible_as_evidentiary_state"
+  ]
+}

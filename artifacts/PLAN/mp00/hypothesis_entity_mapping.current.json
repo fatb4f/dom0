@@ -1,0 +1,43 @@
+{
+  "kind": "hypothesis_entity_mapping.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "mappings": [
+    {
+      "hypothesis_id": "runtime_environment",
+      "label": "Runtime Environment",
+      "operational_realizations": [
+        "runtime_environment"
+      ],
+      "root_candidacy_status": "initial_hypothesis",
+      "supporting_entity_ids": [],
+      "admission_status": "pending_anchor_admissibility"
+    },
+    {
+      "hypothesis_id": "codex",
+      "label": "Codex",
+      "operational_realizations": [
+        "codex_local_agent"
+      ],
+      "supporting_entity_ids": [
+        "codex_cloud_worker"
+      ],
+      "root_candidacy_status": "initial_hypothesis",
+      "admission_status": "pending_anchor_admissibility"
+    },
+    {
+      "hypothesis_id": "spawn",
+      "label": "Spawn",
+      "operational_realizations": [
+        "orchestration_daemon"
+      ],
+      "supporting_entity_ids": [],
+      "root_candidacy_status": "emergent_candidate_only",
+      "admission_status": "not_admitted_by_default"
+    }
+  ],
+  "notes": [
+    "Hypothesis ids are discovery/root candidates. Operational realizations are explicit subsystem entities.",
+    "This mapping is intended to prevent drift between conceptual root candidates and concrete operational entities."
+  ]
+}

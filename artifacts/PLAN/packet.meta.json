@@ -11,12 +11,20 @@
   "planning_unit": "micro_plan",
   "output_unit": "artifact",
   "architectural_form": "rooted_event_sourced_dual_loop_homeostatic_control_system",
-  "state_space_model": "layered_partially_observable_operational_model",
-  "state_layers": [
+  "state_space_model": "composed_operational_subsystem_plus_epistemic_governance_model",
+  "operational_entities": [
+    "runtime_environment",
+    "codex_local_agent",
+    "codex_cloud_worker",
+    "orchestration_daemon"
+  ],
+  "epistemic_strata": [
     "ontic_state",
     "evidentiary_state",
     "accepted_relationship_state",
-    "accepted_identity_state",
+    "accepted_identity_state"
+  ],
+  "supervisory_states": [
     "applied_control_state",
     "fidelity_review_state"
   ],
@@ -32,6 +40,13 @@
   ],
   "foundational_state_artifacts": [
     "state_space.model",
+    "system_entities.current",
+    "hypothesis_entity_mapping.current",
+    "operational_state_variables.current",
+    "interface_and_channel_model.current",
+    "operational_transition_model.current",
+    "disturbance_fault_taxonomy.current",
+    "operational_epistemic_model_bridge.current",
     "state_taxonomy.current",
     "state_transition_rules.current",
     "state_authority_rules.current",
@@ -42,7 +57,13 @@
     "plane_mapping.current",
     "plane_operating_model.current",
     "plane_transition_constraints.current",
-    "projection_boundary_rules.current"
+    "projection_boundary_rules.current",
+    "anchor_admissibility_rules.current"
+  ],
+  "provisional_identity_artifacts": [
+    "identity_hypothesis.current",
+    "identity_assumption_register.current",
+    "fsm_fit_assessment.current"
   ],
   "canonical_materialized_views": [
     "root_set.current",
@@ -108,15 +129,20 @@
   ],
   "design_rules": [
     "define_state_space_before_ontology",
+    "define_operational_subsystem_entities_and_variables_before_claiming_full_state_space_coverage",
     "define_planes_before_discovery",
+    "define_anchor_admissibility_before_root_declaration",
     "evidence_ingestion_is_immediate_but_accepted_state_mutation_is_reduced",
     "treat_relationship_current_as_the_canonical_relationship_surface_of_the_model",
     "treat_identity_current_as_the_accepted_operational_state_estimate",
     "treat_identity_current_as_a_deterministic_materialized_view",
     "treat_applied_control_current_as_derived_from_identity",
-    "treat_host_codex_spawn_as_candidate_roots",
+    "treat_mp04_as_provisional_identity_scaffolding_and_mp05_as_identity_materialization",
+    "treat_runtime_environment_and_codex_as_initial_root_hypotheses_until_admitted",
+    "treat_spawn_as_emergent_not_peer_by_default",
     "treat_fsm_as_a_local_probe_not_the_base_ontology",
-    "review_fidelity_without_blocking_evidence_ingestion"
+    "review_fidelity_without_blocking_evidence_ingestion",
+    "treat_fidelity_review_as_parallel_governance_overlay"
   ],
   "trust_boundary": "dom0_only",
   "external_state": "untrusted_due_to_compounding_drift"

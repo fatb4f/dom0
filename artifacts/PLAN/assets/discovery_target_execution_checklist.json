@@ -1,0 +1,205 @@
+{
+  "kind": "discovery_target_execution_checklist.v1",
+  "purpose": "Concrete per-target execution checklist for discovery once the state-space and plane-definition micro-plans are temporarily closed under current evidence.",
+  "preconditions": [
+    "MP-00 temporarily closed under current evidence",
+    "MP-01 temporarily closed under current evidence",
+    "system_entities.current operational artifacts exist",
+    "hypothesis_entity_mapping.current exists",
+    "anchor_admissibility_rules.current exists"
+  ],
+  "initial_targets": [
+    "runtime_environment",
+    "codex"
+  ],
+  "emergent_targets": [
+    "spawn"
+  ],
+  "non_target_entity_rule": "Entities not currently targeted for root discovery must still remain modeled as supporting or subordinate operational entities.",
+  "steps": [
+    {
+      "step": 1,
+      "name": "establish_target_hypothesis",
+      "record": [
+        "target_name",
+        "why_tested",
+        "hypothesis_class"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "run_anchor_admissibility_test",
+      "check_against": [
+        "system_entities.current",
+        "hypothesis_entity_mapping.current",
+        "operational_state_variables.current",
+        "state_taxonomy.current",
+        "plane_mapping.current",
+        "projection_boundary_rules.current",
+        "anchor_admissibility_rules.current"
+      ],
+      "outcomes": [
+        "admitted_as_candidate_root",
+        "rejected_as_candidate_root",
+        "deferred_pending_more_evidence",
+        "reclassified_as_subordinate_or_control_surface"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "bound_admitted_target",
+      "emit": [
+        "scope_root",
+        "control_root",
+        "root_boundary",
+        "crawl_boundary",
+        "initial_crawl_rules"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "arbitrate_controllers",
+      "collect": [
+        "controllers",
+        "actuators",
+        "shared_control_surfaces",
+        "precedence_rules",
+        "invalid_overlaps",
+        "tie_break_requirements"
+      ]
+    },
+    {
+      "step": 5,
+      "name": "run_identity_first_crawl",
+      "capture": [
+        "boundary",
+        "purpose",
+        "authority_owner",
+        "subordinates",
+        "controllers",
+        "actuators",
+        "observers",
+        "writers",
+        "state_surfaces",
+        "produced_artifacts",
+        "ingress_egress",
+        "dependencies",
+        "local_fsm_fit"
+      ]
+    },
+    {
+      "step": 6,
+      "name": "ingest_findings",
+      "append_to": [
+        "finding.log",
+        "finding.normalized"
+      ],
+      "required_fields": [
+        "raw_finding",
+        "source_ref",
+        "evidence_ref",
+        "confidence",
+        "observation_mode",
+        "timestamp"
+      ]
+    },
+    {
+      "step": 7,
+      "name": "apply_admission_and_reduction",
+      "decisions": [
+        "evidentiary_only",
+        "mutates_accepted_relationship_state",
+        "mutates_accepted_identity_state",
+        "rejected_from_accepted_state_mutation"
+      ],
+      "emit": [
+        "relationship.current",
+        "relationship.delta",
+        "identity.current",
+        "identity.delta"
+      ]
+    },
+    {
+      "step": 8,
+      "name": "recompute_applied_control",
+      "inputs": [
+        "accepted_identity",
+        "controller_rules",
+        "observed_effects",
+        "unresolved_unknowns",
+        "control_conflicts",
+        "relationship_state"
+      ],
+      "emit": [
+        "applied_control.current",
+        "applied_control.report",
+        "control_gaps",
+        "controller_findings"
+      ]
+    },
+    {
+      "step": 9,
+      "name": "check_reiteration_triggers",
+      "triggers": [
+        "new_admissible_root_candidate",
+        "scope_or_control_root_correction",
+        "controller_conflict_drift",
+        "material_identity_delta",
+        "material_relationship_delta",
+        "material_applied_control_delta"
+      ]
+    },
+    {
+      "step": 10,
+      "name": "evaluate_temporary_epistemic_quiescence",
+      "conditions": [
+        "no_new_admitted_relationship_delta_pending",
+        "no_new_admitted_identity_delta_pending",
+        "no_new_material_applied_control_delta_pending",
+        "unresolved_unknowns_are_explicit"
+      ]
+    }
+  ],
+  "suggested_artifacts_per_target": [
+    "target_hypothesis.current.json",
+    "anchor_admissibility_assessment.current.json",
+    "root_boundary.current.json",
+    "root_crawl_rules.current.json",
+    "controller_catalog.current.json",
+    "identity.current.json",
+    "identity.delta.json",
+    "relationship.current.json",
+    "relationship.delta.json",
+    "applied_control.current.json",
+    "applied_control.report.json",
+    "target_quiescence_assessment.current.json"
+  ],
+  "target_start_points": {
+    "runtime_environment": [
+      "execution_context",
+      "process_surfaces",
+      "filesystem_state_config_paths",
+      "env_surfaces",
+      "supervisors",
+      "timers",
+      "buses",
+      "external_dependencies"
+    ],
+    "codex": [
+      "session_surfaces",
+      "prompt_context_surfaces",
+      "skills",
+      "cli_and_cloud_delegation_surfaces",
+      "local_state_paths",
+      "controllers",
+      "actuators",
+      "produced_artifacts"
+    ],
+    "spawn": {
+      "admit_separately_only_if": [
+        "cannot_be_modeled_cleanly_as_subordinate_or_control_surface_under_runtime_environment",
+        "cannot_be_modeled_cleanly_as_subordinate_or_control_surface_under_codex"
+      ]
+    }
+  }
+}

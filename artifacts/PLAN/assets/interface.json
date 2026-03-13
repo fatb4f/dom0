@@ -38,6 +38,34 @@
       "type": "planned_program"
     },
     {
+      "name": "system_entities.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "hypothesis_entity_mapping.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "operational_state_variables.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "interface_and_channel_model.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "operational_transition_model.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "disturbance_fault_taxonomy.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "operational_epistemic_model_bridge.current",
+      "type": "planned_artifact"
+    },
+    {
       "name": "state_space.model",
       "type": "planned_artifact"
     },
@@ -86,6 +114,10 @@
       "type": "planned_artifact"
     },
     {
+      "name": "anchor_admissibility_rules.current",
+      "type": "planned_artifact"
+    },
+    {
       "name": "root_set.current",
       "type": "planned_artifact"
     },
@@ -127,6 +159,18 @@
     },
     {
       "name": "entity_facts.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "identity_hypothesis.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "identity_assumption_register.current",
+      "type": "planned_artifact"
+    },
+    {
+      "name": "fsm_fit_assessment.current",
       "type": "planned_artifact"
     },
     {
@@ -187,12 +231,18 @@
     }
   ],
   "capabilities": [
+    "operational_subsystem_decomposition",
+    "operational_state_variable_definition",
+    "interface_and_channel_model_definition",
+    "operational_transition_model_definition",
+    "disturbance_fault_taxonomy_definition",
     "state_space_definition",
     "state_transition_rule_definition",
     "state_authority_rule_definition",
     "evidence_ingestion_rule_definition",
     "accepted_state_mutation_rule_definition",
     "five_plane_architecture_definition",
+    "anchor_admissibility_rule_definition",
     "candidate_root_modeling_after_state_typing",
     "controller_arbitration",
     "identity_materialization_modeling",
@@ -211,16 +261,20 @@
   },
   "notes": [
     "Micro-plan is the planning unit; artifacts are the output unit.",
-    "State space is defined before planes, ontology, root discovery, and controller analysis.",
+    "MP-00 defines a composed foundation: operational subsystem model plus epistemic/control/governance model.",
+    "Hypothesis ids and operational entity ids are kept distinct through hypothesis_entity_mapping.current.",
+    "State space is defined before planes, ontology, anchor declaration, root discovery, and controller analysis.",
     "The architecture is a rooted, event-sourced, dual-loop homeostatic control system, not a one-shot document pipeline.",
-    "The model is layered and partially observable; it must not collapse evidence, relationships, identity, control, and fidelity into one flattened state.",
+    "The model is layered and partially observable; it must not collapse operational entities, evidence, relationships, identity, control, and fidelity into one flattened state.",
     "Canonical current-state artifacts are deterministic materialized views over admitted evidence and accepted observations.",
     "Evidence ingestion is immediate, but accepted-state mutation happens only through explicit admission and reduction rules.",
     "Neo4j or any graph database is a projection/query surface only and not the source of truth.",
     "identity.current is the accepted operational state estimate, not world state itself.",
     "relationship.current is the canonical relationship surface of the model, not the ontic relationship fabric of the world.",
+    "fidelity_review_state is a supervisory governance overlay, not an epistemic stratum or the terminal layer of plant state.",
     "Promotion gates apply only to schema fidelity and applied-control fidelity, not to observed live facts.",
-    "host, codex, and spawn begin as candidate scope/control roots and may be refined during discovery.",
+    "runtime_environment and codex begin as the initial root hypotheses and must satisfy anchor admissibility rules before becoming candidate scope/control roots.",
+    "spawn is not presumed co-equal; it emerges later only if the discovery crawl makes it independently admissible.",
     "FSM fit is a local probe, not the base ontology for the whole system.",
     "Temporary closure is temporary epistemic quiescence under current evidence and may be reopened by identity-changing findings.",
     "Sweep artifacts are intentionally not required for this static conceptual analysis objective.",

@@ -1,0 +1,113 @@
+{
+  "kind": "state_transition_rules.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "transitions": [
+    {
+      "transition_id": "T01_ontic_to_evidentiary",
+      "from": "ontic_state",
+      "to": "evidentiary_state",
+      "mode": "observation_or_inference_capture",
+      "allowed": true,
+      "notes": "The model never reads ontic state directly; it only captures observations or justified inferences."
+    },
+    {
+      "transition_id": "T02_evidentiary_to_relationship",
+      "from": "evidentiary_state",
+      "to": "accepted_relationship_state",
+      "mode": "admission_and_reduction",
+      "allowed": true,
+      "notes": "Only admitted evidence may mutate canonical relationship state."
+    },
+    {
+      "transition_id": "T03_evidentiary_to_identity",
+      "from": "evidentiary_state",
+      "to": "accepted_identity_state",
+      "mode": "restricted_direct_acceptance",
+      "allowed": true,
+      "notes": "Direct evidentiary mutation of identity is exceptional and must be explicitly allowed by state_acceptance_rules.current."
+    },
+    {
+      "transition_id": "T04_relationship_to_identity",
+      "from": "accepted_relationship_state",
+      "to": "accepted_identity_state",
+      "mode": "materialization",
+      "allowed": true,
+      "notes": "Identity is normally derived from accepted relationship state plus admitted findings."
+    },
+    {
+      "transition_id": "T05_identity_to_applied_control",
+      "from": "accepted_identity_state",
+      "to": "applied_control_state",
+      "mode": "control_analysis",
+      "allowed": true,
+      "notes": "Applied control is recomputed when accepted identity changes materially."
+    },
+    {
+      "transition_id": "T06_applied_control_to_relationship",
+      "from": "applied_control_state",
+      "to": "accepted_relationship_state",
+      "mode": "feedback_via_admission_and_reduction",
+      "allowed": true,
+      "notes": "Control findings may introduce newly admitted controller, actuator, or subordinate relationships."
+    },
+    {
+      "transition_id": "T08_identity_to_fidelity_review",
+      "from": "accepted_identity_state",
+      "to": "fidelity_review_state",
+      "mode": "promotion_review_input",
+      "allowed": true,
+      "notes": "Schema fidelity is reviewed against the accepted model, not ontic state directly."
+    },
+    {
+      "transition_id": "T09_applied_control_to_fidelity_review",
+      "from": "applied_control_state",
+      "to": "fidelity_review_state",
+      "mode": "promotion_review_input",
+      "allowed": true,
+      "notes": "Fidelity review is a governance overlay fed by accepted identity and applied control, not the terminal layer of plant state."
+    }
+  ],
+  "forbidden_transitions": [
+    {
+      "transition_id": "F01_ontic_to_identity_direct",
+      "from": "ontic_state",
+      "to": "accepted_identity_state",
+      "reason": "The model cannot bypass evidentiary capture and acceptance."
+    },
+    {
+      "transition_id": "F02_ontic_to_relationship_direct",
+      "from": "ontic_state",
+      "to": "accepted_relationship_state",
+      "reason": "Relationships cannot be written as world-truth assertions without evidence."
+    },
+    {
+      "transition_id": "F03_projection_to_canonical",
+      "from": "projection_surface",
+      "to": "accepted_relationship_state",
+      "reason": "Projection/query surfaces are non-authoritative."
+    },
+    {
+      "transition_id": "F04_fidelity_to_evidence_block",
+      "from": "fidelity_review_state",
+      "to": "evidentiary_state",
+      "reason": "Promotion review must not block evidence ingestion."
+    }
+  ],
+  "feedback_paths": [
+    {
+      "path_id": "FP01_control_feedback",
+      "sequence": [
+        "applied_control_state",
+        "admission_or_reduction",
+        "accepted_relationship_state",
+        "accepted_identity_state"
+      ]
+    }
+  ],
+  "notes": [
+    "These are knowledge and supervisory transitions, not entity lifecycle transitions.",
+    "Operational lifecycle transitions are defined separately in operational_transition_model.current.json.",
+    "fidelity_review_state is a supervisory governance overlay, not part of the epistemic stratum chain."
+  ]
+}

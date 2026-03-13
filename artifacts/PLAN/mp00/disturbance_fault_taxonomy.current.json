@@ -1,0 +1,109 @@
+{
+  "kind": "disturbance_fault_taxonomy.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "disturbances": [
+    {
+      "disturbance_id": "network_partition",
+      "affected_entities": [
+        "runtime_environment",
+        "codex_local_agent",
+        "codex_cloud_worker"
+      ],
+      "effect_on_operational_state": "channel_loss_or_remote_unreachability",
+      "effect_on_epistemic_state": "stale_or_missing_observations",
+      "required_response_class": "quarantine_or_retry"
+    },
+    {
+      "disturbance_id": "auth_token_invalidation",
+      "affected_entities": [
+        "codex_local_agent",
+        "codex_cloud_worker"
+      ],
+      "effect_on_operational_state": "submission_or_status_failure",
+      "effect_on_epistemic_state": "missing_remote_status_updates",
+      "required_response_class": "re_authenticate_or_block"
+    },
+    {
+      "disturbance_id": "worker_eviction_or_expiry",
+      "affected_entities": [
+        "codex_cloud_worker"
+      ],
+      "effect_on_operational_state": "job_termination_before_finalize",
+      "effect_on_epistemic_state": "partial_remote_report_surface",
+      "required_response_class": "retry_or_mark_terminal_failure"
+    },
+    {
+      "disturbance_id": "local_runtime_mismatch",
+      "affected_entities": [
+        "runtime_environment",
+        "codex_local_agent"
+      ],
+      "effect_on_operational_state": "tool_or_dependency_failure",
+      "effect_on_epistemic_state": "conflicting_local_observations",
+      "required_response_class": "repair_or_reclassify"
+    },
+    {
+      "disturbance_id": "repo_drift",
+      "affected_entities": [
+        "runtime_environment",
+        "codex_local_agent",
+        "orchestration_daemon"
+      ],
+      "effect_on_operational_state": "worktree_or_artifact_mismatch",
+      "effect_on_epistemic_state": "accepted_state_may_become_stale",
+      "required_response_class": "reconcile_and_reanalyze"
+    },
+    {
+      "disturbance_id": "stale_evidence",
+      "affected_entities": [
+        "runtime_environment",
+        "codex_local_agent",
+        "codex_cloud_worker",
+        "orchestration_daemon"
+      ],
+      "effect_on_operational_state": "none_direct",
+      "effect_on_epistemic_state": "accepted_model_confidence_drops",
+      "required_response_class": "reobserve_or_quarantine"
+    },
+    {
+      "disturbance_id": "projection_drift",
+      "affected_entities": [
+        "orchestration_daemon"
+      ],
+      "effect_on_operational_state": "query_surfaces_disagree_with_canonical_json",
+      "effect_on_epistemic_state": "projection_misread_as_authority",
+      "required_response_class": "rebuild_projection_and_block_authority_leak"
+    },
+    {
+      "disturbance_id": "duplicate_job_execution",
+      "affected_entities": [
+        "codex_cloud_worker",
+        "orchestration_daemon"
+      ],
+      "effect_on_operational_state": "double_dispatch_or_race",
+      "effect_on_epistemic_state": "conflicting_reports_or_artifacts",
+      "required_response_class": "quarantine_and_reconcile"
+    },
+    {
+      "disturbance_id": "partial_artifact_publication",
+      "affected_entities": [
+        "codex_cloud_worker",
+        "orchestration_daemon",
+        "codex_local_agent"
+      ],
+      "effect_on_operational_state": "incomplete_result_surface",
+      "effect_on_epistemic_state": "evidence_ingested_without_full_context",
+      "required_response_class": "partial_acceptance_or_block"
+    },
+    {
+      "disturbance_id": "daemon_restart_during_inflight_work",
+      "affected_entities": [
+        "orchestration_daemon"
+      ],
+      "effect_on_operational_state": "cursor_loss_or_reconciliation_gap",
+      "effect_on_epistemic_state": "event_history_gap",
+      "required_response_class": "rebuild_cursor_and_reconcile"
+    }
+  ]
+}

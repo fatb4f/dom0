@@ -1,0 +1,66 @@
+{
+  "kind": "state_authority_rules.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "layer_rules": [
+    {
+      "state_id": "ontic_state",
+      "state_class": "epistemic_stratum",
+      "authority_status": "non_model_authority",
+      "authoritative_within_model": false,
+      "notes": "Ontic state is real but not directly writable/readable as canonical model state."
+    },
+    {
+      "state_id": "evidentiary_state",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_evidence_ledger",
+      "authoritative_within_model": true,
+      "notes": "Evidence is authoritative for what was observed or reported, not for what is finally accepted as model state."
+    },
+    {
+      "state_id": "accepted_relationship_state",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_relationship_surface",
+      "authoritative_within_model": true,
+      "notes": "Relationship state is authoritative inside the model after admission."
+    },
+    {
+      "state_id": "accepted_identity_state",
+      "state_class": "epistemic_stratum",
+      "authority_status": "canonical_operational_state_estimate",
+      "authoritative_within_model": true,
+      "notes": "Identity is authoritative as the accepted estimate, not as direct world truth."
+    },
+    {
+      "state_id": "applied_control_state",
+      "authority_status": "canonical_control_interpretation",
+      "authoritative_within_model": true,
+      "state_class": "supervisory_overlay",
+      "notes": "Applied control is authoritative as the current interpreted control surface."
+    },
+    {
+      "state_id": "fidelity_review_state",
+      "authority_status": "canonical_governance_surface",
+      "authoritative_within_model": true,
+      "state_class": "supervisory_overlay",
+      "notes": "Fidelity review governs hardening, not evidence existence, and remains a parallel governance overlay."
+    }
+  ],
+  "projection_rules": [
+    {
+      "projection_id": "neo4j_graph",
+      "authority_status": "non_authoritative_projection",
+      "must_not_mutate": [
+        "accepted_relationship_state",
+        "accepted_identity_state"
+      ]
+    }
+  ],
+  "authoring_constraints": [
+    "accepted_identity_state_is_not_freely_authored",
+    "accepted_relationship_state_is_not_freely_authored",
+    "evidentiary_state_may_be_appended_immediately",
+    "promotion_review_may_not_rewrite_evidentiary_history",
+    "operational_subsystem_entities_and_variables_must_be_declared_explicitly"
+  ]
+}

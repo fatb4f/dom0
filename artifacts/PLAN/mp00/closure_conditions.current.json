@@ -1,0 +1,37 @@
+{
+  "kind": "closure_conditions.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "mp00_closure_conditions": [
+    "operational_subsystem_entities_are_defined",
+    "operational_state_variables_exist_for_each_declared_entity",
+    "interfaces_and_channels_are_modeled",
+    "operational_lifecycle_transitions_are_defined",
+    "disturbance_and_fault_classes_are_defined",
+    "all_six_state_strata_are_defined",
+    "transition_rules_exist_for_allowed_state_motion",
+    "forbidden_transitions_are_explicit",
+    "authority_rules_exist_for_every_state_layer",
+    "evidence_ingestion_rules_exist",
+    "state_acceptance_rules_exist",
+    "reanalysis_triggers_exist",
+    "no_known_state_class_is_unhosted"
+  ],
+  "general_epistemic_quiescence_conditions": [
+    "no_new_admitted_relationship_delta_pending",
+    "no_new_admitted_identity_delta_pending",
+    "no_new_material_applied_control_delta_pending",
+    "unresolved_unknowns_are_explicit"
+  ],
+  "reopen_conditions": [
+    "new_state_class_required",
+    "new_anchor_admissibility_requirement_discovered",
+    "projection_surface_attempts_to_behave_as_authority",
+    "materiality_rules_prove_insufficient"
+  ],
+  "notes": [
+    "Closure is epistemic, not ontological.",
+    "Closure does not imply stability of the real system.",
+    "Closure may be lost immediately when new admitted evidence changes the accepted model."
+  ]
+}

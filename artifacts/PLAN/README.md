@@ -30,12 +30,12 @@ Required input:
 Analysis:
 - Symptoms: `homeostasis` defines a dual-loop truth-maintenance model with `relationship.current`, `identity.current`, and `applied_control.current`, but the localized planning packet still lacked a typed state space to receive findings without semantic drift.
 - Symptoms: The broader environment is treated as untrusted due to compounding drift and unconstrained state, so planning inputs, outputs, and reference material must stay localized under `/home/_404/src/dom0`.
-- Expected behavior: We need a state-space-first, plane-aware discovery program that aligns homeostasis concepts with ACM at the root level, keeps the accepted operational model accurate under reiterative closure, and emits methodology/workflow artifacts without collapsing evidence into accepted state or promotion into runtime.
+- Expected behavior: We need a state-space-first, plane-aware discovery program that aligns homeostasis concepts with ACM at the root level, keeps the accepted operational model accurate under reiterative closure, makes the operational subsystem decomposition explicit, and emits methodology/workflow artifacts without collapsing evidence into accepted state or promotion into runtime.
 - Failure signatures: Discovery starts before state classes and authority rules are frozen; plane boundaries remain implicit; roots and controllers are discovered into an untyped model; identity-changing findings have no bounded reiteration path; schema/control fidelity remain mixed with live-fact updates.
 - User impact: Without a stable state model, later artifacts will harden roots, leaves, and control boundaries into the wrong layers and make the homeostatic loop harder to operationalize safely.
 
 Output:
-- One clear program definition tied to observed evidence: a micro-plan program for system discovery and homeostasis that defines state space first, planes second, discovery third, and fidelity review last.
+- One clear program definition tied to observed evidence: a micro-plan program for system discovery and homeostasis that defines the operational subsystem model and epistemic/governance state model first, planes second, discovery third, and fidelity review last.
 
 ## reproduce_problem_set
 Required input:
@@ -113,13 +113,14 @@ Analysis:
   - None in this planning pass
 - Data stores/paths affected:
   - future root-level control bundle paths under `$git_root/.control`
-  - future foundational state artifacts such as `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `plane_mapping.current`, `reanalysis_triggers.current`, and `closure_conditions.current`
+  - future foundational state artifacts such as `system_entities.current`, `hypothesis_entity_mapping.current`, `operational_state_variables.current`, `interface_and_channel_model.current`, `operational_transition_model.current`, `disturbance_fault_taxonomy.current`, `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `plane_mapping.current`, `reanalysis_triggers.current`, and `closure_conditions.current`
   - future accepted-state surfaces such as `root_set.current`, `entity_facts.current`, `finding.normalized`, `relationship.current`, `identity.current`, `applied_control.current`, and fidelity review artifacts
   - future projection/query surfaces such as Neo4j, which remain non-authoritative
 - Operational touchpoints:
   - state-space typing
   - five-plane operating model
-  - `host`, `codex`, and `spawn` as root candidates
+  - `runtime_environment` and `codex` as initial anchor hypotheses
+  - `spawn` as an emergent candidate or subordinate/control surface if the crawl forces that split
   - root discovery crawl
   - controller arbitration
   - identity mutation and applied-control reassessment
@@ -152,15 +153,36 @@ Output:
 ### architecture_model
 
 - Architectural form: rooted, event-sourced, dual-loop homeostatic control system
+- Composed model: operational subsystem model plus epistemic/control/governance model
 - Planning unit: `micro_plan`
 - Output unit: `artifact`
 - Promotion unit: `schema_fidelity` and `applied_control_fidelity`
 - Closure mode: `temporary_epistemic_quiescence_under_current_evidence`
-- Main design rule: define the state space before ontology; define planes before discovery; admit evidence immediately; update accepted model state through explicit reduction rules; review fidelity without blocking evidence ingestion
+- Main design rule: define the operational subsystem model and epistemic/governance state model before ontology; define planes and anchor admissibility before discovery; admit evidence immediately; update accepted model state through explicit reduction rules; review fidelity without blocking evidence ingestion
 
 ### state_space
 
-The system is modeled as a layered, partially observable operational state space. It must not collapse ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review into one flattened state.
+The system is modeled as a composed, partially observable state space. It must not collapse operational entities, ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review into one flattened state.
+
+#### Operational subsystem model
+
+The operational subsystem model is explicit and first-class. It currently names:
+
+- `runtime_environment`
+- `codex_local_agent`
+- `codex_cloud_worker`
+- `orchestration_daemon`
+
+This model is carried by:
+
+- `system_entities.current`
+- `hypothesis_entity_mapping.current`
+- `operational_state_variables.current`
+- `interface_and_channel_model.current`
+- `operational_transition_model.current`
+- `disturbance_fault_taxonomy.current`
+
+Cloud execution routing is explicitly mediated via `codex_local_agent`; `orchestration_daemon` does not call `codex_cloud_worker` directly in the current model.
 
 #### State taxonomy
 
@@ -173,10 +195,12 @@ The system is modeled as a layered, partially observable operational state space
    - The canonical relationship layer of the model after admission and reduction.
 4. Accepted identity state
    - The current justified operational state estimate computed from lower-level substrates.
-5. Applied-control state
+#### Supervisory overlays
+
+1. Applied-control state
    - Current control interpretation derived from accepted identity, controller rules, observed effects, unresolved unknowns, and control conflicts.
-6. Fidelity review state
-   - Schema/control quality review surfaces used for promotion-gated fidelity decisions only.
+2. Fidelity review state
+   - Governance review state used for promotion-gated fidelity decisions only.
 
 #### Transition model
 
@@ -186,7 +210,18 @@ ontic_state
   -> admission_or_reduction
   -> accepted_relationship_state
   -> accepted_identity_state
+```
+
+Supervisory overlays:
+
+```text
+accepted_identity_state
   -> applied_control_state
+
+accepted_identity_state
+  -> fidelity_review_state
+
+applied_control_state
   -> fidelity_review_state
 ```
 
@@ -217,7 +252,7 @@ applied_control_findings
 | Accepted relationship state | Canonical relationship surface of the model |
 | Accepted identity state | Canonical accepted operational state estimate |
 | Applied-control state | Canonical current control interpretation |
-| Fidelity review state | Canonical governance/review surface |
+| Fidelity review state | Canonical governance/review surface; supervisory overlay |
 | Neo4j | Projection only; never the source of truth |
 
 #### State properties
@@ -232,16 +267,20 @@ applied_control_findings
 
 ### planes
 
+- Operational subsystem model:
+  - owns explicit entity decomposition, per-entity state variables, interfaces/channels, lifecycle transitions, and disturbance/fault classes
 - Root plane:
-  - owns candidate root anchors, `scope_root`, `control_root`, root boundaries, and crawl rules
+  - owns anchor admissibility, candidate root anchors, `scope_root`, `control_root`, root boundaries, and crawl rules
 - Observation plane:
   - owns append-only findings, normalization, provenance, confidence, evidence refs, and evidence admission rules
 - Relationship plane:
   - owns `relationship.current`, `relationship.delta`, contradiction/supersession handling, and graph projection jobs
 - Identity plane:
-  - owns `entity_facts.current`, `identity.current`, `identity.delta`, `identity.schema`, and `fsm_fit.current`
+  - owns `entity_facts.current`, `identity.current`, `identity.delta`, `identity.schema`, and `fsm_fit_assessment.current`
 - Control plane:
   - owns `applied_control.current`, `applied_control.report`, controller arbitration, gap sets, observed effects, conflict matrices, and fidelity reviews
+- Governance note:
+  - fidelity review is treated as a supervisory overlay rather than the terminal layer of plant state or an epistemic stratum
 
 ### service_decomposition
 
@@ -268,60 +307,61 @@ applied_control_findings
 - Reiteration rule: any admitted delta that materially changes accepted identity reopens the relevant upstream micro-plan and re-triggers applied-control analysis
 - Materialization rule: `identity.current` is the accepted operational state estimate; it is a deterministic materialized view over admitted findings, accepted relationship state, and accepted observations
 - Projection rule: graph databases and traversal indexes are query surfaces only and never replace canonical JSON artifacts
-- Discovery rule: discovery begins only after MP-00 and MP-01 are temporarily closed under current evidence
-- Root rule: `host`, `codex`, and `spawn` begin as candidate scope/control roots and may be refined, split, merged, or retired during discovery
+- Discovery rule: discovery begins only after MP-00 and MP-01 are temporarily closed under current evidence and anchor admissibility is explicit
+- Root rule: `runtime_environment` and `codex` begin as the initial anchor hypotheses; `spawn` is not presumed co-equal and may emerge later as a subordinate/control surface or separately admissible candidate if the evidence forces that split
 - FSM rule: FSM fit is a local probe, not the base ontology for the whole system
+- Governance rule: `fidelity_review_state` is a parallel supervisory overlay, not the terminal layer of plant state
 
 ### micro_plan_catalog
 | Micro-plan | Primary question | Core artifacts | Temporary closure condition |
 |---|---|---|---|
-| MP-00 | What kinds of state exist, how may state move, what admission rules govern accepted-state mutation, and what authority status does each state class have? | `state_space.model`, `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current` | The state taxonomy, admission rules, transition rules, authority rules, re-analysis triggers, and closure conditions are explicit and no known state class is unhosted |
-| MP-01 | How does the accepted state taxonomy map into the five operating planes? | `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current` | Every accepted state class has a plane host and projection boundaries are explicit |
+| MP-00 | What operational subsystem entities, variables, interfaces, transitions, and disturbances exist, and what epistemic/control/governance state model governs accepted-state mutation and applied-control derivation? | `system_entities.current`, `hypothesis_entity_mapping.current`, `operational_state_variables.current`, `interface_and_channel_model.current`, `operational_transition_model.current`, `disturbance_fault_taxonomy.current`, `operational_epistemic_model_bridge.current`, `state_space.model`, `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current` | The operational subsystem model and epistemic/governance model are both explicit, coupled, and no required state/entity class is unhosted |
+| MP-01 | How does the composed operational plus accepted-state model map into the five operating planes, and what qualifies as an admissible discovery anchor? | `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current`, `anchor_admissibility_rules.current` | Every accepted state class has a plane host, projection boundaries are explicit, and anchor admission criteria are frozen |
 | MP-02 | What are the current candidate scope/control roots and crawl boundaries? | `root_set.current`, `scope_root_map.current`, `control_root_map.current`, `root_boundary.current`, `root_crawl_rules.current` | Every current root candidate has an accepted declaration and no unresolved scope-root ambiguity remains |
 | MP-03 | How are controller conflicts and tie-breaks resolved across candidate roots? | `controller_catalog.current`, `control_scope_map.current`, precedence and conflict artifacts | Every known shared control surface has a precedence rule, tie-break, or explicit unresolved gap |
-| MP-04 | What is the accepted identity estimate of each root candidate under current evidence? | `entity_facts.current`, `identity.current`, `identity.delta`, `fsm_fit_assessment.current` | Identity is accepted for all current root candidates under current evidence and unresolved identity gaps are explicit |
-| MP-05 | How are findings admitted into accepted relationship state, and how do those relationship deltas affect accepted identity? | `finding.log`, `finding.normalized`, `relationship.current`, `relationship.delta`, relationship capture artifacts | Observable relationship capture is defined and identity effects are explicit under current evidence |
+| MP-04 | What provisional identity hypotheses, assumptions, and FSM-fit probes are needed before relationship-driven identity materialization? | `entity_facts.current`, `identity_hypothesis.current`, `identity_assumption_register.current`, `fsm_fit_assessment.current` | Provisional identity scaffolding exists for all current root candidates and unresolved assumptions are explicit |
+| MP-05 | How are findings admitted into accepted relationship state, and how do those relationship deltas materialize accepted identity? | `finding.log`, `finding.normalized`, `relationship.current`, `relationship.delta`, `identity.current`, `identity.delta`, relationship capture artifacts | Observable relationship capture is defined and accepted identity materialization is explicit under current evidence |
 | MP-06 | What is controlled, uncontrolled, ambiguous, or missing against accepted identity? | `applied_control.current`, `applied_control.report`, control gap and re-analysis artifacts | Applied-control understanding is current under accepted identity and all known gaps are explicit |
 | MP-07 | Does schema/control fidelity match the accepted model, and what workflow projection follows? | `schema_fidelity_review.current`, `applied_control_fidelity_review.current`, `methodology_workflow_projection.current` | Both fidelity reviews are accepted under current evidence or their failures are explicit and routed |
 
 ### micro_plans
 
 #### MP-00 — State-space definition
-- Question being resolved: What classes of state exist, how are they allowed to transition, what admission rules govern accepted-state mutation, and what authority status does each state layer have?
+- Question being resolved: What operational subsystem entities, variables, interfaces, transitions, and disturbances exist, and what epistemic/control/governance state model governs accepted-state mutation, accepted identity, applied control, and fidelity review?
 - Roots in scope: pre-root substrate for all later roots and downstream scoped systems
-- Current accepted identity assumptions: the system is layered and partially observable; ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review must remain distinct layers
-- Discovery method / crawl path: synthesize the state model from the homeostasis live-substrate loop and ACM current/delta governance constraints before any root/entity crawl begins
-- Evidence that can change accepted state: any admitted finding that requires a new state class, state transition, ingestion rule, acceptance rule, authority rule, or closure rule
-- Artifacts emitted: `state_space.model` with intended file surface `state_space.model.md`; `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current`
-- Reiteration triggers: new state class required; undefined state transition discovered; evidence cannot be admitted cleanly; acceptance logic becomes ambiguous; fidelity review exposes missing state semantics
+- Current accepted identity assumptions: the system is composed of an explicit operational subsystem model plus a layered and partially observable epistemic/control/governance model; ontic state, evidence, accepted relationship state, accepted identity state, applied control, and fidelity review must remain distinct from the operational entity decomposition
+- Discovery method / crawl path: synthesize the epistemic/governance state model from the homeostasis live-substrate loop and ACM governance constraints, and synthesize the operational subsystem model from the current four-part decomposition requirement before any root/entity crawl begins
+- Evidence that can change accepted state: any admitted finding that requires a new operational entity, state variable, interface class, disturbance class, state class, state transition, ingestion rule, acceptance rule, authority rule, or closure rule
+- Artifacts emitted: `system_entities.current`, `hypothesis_entity_mapping.current`, `operational_state_variables.current`, `interface_and_channel_model.current`, `operational_transition_model.current`, `disturbance_fault_taxonomy.current`, `operational_epistemic_model_bridge.current`; `state_space.model` with intended file surface `state_space.model.md`; `state_taxonomy.current`, `state_transition_rules.current`, `state_authority_rules.current`, `evidence_ingestion_rules.current`, `state_acceptance_rules.current`, `reanalysis_triggers.current`, `closure_conditions.current`
+- Reiteration triggers: new operational entity or interface class required; operational lifecycle transitions become ambiguous; disturbance taxonomy proves incomplete; new state class required; undefined state transition discovered; evidence cannot be admitted cleanly; acceptance logic becomes ambiguous; fidelity review exposes missing state semantics
 - Promotion gate: none for evidentiary or accepted-state mutation logic; fidelity review is later
-- Temporary closure condition: the typed state space is explicit enough that new findings have a stable landing zone and an admission path without flattening the model
+- Temporary closure condition: the operational subsystem model and typed epistemic/governance state space are explicit enough that new findings have a stable landing zone and an admission path without flattening the model
 
-#### MP-01 — Five-plane definition
-- Question being resolved: How does the accepted state taxonomy map into the root, observation, relationship, identity, and control planes?
+#### MP-01 — Five-plane definition and anchor admissibility
+- Question being resolved: How does the composed operational plus accepted-state model map into the root, observation, relationship, identity, and control planes, and what qualifies as an admissible discovery anchor?
 - Roots in scope: all present and future root candidates that will later be discovered into the typed state model
 - Current accepted identity assumptions: MP-00 is temporarily closed under current evidence
-- Discovery method / crawl path: define the operating decomposition of the state space, including projection-only surfaces and plane transition constraints
+- Discovery method / crawl path: define the operating decomposition of the state space, including projection-only surfaces, plane transition constraints, and the criteria a subject must satisfy before it can be admitted as a candidate scope/control root
 - Evidence that can change accepted state: any admitted finding showing that a state class has no valid plane host or that a projection surface is acting as authority
-- Artifacts emitted: `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current`
-- Reiteration triggers: state taxonomy changes; authority rules change; plane responsibility becomes ambiguous; projection surfaces threaten to become authority surfaces
+- Artifacts emitted: `plane_mapping.current`, `plane_operating_model.current`, `plane_transition_constraints.current`, `projection_boundary_rules.current`, `anchor_admissibility_rules.current`
+- Reiteration triggers: state taxonomy changes; authority rules change; plane responsibility becomes ambiguous; projection surfaces threaten to become authority surfaces; anchor admission criteria become ambiguous
 - Promotion gate: none for plane-definition findings; fidelity review is later
-- Temporary closure condition: every accepted state class has a plane host and every projection/query surface has an explicit non-authority boundary
+- Temporary closure condition: every accepted state class has a plane host, every projection/query surface has an explicit non-authority boundary, and anchor admission criteria are explicit
 
 #### MP-02 — Root declaration and scope-root definition
-- Question being resolved: What are the current candidate `scope_root`, `control_root`, root boundaries, and crawl rules for `host`, `codex`, and `spawn`, including cases with no enclosing git repository?
-- Roots in scope: current candidates `host`, `codex`, `spawn`
+- Question being resolved: Which subjects satisfy anchor admissibility and can currently be treated as candidate `scope_root` or `control_root`, with bounded root boundaries and crawl rules?
+- Roots in scope: initial anchor hypotheses `runtime_environment` and `codex`; `spawn` only if later evidence makes it independently admissible
 - Current accepted identity assumptions: MP-00 and MP-01 are temporarily closed under current evidence
-- Discovery method / crawl path: inspect homeostasis root statements, ACM control boundaries, and localized evidence of root ownership or scope anchors
+- Discovery method / crawl path: apply anchor admissibility rules to `runtime_environment` and `codex` first, using homeostasis root statements, ACM control boundaries, and localized evidence of root ownership or scope anchors; only test `spawn` as a separate candidate if the earlier crawl forces that split
 - Evidence that can change accepted state: new root-candidate findings, corrected scope roots, corrected control roots, newly observed undisclosed operations at root level
 - Artifacts emitted: `root_set.current`, `scope_root_map.current`, `control_root_map.current`, `root_boundary.current`, `root_crawl_rules.current`
 - Reiteration triggers: new root candidate discovered; scope root corrected; control root corrected; root boundary invalidated; crawl boundary invalidated
 - Promotion gate: none for root findings; only later fidelity review
-- Temporary closure condition: every current root candidate is declared, bounded, and mapped to scope/control roots under current evidence
+- Temporary closure condition: every admitted root candidate is declared, bounded, and mapped to scope/control roots under current evidence
 
 #### MP-03 — Root controller arbitration
 - Question being resolved: How are controller conflicts, precedence, invalid overlap, and tie-breaks resolved across controllers rooted in the current root candidates?
-- Roots in scope: current candidates `host`, `codex`, `spawn`
+- Roots in scope: admitted candidates from MP-02, expected to start with `runtime_environment` and `codex`
 - Current accepted identity assumptions: MP-02 root-candidate declarations are temporarily closed under current evidence
 - Discovery method / crawl path: crawl root-owned control surfaces, controller/actuator paths, shared assets, and guarded transitions
 - Evidence that can change accepted state: new controller, new actuator path, new subordinate, new shared control surface, new guarded transition, corrected root declaration
@@ -330,27 +370,27 @@ applied_control_findings
 - Promotion gate: none for controller findings; fidelity review happens later
 - Temporary closure condition: every known controller is anchored to a current root candidate and every shared control surface has precedence, tie-break, or explicit unresolved gap
 
-#### MP-04 — Identity scoping per root
-- Question being resolved: What is the accepted identity estimate of each root candidate, and does each root candidate fit FSM treatment directly or as a container of downstream FSMs?
+#### MP-04 — Provisional identity scaffolding per root
+- Question being resolved: What provisional identity hypotheses, assumptions, and FSM-fit probes are needed for each root candidate before relationship-driven identity materialization occurs?
 - Roots in scope: all current root candidates accepted by MP-02
-- Current accepted identity assumptions: MP-02 and MP-03 are temporarily closed under current evidence
+- Current accepted identity assumptions: MP-02 and MP-03 are temporarily closed under current evidence; accepted identity materialization happens after relationship admission in MP-05
 - Discovery method / crawl path: identity-first crawl over boundary, purpose, authority owner, subordinates, controllers, actuators, state surfaces, artifacts, ingress/egress, and dependencies
 - Evidence that can change accepted state: new state surface, new produced artifact class, new external dependency, undisclosed operation, new subordinate/controller relation
-- Artifacts emitted: `entity_facts.current`, `identity.current`, `identity.delta`, `identity_assumption_register.current`, `fsm_fit_assessment.current`
-- Reiteration triggers: any admitted delta or relationship effect that materially changes the accepted identity estimate
-- Promotion gate: none for accepted identity mutation; schema fidelity is reviewed in MP-07
-- Temporary closure condition: the accepted identity estimate is current for each known root candidate and unresolved identity gaps are explicit
+- Artifacts emitted: `entity_facts.current`, `identity_hypothesis.current`, `identity_assumption_register.current`, `fsm_fit_assessment.current`
+- Reiteration triggers: any admitted delta or relationship effect that invalidates provisional identity hypotheses or FSM-fit assumptions
+- Promotion gate: none for provisional identity scaffolding; schema fidelity is reviewed in MP-07
+- Temporary closure condition: provisional identity scaffolding exists for each known root candidate and unresolved assumptions are explicit
 
-#### MP-05 — Relationship substrate bootstrap
-- Question being resolved: How are observable findings admitted into accepted relationship state, and how do those accepted relationship deltas affect accepted identity?
+#### MP-05 — Relationship substrate bootstrap and identity materialization
+- Question being resolved: How are observable findings admitted into accepted relationship state, and how do those accepted relationship deltas materialize accepted identity?
 - Roots in scope: all accepted root candidates plus their discovered first-degree entities and control surfaces
-- Current accepted identity assumptions: MP-04 identity is current under accepted evidence
-- Discovery method / crawl path: normalize observations into evidentiary state, apply admission and reduction rules, then emit canonical relationship state with identity-effect classification and projection-only graph boundaries
+- Current accepted identity assumptions: MP-04 provisional identity scaffolding is current under accepted evidence
+- Discovery method / crawl path: normalize observations into evidentiary state, apply admission and reduction rules, then emit canonical relationship state, accepted identity materialization, identity-effect classification, and projection-only graph boundaries
 - Evidence that can change accepted state: any observed node/edge or control finding with `affects_identity`, `affects_control`, or a new `identity_effect`
-- Artifacts emitted: `finding.log`, `finding.normalized`, `evidence_ref_index.current`, `relationship.current`, `relationship.delta`, `relationship_capture_rules.current`, `relationship_identity_effect_rules.current`, `graph_projection_rules.current`
+- Artifacts emitted: `finding.log`, `finding.normalized`, `evidence_ref_index.current`, `relationship.current`, `relationship.delta`, `identity.current`, `identity.delta`, `relationship_capture_rules.current`, `relationship_identity_effect_rules.current`, `graph_projection_rules.current`
 - Reiteration triggers: new observable relationship; new relationship type; new observation mode; admitted relationship effect that materially changes accepted identity; graph projection drift
 - Promotion gate: none for observed or accepted relationships; fidelity review is later
-- Temporary closure condition: relationship admission, reduction, and identity-effect semantics are explicit under current evidence
+- Temporary closure condition: relationship admission, reduction, identity materialization, and identity-effect semantics are explicit under current evidence
 
 #### MP-06 — Applied-control gap analysis loop
 - Question being resolved: Given accepted identity and accepted relationship state, what is controlled, uncontrolled, ambiguous, or missing, and what must be re-analyzed?
@@ -382,10 +422,10 @@ applied_control_findings
 - Status: APPROVED
 - Plan status: APPROVED
 - Implementation status: NOT_YET_APPROVED
-- Decision rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with state-space and plane definition before discovery begins.
-- Plan rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with state-space definition, explicit admission logic, and plane definition before discovery begins.
+- Decision rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with operational subsystem plus state-space definition and plane definition before discovery begins.
+- Plan rationale: The required source evidence is present in the `dom0` working copy, and the program now starts with operational subsystem modeling, state-space definition, explicit admission logic, and plane definition before discovery begins.
 - Blocking items (if `REJECTED`): not applicable; this packet is approved only as a planning foundation and blocked for implementation by the items below.
-- Implementation blockers: MP-00 through MP-07 artifacts do not yet exist as accepted current-state artifacts; root declarations and controller arbitration are not yet temporarily closed under current evidence; fidelity reviews do not yet exist; the parent issue does not yet exist; the implementation evidence gate remains pending.
+- Implementation blockers: MP-00 through MP-07 artifacts do not yet exist as accepted current-state artifacts; MP-00 operational subsystem artifacts do not yet exist as accepted current-state artifacts; root declarations and controller arbitration are not yet temporarily closed under current evidence; fidelity reviews do not yet exist; the parent issue does not yet exist; the implementation evidence gate remains pending.
 - Required follow-up evidence: accepted outputs from MP-00 through MP-07, each with explicit temporary epistemic-quiescence statements under current evidence.
 - Re-entry condition for re-review: re-review once MP-00 through MP-07 have current artifacts, temporary epistemic-quiescence statements, and the implementation evidence gate is restated against those artifacts.
 - Re-entry condition for implementation review: re-review once MP-00 through MP-07 have current artifacts, temporary epistemic-quiescence statements, and the implementation evidence gate is restated against those artifacts.
@@ -408,8 +448,8 @@ applied_control_findings
 | MP-01 | `[dom0][foundation] MP-01 five-plane definition` | pending |
 | MP-02 | `[dom0][foundation] MP-02 root declaration and scope roots` | pending |
 | MP-03 | `[dom0][foundation] MP-03 root controller arbitration` | pending |
-| MP-04 | `[dom0][foundation] MP-04 identity scoping per root` | pending |
-| MP-05 | `[dom0][foundation] MP-05 relationship substrate bootstrap` | pending |
+| MP-04 | `[dom0][foundation] MP-04 provisional identity scaffolding per root` | pending |
+| MP-05 | `[dom0][foundation] MP-05 relationship substrate bootstrap and identity materialization` | pending |
 | MP-06 | `[dom0][foundation] MP-06 applied-control gap loop` | pending |
 | MP-07 | `[dom0][foundation] MP-07 fidelity gates and workflow projection` | pending |
 
@@ -417,12 +457,12 @@ applied_control_findings
 
 | Micro-plan | Evidence required | Proof ref | Status (pending|met|blocked) |
 |---|---|---|---|
-| MP-00 | State taxonomy, transition rules, authority rules, re-analysis triggers, and closure conditions | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266` | pending |
+| MP-00 | Operational entity model, operational state variables, interface/channel model, operational transitions, disturbance taxonomy, state taxonomy, transition rules, authority rules, re-analysis triggers, and closure conditions | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266`, `/home/_404/src/dom0/artifacts/PLAN/mp00/operational_epistemic_model_bridge.md` | pending |
 | MP-01 | Plane mapping, plane transition constraints, and projection boundary rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:142`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:294`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:101` | pending |
 | MP-02 | Root declarations plus `scope_root`/`control_root` mappings and crawl rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:28`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:59`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:376` | pending |
 | MP-03 | Controller catalog, precedence, conflict matrix, and tie-break rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:68`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:246`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:87` | pending |
-| MP-04 | Entity facts, identity scoping, and FSM-fit assessment per root | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:61`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:321` | pending |
-| MP-05 | Finding normalization, relationship substrate rules, and identity-effect semantics | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:148`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:222`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:312` | pending |
+| MP-04 | Entity facts, provisional identity scaffolding, and FSM-fit assessment per root | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:61`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:190`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:321` | pending |
+| MP-05 | Finding normalization, relationship substrate rules, identity materialization, and identity-effect semantics | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:148`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:222`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:312` | pending |
 | MP-06 | Applied-control gap register, controller findings, and re-analysis rules | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:209`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:234`, `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:327` | pending |
 | MP-07 | Schema fidelity review, applied-control fidelity review, and workflow projection | `/home/_404/src/dom0/homeostasis/2026-03-10T00-00-00Z__2026-03-11T00-00-00Z/system_discovery_homeostasis.md:266`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:86`, `/home/_404/src/dom0/asset-control-model/spec_draft.v1.json:88` | pending |
 

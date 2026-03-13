@@ -1,0 +1,146 @@
+{
+  "kind": "operational_transition_model.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "notes": [
+    "This artifact captures operational lifecycle transitions.",
+    "Knowledge-flow transitions remain in state_transition_rules.current.json."
+  ],
+  "transition_classes": [
+    "entity_lifecycle",
+    "dispatch_and_reconcile",
+    "fault_and_recovery"
+  ],
+  "entity_transitions": [
+    {
+      "entity_id": "runtime_environment",
+      "transitions": [
+        {
+          "from": "active",
+          "to": "degraded",
+          "trigger": "runtime_mismatch_or_resource_loss"
+        },
+        {
+          "from": "degraded",
+          "to": "partitioned",
+          "trigger": "network_or_credential_failure"
+        },
+        {
+          "from": "degraded",
+          "to": "active",
+          "trigger": "local_recovery"
+        },
+        {
+          "from": "partitioned",
+          "to": "restored",
+          "trigger": "connectivity_or_credential_recovery"
+        }
+      ]
+    },
+    {
+      "entity_id": "codex_local_agent",
+      "transitions": [
+        {
+          "from": "ready",
+          "to": "planning",
+          "trigger": "new_task_or_packet_bound"
+        },
+        {
+          "from": "planning",
+          "to": "executing",
+          "trigger": "execution_authorized"
+        },
+        {
+          "from": "executing",
+          "to": "blocked",
+          "trigger": "permission_or_dependency_failure"
+        },
+        {
+          "from": "blocked",
+          "to": "recovered",
+          "trigger": "dependency_restored"
+        },
+        {
+          "from": "executing",
+          "to": "failed",
+          "trigger": "terminal_execution_failure"
+        },
+        {
+          "from": "recovered",
+          "to": "ready",
+          "trigger": "state_reconciled"
+        }
+      ]
+    },
+    {
+      "entity_id": "codex_cloud_worker",
+      "transitions": [
+        {
+          "from": "unrequested",
+          "to": "queued",
+          "trigger": "remote_task_submitted"
+        },
+        {
+          "from": "queued",
+          "to": "running",
+          "trigger": "remote_executor_starts"
+        },
+        {
+          "from": "running",
+          "to": "reported",
+          "trigger": "artifacts_or_status_published"
+        },
+        {
+          "from": "reported",
+          "to": "finalized",
+          "trigger": "results_applied_or_archived"
+        },
+        {
+          "from": "running",
+          "to": "failed",
+          "trigger": "remote_execution_failure"
+        },
+        {
+          "from": "queued",
+          "to": "expired",
+          "trigger": "timeout_or_eviction"
+        }
+      ]
+    },
+    {
+      "entity_id": "orchestration_daemon",
+      "transitions": [
+        {
+          "from": "idle",
+          "to": "dispatching",
+          "trigger": "dispatch_condition_satisfied"
+        },
+        {
+          "from": "dispatching",
+          "to": "awaiting_result",
+          "trigger": "packet_or_job_dispatched"
+        },
+        {
+          "from": "awaiting_result",
+          "to": "reconciling",
+          "trigger": "result_available"
+        },
+        {
+          "from": "reconciling",
+          "to": "gated",
+          "trigger": "gate_or_quarantine_condition_met"
+        },
+        {
+          "from": "reconciling",
+          "to": "idle",
+          "trigger": "state_reconciled_cleanly"
+        },
+        {
+          "from": "awaiting_result",
+          "to": "failed",
+          "trigger": "timeout_or_restart_during_inflight_work"
+        }
+      ]
+    }
+  ]
+}

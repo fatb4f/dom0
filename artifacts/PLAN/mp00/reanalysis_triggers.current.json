@@ -1,0 +1,51 @@
+{
+  "kind": "reanalysis_triggers.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "mp00_reopen_triggers": [
+    "new_operational_entity_required",
+    "undefined_interface_or_channel_class_discovered",
+    "undefined_operational_transition_discovered",
+    "disturbance_or_fault_class_missing",
+    "new_state_class_required",
+    "undefined_state_transition_discovered",
+    "evidence_cannot_be_admitted_cleanly",
+    "acceptance_logic_becomes_ambiguous",
+    "authority_status_conflict_between_layers",
+    "projection_surface_behaves_as_authority"
+  ],
+  "discovery_reopen_triggers": {
+    "mp02_root_declaration": [
+      "new_root_candidate_discovered",
+      "scope_root_corrected",
+      "control_root_corrected",
+      "root_boundary_invalidated"
+    ],
+    "mp03_controller_arbitration": [
+      "new_controller_discovered",
+      "new_shared_control_surface_discovered",
+      "controller_precedence_drift"
+    ],
+    "mp04_identity_scoping": [
+      "material_identity_delta",
+      "new_state_surface",
+      "new_dependency_that_changes_control_boundary"
+    ],
+    "mp05_relationship_substrate_bootstrap": [
+      "new_relationship_type",
+      "admitted_relationship_delta_with_identity_effect",
+      "graph_projection_drift"
+    ],
+    "mp06_applied_control_gap_loop": [
+      "material_identity_delta",
+      "material_relationship_delta",
+      "material_applied_control_delta",
+      "undisclosed_operation_observed"
+    ]
+  },
+  "applied_control_rerun_on": [
+    "material_identity_delta",
+    "admitted_relationship_delta_that_changes_identity",
+    "controller_conflict_resolution_change"
+  ]
+}

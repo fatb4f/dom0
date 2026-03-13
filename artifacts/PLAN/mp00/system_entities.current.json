@@ -1,0 +1,185 @@
+{
+  "kind": "system_entities.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "notes": [
+    "This artifact defines the operational subsystem decomposition required in addition to the epistemic/governance state model.",
+    "Entity declaration does not imply anchor admission. runtime_environment and codex_local_agent are the current operational realizations of the initial runtime_environment and codex hypotheses; codex_cloud_worker and orchestration_daemon are supporting operational entities until discovery proves otherwise."
+  ],
+  "entities": [
+    {
+      "entity_id": "runtime_environment",
+      "label": "Runtime Environment",
+      "kind": "compute_runtime_environment",
+      "anchor_status": "initial_hypothesis",
+      "identity_requirements": [
+        "scope_boundary",
+        "authority_owner",
+        "observation_surfaces",
+        "actuation_surfaces",
+        "dependency_set"
+      ],
+      "lifecycle_state_model_ref": "operational_state_variables.current#runtime_environment",
+      "authority_scope": [
+        "local_execution_context",
+        "filesystem_and_worktree_surfaces",
+        "local_runtime_dependencies",
+        "host_session_and_scheduler_surfaces"
+      ],
+      "observation_surfaces": [
+        "filesystem",
+        "process_table",
+        "environment_variables",
+        "local_runtime_state_paths",
+        "network_reachability_probes"
+      ],
+      "actuation_surfaces": [
+        "shell_command_execution",
+        "filesystem_mutation",
+        "service_supervision_hooks",
+        "credential_mount_points"
+      ],
+      "dependencies": [
+        "local_os_session",
+        "toolchain_installation",
+        "network_connectivity",
+        "credential_material"
+      ],
+      "failure_classes": [
+        "runtime_mismatch",
+        "filesystem_drift",
+        "network_partition",
+        "credential_loss"
+      ]
+    },
+    {
+      "entity_id": "codex_local_agent",
+      "label": "Codex Local Agent",
+      "kind": "coding_agent",
+      "anchor_status": "initial_hypothesis",
+      "identity_requirements": [
+        "session_boundary",
+        "controller_set",
+        "tool_surface",
+        "worktree_binding",
+        "artifact_outputs"
+      ],
+      "lifecycle_state_model_ref": "operational_state_variables.current#codex_local_agent",
+      "authority_scope": [
+        "local_planning_and_execution",
+        "local_artifact_generation",
+        "cloud_task_submission",
+        "local_tool_invocation"
+      ],
+      "observation_surfaces": [
+        "session_context_files",
+        "cli_status",
+        "local_artifacts",
+        "repo_state",
+        "tool_availability"
+      ],
+      "actuation_surfaces": [
+        "local_cli_commands",
+        "file_edits",
+        "cloud_exec_submission",
+        "local_validation_runs"
+      ],
+      "dependencies": [
+        "runtime_environment",
+        "repo_worktree",
+        "auth_session",
+        "installed_tools"
+      ],
+      "failure_classes": [
+        "permission_block",
+        "session_context_drift",
+        "tool_unavailability",
+        "submission_failure"
+      ]
+    },
+    {
+      "entity_id": "codex_cloud_worker",
+      "label": "Codex Cloud Worker",
+      "kind": "cloud_worker",
+      "anchor_status": "supporting_operational_entity",
+      "identity_requirements": [
+        "remote_job_identity",
+        "execution_policy",
+        "artifact_return_path",
+        "callback_or_status_surface"
+      ],
+      "lifecycle_state_model_ref": "operational_state_variables.current#codex_cloud_worker",
+      "authority_scope": [
+        "remote_isolated_execution",
+        "remote_patch_generation",
+        "remote_report_emission"
+      ],
+      "observation_surfaces": [
+        "task_status_api",
+        "task_diff",
+        "task_artifact_output",
+        "remote_report_channel"
+      ],
+      "actuation_surfaces": [
+        "remote_task_launch",
+        "remote_branch_or_diff_production",
+        "remote_retry_or_finalize"
+      ],
+      "dependencies": [
+        "remote_execution_environment",
+        "repository_binding",
+        "auth_scope",
+        "network_policy"
+      ],
+      "failure_classes": [
+        "job_expiry",
+        "remote_execution_failure",
+        "artifact_channel_failure",
+        "auth_scope_failure"
+      ]
+    },
+    {
+      "entity_id": "orchestration_daemon",
+      "label": "Orchestration Daemon",
+      "kind": "orchestration_daemon",
+      "anchor_status": "supporting_operational_entity",
+      "identity_requirements": [
+        "supervision_boundary",
+        "queue_binding",
+        "dispatch_policy",
+        "reconciliation_scope"
+      ],
+      "lifecycle_state_model_ref": "operational_state_variables.current#orchestration_daemon",
+      "authority_scope": [
+        "queue_watch",
+        "packet_dispatch",
+        "result_reconciliation",
+        "gate_signal_emission"
+      ],
+      "observation_surfaces": [
+        "queue_state",
+        "event_log_cursor",
+        "dispatch_logs",
+        "reconciliation_reports"
+      ],
+      "actuation_surfaces": [
+        "dispatch_trigger",
+        "retry_control",
+        "quarantine_or_gate_actions",
+        "state_reconciliation"
+      ],
+      "dependencies": [
+        "runtime_environment",
+        "queue_or_packet_store",
+        "controller_rules",
+        "worker_or_agent_channels"
+      ],
+      "failure_classes": [
+        "duplicate_dispatch",
+        "inflight_restart",
+        "reconciliation_drift",
+        "queue_backlog"
+      ]
+    }
+  ]
+}

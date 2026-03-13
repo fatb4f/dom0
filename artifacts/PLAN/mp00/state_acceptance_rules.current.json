@@ -1,0 +1,61 @@
+{
+  "kind": "state_acceptance_rules.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "relationship_acceptance_rules": [
+    {
+      "rule_id": "RAR01_observed_edge",
+      "description": "Observed relationships with adequate provenance may mutate accepted relationship state.",
+      "requires": [
+        "admitted_evidentiary_state",
+        "subject",
+        "predicate",
+        "object"
+      ]
+    },
+    {
+      "rule_id": "RAR02_control_feedback_edge",
+      "description": "Control findings may mutate accepted relationship state when they reveal a real controller, actuator, or subordinate relationship.",
+      "requires": [
+        "applied_control_finding",
+        "admitted_supporting_evidence_or_explicit_inference_marker"
+      ]
+    }
+  ],
+  "identity_acceptance_rules": [
+    {
+      "rule_id": "IAR01_relationship_derived_identity",
+      "description": "Accepted identity is normally materialized from accepted relationship state plus admitted findings.",
+      "default": true
+    },
+    {
+      "rule_id": "IAR02_direct_identity_acceptance_exception",
+      "description": "Direct evidentiary mutation of identity is allowed only for bounded identity facts that cannot wait for full relationship reduction.",
+      "requires": [
+        "admitted_evidentiary_state",
+        "explicit_identity_fact_class",
+        "materiality_justification"
+      ]
+    }
+  ],
+  "materiality_rules": [
+    "new_root_candidate",
+    "new_scope_root_or_control_root",
+    "new_controller_or_actuator",
+    "new_subordinate_or_dependency_that_changes_control_boundary",
+    "new_state_surface",
+    "new_produced_artifact_class",
+    "new_identity_effect_class"
+  ],
+  "rejection_classes": [
+    "evidentiary_only",
+    "insufficient_for_accepted_relationship_state",
+    "insufficient_for_accepted_identity_state",
+    "conflicts_with_accepted_state_pending_resolution"
+  ],
+  "invariants": [
+    "raw_findings_do_not_directly_rewrite_identity",
+    "accepted_identity_state_is_derived_by_default",
+    "accepted_relationship_state_precedes_identity_when_possible"
+  ]
+}

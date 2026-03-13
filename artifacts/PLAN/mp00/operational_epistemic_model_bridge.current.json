@@ -1,0 +1,40 @@
+{
+  "kind": "operational_epistemic_model_bridge.current.v1",
+  "status": "draft",
+  "scope": "dom0_discovery_phase",
+  "statement": "The discovery program consists of two coupled models: an operational subsystem model for runtime_environment, codex_local_agent, codex_cloud_worker, and orchestration_daemon, and an epistemic/control/governance model that tracks evidence, accepted relationships, accepted identity, applied control, and fidelity review about that operational system.",
+  "operational_entities": [
+    "runtime_environment",
+    "codex_local_agent",
+    "codex_cloud_worker",
+    "orchestration_daemon"
+  ],
+  "epistemic_knowledge_strata": [
+    "ontic_state",
+    "evidentiary_state",
+    "accepted_relationship_state",
+    "accepted_identity_state"
+  ],
+  "supervisory_states": [
+    "applied_control_state",
+    "fidelity_review_state"
+  ],
+  "coupling_rules": [
+    "observations_from_operational_entities_enter_evidentiary_state_immediately",
+    "accepted_relationship_state_and_accepted_identity_state_are_updated_only_via_admission_and_reduction",
+    "applied_control_state_is_recomputed_from_accepted_identity_state_plus_controller_rules_observed_effects_unresolved_unknowns_and_control_conflicts",
+    "fidelity_review_state_is_a_parallel_governance_overlay_not_a_terminal_plant_state_layer",
+    "projection_surfaces_must_not_become_authority_surfaces"
+  ],
+  "bridge_outputs": [
+    "system_entities.current",
+    "hypothesis_entity_mapping.current",
+    "operational_state_variables.current",
+    "interface_and_channel_model.current",
+    "operational_transition_model.current",
+    "disturbance_fault_taxonomy.current",
+    "state_taxonomy.current",
+    "state_transition_rules.current",
+    "state_authority_rules.current"
+  ]
+}
